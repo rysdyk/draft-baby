@@ -1,0 +1,13 @@
+{"players" : [
+  {"name": "Antonio Brown", "position": "wr", "team": "Pittsburgh Steelers" },
+  {"name": "Le'Veon Bell", "position": "rb", "team": "Pittsburgh Steelers" },
+  {"name": "Todd Gurley", "position": "rb", "team": "Los Angeles Rams" },
+  {"name": "Julio Jones", "position": "wr", "team": "Atlanta Falcons" },
+  {"name": "Odell Beckham Jr", "position": "wr", "team": "New York Giants" },
+  {"name": "David Johnson", "position": "rb", "team": "Arizona Cardinals" },
+  {"name": "Adrian Peterson", "position": "rb", "team": "Minnesota Vikings" },
+  {"name": "Deandre Hopkins", "position": "rb", "team": "Houstan Texans" },
+  {"name": "Rob Gronkowski", "position": "te", "team": "New England Patriots" },
+  {"name": "Dez Bryant", "position": "rb", "team": "Dallas Cowboys" }
+]
+}
