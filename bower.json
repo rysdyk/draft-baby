@@ -1,0 +1,28 @@
+{
+  "name": "draft-helper",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "Samuel Rysdyk <samuel.rysdyk@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/rysdyk/fantasy-football-draft-helper",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.7",
+    "angular-animate": "^1.5.7",
+    "angular-route": "^1.5.7",
+    "jquery": "^3.0.0",
+    "animate.css": "^3.5.2",
+    "bootstrap": "^3.3.6",
+    "font-awesome": "fontawesome#^4.6.3"
+  }
+}

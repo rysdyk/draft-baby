@@ -1,0 +1,23 @@
+{"players" : [
+  {"name": "Antonio Brown", "position": "wr", "team": "Pittsburgh Steelers", "fftoday": "http://www.fftoday.com/stats/players/13029/Le'Veon_Bell", "rotoworld": "http://www.rotoworld.com/player/nfl/8390/leveon-bell" },
+  {"name": "Le'Veon Bell", "position": "rb", "team": "Pittsburgh Steelers" },
+  {"name": "Todd Gurley", "position": "rb", "team": "Los Angeles Rams" },
+  {"name": "Julio Jones", "position": "wr", "team": "Atlanta Falcons" },
+  {"name": "Odell Beckham Jr", "position": "wr", "team": "New York Giants" },
+  {"name": "David Johnson", "position": "rb", "team": "Arizona Cardinals" },
+  {"name": "Adrian Peterson", "position": "rb", "team": "Minnesota Vikings" },
+  {"name": "Deandre Hopkins", "position": "rb", "team": "Houstan Texans" },
+  {"name": "Rob Gronkowski", "position": "te", "team": "New England Patriots" },
+  {"name": "Dez Bryant", "position": "wr", "team": "Dallas Cowboys" },
+  {"name": "Ezekiel Elliot", "position": "rb", "team": "Dallas Cowboys"},
+  {"name": "Lamar Miller", "position": "rb", "team": "Houstan Texans"},
+  {"name": "Devonta Freeman", "position": "rb", "team": "Atlanta Falcons"},
+  {"name": "Jamaal Charles", "position": "rb", "team": "Kansas City Chiefs"},
+  {"name": "Mark Ingram", "position": "rb", "team": "New Orleans Saints"},
+  {"name": "Doug Martin", "position": "rb", "team": "Tampa Bay Buccaneers"},
+  {"name": "Jordy Nelson", "position": "wr", "team": "Green Bay Packers"},
+  {"name": "A.J. Green", "position": "wr", "team": "Cincinnati Bengals"},
+  {"name": "Alshon Jeffery", "position": "wr", "team": "Chicago Bears"},
+  {"name": "LeSean McCoy", "position": "rb", "team": "Buffalo Bills"}
+]
+}
