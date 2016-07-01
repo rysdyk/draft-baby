@@ -4,10 +4,7 @@
     <title>Draft Dominator</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <style>
-      tr.wr { background: #dff0d8; }
-      tr.rb { background: #d9edf7; }
-      tr.te { background: #fcf8e3; }
-
+      .draftpick td { border-bottom: 1px solid red !important; border-top: 1px solid red !important; }
     </style>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
@@ -19,32 +16,94 @@
       <div class="row">
         <div class="col-xs-12">
           <h1>Fantasy Football Draft Tool</h1>
-          <span class="quote">"However beautiful the strategy, you should occassionally look at the results. - Churchill"</span>
+          <span class="quote">"However beautiful the strategy, you should occassionally look at the results." - Churchill</span>
         </div>
       </div>
       <div class="row">
+
         <div class="col-xs-12 col-md-8 col-md-offset-2">
+          <label>Search: <input ng-model="searchText"></label>
+          <!-- <label>WR Only <input type="radio"></label> -->
+          <p>Draft Settings: Snake, 10 Team, Position 8</p>
           <table class="table">
             <tr>
-              <th>Rank</th>
-              <th>Name</th>
+              <th><a href="#" ng-click="sortType = 'rank'; sortReverse = !sortReverse">
+            Rank
+            <span ng-show="sortType == 'rank' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == 'rank' && sortReverse" class="fa fa-caret-up"></span>
+          </a></th>
+              <th>
+                <a href="#" ng-click="sortType = 'name'; sortReverse = !sortReverse">
+            Name
+            <span ng-show="sortType == 'name' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == 'name' && sortReverse" class="fa fa-caret-up"></span>
+          </a>
+              </th>
               <th>Position</th>
               <th>Team</th>
-              <th>Profile</th>
+              <th>Bye Week</th>
+              <th><a href="#" ng-click="sortType = 'best_rank'; sortReverse = !sortReverse">
+            Best Rank
+            <span ng-show="sortType == 'best_rank' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == 'best_rank' && sortReverse" class="fa fa-caret-up"></span>
+          </a></th>
+              <th><a href="#" ng-click="sortType = 'worst_rank'; sortReverse = !sortReverse">
+            Worst Rank
+            <span ng-show="sortType == 'worst_rank' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == 'worst_rank' && sortReverse" class="fa fa-caret-up"></span>
+          </a></th>
+              <th><a href="#" ng-click="sortType = 'average_rank'; sortReverse = !sortReverse">
+            Average Rank
+            <span ng-show="sortType == 'average_rank' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == 'average_rank' && sortReverse" class="fa fa-caret-up"></span>
+          </a></th>
+          <!-- Standard deviation indicates how varied expert opinion is on this player. High standard deviation indication more disagreement. Lower indicates more agreement. -->
+              <th><a href="#" ng-click="sortType = 'std_dev'; sortReverse = !sortReverse">
+            Rank Std Dev
+            <span ng-show="sortType == 'std_dev' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == 'std_dev' && sortReverse" class="fa fa-caret-up"></span>
+          </a></th>
+              <th><a href="#" ng-click="sortType = 'adp'; sortReverse = !sortReverse">
+            Average Draft Position
+            <span ng-show="sortType == 'adp' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == 'adp' && sortReverse" class="fa fa-caret-up"></span>
+          </a></th>
             </tr>
-            <tr ng-repeat="player in players" class="{{ player.position }}">
-              <td>{{ $index + 1 }}</td>
+            <tr ng-repeat="player in players | orderBy:sortType:sortReverse | filter:searchText | filter: greaterThan('adp', 0)">
+              <td>{{ player.rank }}</td>
               <td>{{ player.name }}</td>
               <td>{{ player.position | uppercase }}</td>
               <td>{{ player.team }}</td>
-              <td>
-                <a ng-if="player.fftoday" href="{{ player.fftoday }}" target="_blank">FF Today</a>
-                <a ng-if="player.rotoworld" href="{{ player.rotoworld }}" target="_blank">Rotoworld</a>
-              </td>
+              <td>{{ player.bye_week }}</td>
+              <td>{{ player.best_rank }}</td>
+              <td>{{ player.worst_rank }}</td>
+              <td>{{ player.avg_rank | number: 2 }}</td>
+              <td>{{ player.std_dev | number: 2 }}</td>
+              <td>{{ player.adp }}</td>
             </tr>
           </table>
         </div>
       </div>
     </div>
+
+    <script>
+      function draftPick(){
+        var teams = 10;
+        var pick = 8;
+        var snakePick = teams * 2 - pick + 1;
+        var pickSpread = teams * 2;
+
+        for(i=pick; i<330; i+= pickSpread ) {
+          console.log(i);
+          $("tr:eq(" + i + ")").addClass("draftpick");
+        }
+
+        for(i=snakePick; i<330; i+= pickSpread ) {
+          console.log(i);
+          $("tr:eq(" + i + ")").addClass("draftpick");
+        }
+      }
+      setTimeout(draftPick, 2000);
+    </script>
   </body>
 </html>
