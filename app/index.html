@@ -9,45 +9,49 @@
     <link rel="stylesheet" href="css/main.css"/>
   </head>
   <body ng-app="draftApp">
+    <header>
+    <div class="row">
+      <div class="col-xs-12">
+        <h1>Fantasy Football Draft Tool</h1>
+        <span class="quote">"However beautiful the strategy, you should occassionally look at the results." - Winston Churchill</span>
+      </div>
+    </div>
+    </header>
     <div class="container" ng-controller="PlayerListController">
-      <div class="row">
-        <div class="col-xs-12">
-          <h1>Fantasy Football Draft Tool</h1>
-          <span class="quote">"However beautiful the strategy, you should occassionally look at the results." - Churchill</span>
+      <div class="row filter-tools">
+        <div class="col-xs-12 col-md-5 col-md-offset-1">
+          <label>Search: <input ng-model="searchText"></label>
+        </div>
+        <div class="col-xs-12 col-md-5">
+          <label for="draftPosTeams">Teams <select id="draftPosTeams">
+            <option value="8">8</option>
+            <option value="10">10</option>
+            <option value="12">12</option>
+            <option value="14">14</option>
+          </select></label>
+          <label for="draftPos">Draft Position <select id="draftPos">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+          </select></label>
+          <button class="btn btn-primary" id="draftPosEst">Submit</button>
+          <button class="btn btn-default" id="draftPosClear">Clear</button>
         </div>
       </div>
       <div class="row">
 
         <div class="col-xs-12 col-md-10 col-md-offset-1">
-          <label>Search: <input ng-model="searchText"></label>
-          <!-- <label>WR Only <input type="radio"></label> -->
-          <p>
-            <label for="draftPosTeams">Teams <select id="draftPosTeams">
-              <option value="8">8</option>
-              <option value="10">10</option>
-              <option value="12">12</option>
-              <option value="14">14</option>
-            </select></label>
-            <label for="draftPos">Draft Position <select id="draftPos">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
-              <option value="11">11</option>
-              <option value="12">12</option>
-              <option value="13">13</option>
-              <option value="14">14</option>
-            </select></label>
-            <button class="btn btn-primary" id="draftPosEst">Submit</button>
-            <button class="btn btn-default" id="draftPosClear">Clear</button>
-          </p>
-          <p>Draft Settings: Snake, 10 Team, Position 8</p>
           <table class="table">
             <tr>
               <th><a href="#" ng-click="sortType = 'rank'; sortReverse = !sortReverse">
