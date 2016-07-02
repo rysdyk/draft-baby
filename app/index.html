@@ -4,7 +4,7 @@
     <title>Draft Dominator</title>
     <!-- Styles -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.css"/>
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css"/>
     <link rel="stylesheet" href="bower_components/animate.css/animate.css"/>
     <link rel="stylesheet" href="css/main.css"/>
   </head>
@@ -52,6 +52,7 @@
       <div class="row">
 
         <div class="col-xs-12 col-md-10 col-md-offset-1">
+          <span class="disclaimer">Standard league scoring data from FantasyPros. Updated: July 1, 2016</span>
           <table class="table">
             <tr>
               <th><a href="#" ng-click="sortType = 'rank'; sortReverse = !sortReverse">
@@ -95,10 +96,39 @@
             <span ng-show="sortType == 'adp' && !sortReverse" class="fa fa-caret-down"></span>
             <span ng-show="sortType == 'adp' && sortReverse" class="fa fa-caret-up"></span>
           </a></th>
+          <th>Drafted</th>
             </tr>
-            <tr ng-repeat="player in players | orderBy:sortType:sortReverse | filter:searchText | filter: greaterThan('adp', 0)">
+            <tr ng-repeat="player in players | orderBy:sortType:sortReverse | filter:searchText | filter: greaterThan('adp', 0)" ng-class="{'fade-out': drafted}">
               <td>{{ player.rank }}</td>
-              <td>{{ player.name }}</td>
+              <td ng-if="player.profile == 'true' ">
+                <a href="" data-toggle="modal" data-target="#myModal-{{player.rank}}">{{ player.name }}</a>
+                <!-- Modal -->
+                <div class="modal fade" id="myModal-{{player.rank}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">{{ player.name }}</h4>
+                      </div>
+                      <div class="modal-body">
+                        <p>Team: {{ player.full_team }}</p>
+                        <p>Position: {{ player.full_position }}</p>
+                        <p>Height: {{ player.height }}</p>
+                        <p>Weight: {{ player.weight }}lbs</p>
+                        <p>College: {{ player.college }}</p>
+                        <p>Age: {{ player.birthday | ageFilter }} ({{ player.birthday }})</p>
+                        <p>2016 Outlook: {{ player.outlook }}</p>
+                        <p>2015: {{ player.history[0]["2015"] }}</p>
+                        <p>2014: {{ player.history[0]["2014"] }}</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td ng-if="player.profile != 'true'">{{ player.name }}</td>
               <td>{{ player.position | uppercase }}</td>
               <td>{{ player.team }}</td>
               <td>{{ player.bye_week }}</td>
@@ -107,11 +137,14 @@
               <td>{{ player.avg_rank | number: 2 }}</td>
               <td>{{ player.std_dev | number: 2 }}</td>
               <td>{{ player.adp }}</td>
+              <td><input type="checkbox" class="drafted" ng-model="drafted"></td>
             </tr>
           </table>
         </div>
       </div>
     </div>
+
+
 
     <!-- Scripts -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>

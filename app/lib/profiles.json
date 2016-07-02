@@ -1,0 +1,38 @@
+[
+  {
+    "profile": "true",
+    "name": "Le'Veon Bell",
+    "full_position": "Running Back",
+    "full_team": "Pittsburgh Steelers",
+    "college": "Michigan State University",
+    "birthday": "February 18, 1992",
+    "height": "6'1\"",
+    "weight": "244",
+    "outlook": "All signs indicated Bell is recovering from his injury and should be ready to go in 2016",
+    "history": [{"2015": "Bell began the season with a suspension and then experienced a season ending injury in week 8.", "2014": "Bell earned his reputation as the best runner in the NFL in the 2014 season."}]
+  },
+  {
+    "profile": "true",
+    "name": "Antonio Brown",
+    "full_position": "Wide Reciever",
+    "full_team": "Pittsburgh Steelers",
+    "college": "Central Michigan",
+    "birthday": "July 10, 1988",
+    "height": "5'10\"",
+    "weight": "186",
+    "outlook": "Brown is expected to be one of the top wide receivers, and thus one of the top fantasy players for 2016",
+    "history": [{"2015": "Brown was a baller", "2014": "Brown was a shot caller."}]
+  },
+  {
+    "profile": "true",
+    "name": "Odell Beckham Jr.",
+    "full_position": "Wide Reciever",
+    "full_team": "New York Giants",
+    "college": "Louisiana State",
+    "birthday": "November 5, 1992",
+    "height": "5'11\"",
+    "weight": "198",
+    "outlook": "Beckham is an easy choice for a top wide receiver in 2016",
+    "history": [{"2015": "Beckham Jr had a great year.", "2014": "Beckham missed the first four games but finished the year on a strong note."}]
+  }
+]
