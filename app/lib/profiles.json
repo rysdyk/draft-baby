@@ -34,5 +34,17 @@
     "weight": "198",
     "outlook": "Beckham is an easy choice for a top wide receiver in 2016",
     "history": [{"2015": "Beckham Jr had a great year.", "2014": "Beckham missed the first four games but finished the year on a strong note."}]
+  },
+  {
+    "profile": "true",
+    "name": "Cam Newton",
+    "full_position": "Quarterback",
+    "full_team": "Carolina Panthers",
+    "college": "Auburn",
+    "birthday": "May 11, 1989",
+    "height": "6'5\"",
+    "weight": "244",
+    "outlook": "While not necessarily expected to repeat a stellar 2015 outing, Newton is a bonafide elite QB and should be considered at or near the top of QB rankings.",
+    "history": [{"2015": "Newton was the top fantasy quarterback.", "2014": "Newton missed 2 games and played hurt in several others."}]
   }
 ]

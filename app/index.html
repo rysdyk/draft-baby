@@ -12,7 +12,8 @@
     <header>
     <div class="row">
       <div class="col-xs-12">
-        <h1>Fantasy Football Draft Tool</h1>
+        <h1>Draft Baby</h1>
+        <h3>Fantasy Football Draft Assist Tool</h3>
         <span class="quote">"However beautiful the strategy, you should occassionally look at the results." - Winston Churchill</span>
       </div>
     </div>
@@ -70,28 +71,28 @@
               <th>Position</th>
               <th>Team</th>
               <th>Bye Week</th>
-              <th><a href="#" ng-click="sortType = 'best_rank'; sortReverse = !sortReverse">
+              <th><a href="#" ng-click="sortType = 'best_rank'; sortReverse = sortReverse">
             Best Rank
             <span ng-show="sortType == 'best_rank' && !sortReverse" class="fa fa-caret-down"></span>
             <span ng-show="sortType == 'best_rank' && sortReverse" class="fa fa-caret-up"></span>
           </a></th>
-              <th><a href="#" ng-click="sortType = 'worst_rank'; sortReverse = !sortReverse">
+              <th><a href="#" ng-click="sortType = 'worst_rank'; sortReverse = sortReverse">
             Worst Rank
             <span ng-show="sortType == 'worst_rank' && !sortReverse" class="fa fa-caret-down"></span>
             <span ng-show="sortType == 'worst_rank' && sortReverse" class="fa fa-caret-up"></span>
           </a></th>
-              <th><a href="#" ng-click="sortType = 'average_rank'; sortReverse = !sortReverse">
+              <th><a href="#" ng-click="sortType = 'average_rank'; sortReverse = sortReverse">
             Average Rank
             <span ng-show="sortType == 'average_rank' && !sortReverse" class="fa fa-caret-down"></span>
             <span ng-show="sortType == 'average_rank' && sortReverse" class="fa fa-caret-up"></span>
           </a></th>
           <!-- Standard deviation indicates how varied expert opinion is on this player. High standard deviation indication more disagreement. Lower indicates more agreement. -->
-              <th><a href="#" ng-click="sortType = 'std_dev'; sortReverse = !sortReverse">
+              <th><a href="#" ng-click="sortType = 'std_dev'; sortReverse = sortReverse">
             Rank Std Dev
             <span ng-show="sortType == 'std_dev' && !sortReverse" class="fa fa-caret-down"></span>
             <span ng-show="sortType == 'std_dev' && sortReverse" class="fa fa-caret-up"></span>
           </a></th>
-              <th><a href="#" ng-click="sortType = 'adp'; sortReverse = !sortReverse">
+              <th><a href="#" ng-click="sortType = 'adp'; sortReverse = sortReverse">
             Average Draft Position
             <span ng-show="sortType == 'adp' && !sortReverse" class="fa fa-caret-down"></span>
             <span ng-show="sortType == 'adp' && sortReverse" class="fa fa-caret-up"></span>
@@ -120,6 +121,15 @@
                         <p>2016 Outlook: {{ player.outlook }}</p>
                         <p>2015: {{ player.history[0]["2015"] }}</p>
                         <p>2014: {{ player.history[0]["2014"] }}</p>
+                        <div ng-if="player.full_position == 'Quarterback' ">
+                          <p>2015 Pass Stats</p>
+                          <p>Attempts: {{ player.Attempts }}</p>
+                          <p>Completions: {{ player.Completions }}</p>
+                          <p>Yards: {{ player.Yards }}</p>
+                          <p>TDs: {{ player.TDs }}</p>
+                          <p>QB Rating: {{ player.qbrating }}</p>
+                          <p>ESPN QB Rating: {{ player.espnqbr }}</p>
+                        </div>
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

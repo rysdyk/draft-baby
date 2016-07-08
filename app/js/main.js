@@ -9,17 +9,28 @@ draftApp.controller('PlayerListController', function PlayerListController($scope
         .then(function(data){
           $scope.profiles = data.data;
         }).then( function(){
-          angular.forEach($scope.players, function(value, key){
-            angular.forEach($scope.profiles, function(v, k){
-              if ( value.name == v.name ) {
-                for (var prop in v ) {
-                  $scope.players[key][prop] = v[prop];
-                }
+          $http.get('../lib/2015-results/passing.json')
+          .then(function(data){
+            $scope.passing = data.data;
+            //console.log($scope.passing);
+          }).then( function(){
+
+            angular.forEach($scope.players, function(value, key){
+              //var match  = $.grep($scope.profiles, function(e){ console.log(e.name == value.name) });
+              var match  = $scope.profiles.filter( function(x){ return value.name == x.name; });
+              match = match[0]
+              for (var prop in match ) {
+                $scope.players[key][prop] = match[prop];
               }
-            })
-          })
-        })
-      })
+              var pass_match  = $scope.passing.filter( function(x){ return value.name == x.Name; });
+              pass_match = pass_match[0]
+              for (var prop in pass_match ) {
+                $scope.players[key][prop] = pass_match[prop];
+              }
+            });
+          });
+        });
+      });
 
   $scope.sortType     = 'rank';
   $scope.sortReverse  = false;
