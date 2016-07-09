@@ -13,8 +13,10 @@ header a, header a:hover {
   text-decoration: none;
 }
 
+th { cursor: pointer; }
+
 span.sortable {
-  color: red;
+  color: #31b0d5;
 }
 
 .filter-tools {
