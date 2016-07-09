@@ -37,6 +37,30 @@
   },
   {
     "profile": "true",
+    "name": "Julio Jones",
+    "full_position": "Wide Receiver",
+    "full_team": "Atlanta Falcons",
+    "college": "Alabama",
+    "birthday": "February 3, 1989",
+    "height": "6'3\"",
+    "weight": "220",
+    "outlook": "Jones is an elite wide receiver talent. He gets a lot of targets and yards, but a relatively low amount of TDs for his production.",
+    "history": [{"2015": "Jones was the most targeted receiver in the league and had the most passing yards. Finished #2 overall to Antonio Brown.", "2014": "Jones finished 8th overall."}]
+  },
+  {
+    "profile": "true",
+    "name": "Todd Gurley",
+    "full_position": "Running Back",
+    "full_team": "Los Angeles Rams",
+    "college": "Georgia",
+    "birthday": "August 3, 1994",
+    "height": "6'1\"",
+    "weight": "222",
+    "outlook": "Gurley is the one bright spot on a lackluster Rams team. Only his second season, yet all signs indicate he will be a first tier running back.",
+    "history": [{"2015": "Finished 5th overall despite not playing the first 3 games. Was able to put up both yards and touchdowns. Could have finished as top RB. 2015 NFL Rookie of the Year." }]
+  },
+  {
+    "profile": "true",
     "name": "Cam Newton",
     "full_position": "Quarterback",
     "full_team": "Carolina Panthers",
@@ -46,5 +70,17 @@
     "weight": "244",
     "outlook": "While not necessarily expected to repeat a stellar 2015 outing, Newton is a bonafide elite QB and should be considered at or near the top of QB rankings.",
     "history": [{"2015": "Newton was the top fantasy quarterback.", "2014": "Newton missed 2 games and played hurt in several others."}]
+  },
+  {
+    "profile": "true",
+    "name": "Aaron Rodgers",
+    "full_position": "Quarterback",
+    "full_team": "Green Bay Packers",
+    "college": "California",
+    "birthday": "December 2, 1983",
+    "height": "6'2\"",
+    "weight": "225",
+    "outlook": "After an underperforming 2015 -- for the Packers as a whole, and thus Rodgers -- expect Rodgers to return to being his usual elite self. Expect lots of yards and touchdowns.",
+    "history": [{"2015": "Rodgers worst year so far -- mostly due to overall Packers injuries/dysfunction -- but still finished 12th overall.", "2014": "A typical Rodgers year where he finished as the #2 QB to Andrew Luck."}]
   }
 ]
