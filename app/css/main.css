@@ -8,6 +8,15 @@ header {
   text-align: center;
 }
 
+header a, header a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+span.sortable {
+  color: red;
+}
+
 .filter-tools {
   margin-bottom: 10px;
 }

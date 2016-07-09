@@ -1,4 +1,4 @@
-var draftApp = angular.module('draftApp', []);
+var draftApp = angular.module('draftApp', ['ngRoute']);
 
 draftApp.controller('PlayerListController', function PlayerListController($scope, $http){
   $http.get('../lib/fantasypros.json')
@@ -18,22 +18,28 @@ draftApp.controller('PlayerListController', function PlayerListController($scope
             angular.forEach($scope.players, function(value, key){
               //var match  = $.grep($scope.profiles, function(e){ console.log(e.name == value.name) });
               var match  = $scope.profiles.filter( function(x){ return value.name == x.name; });
-              match = match[0]
+              match = match[0];
               for (var prop in match ) {
                 $scope.players[key][prop] = match[prop];
               }
               var pass_match  = $scope.passing.filter( function(x){ return value.name == x.Name; });
-              pass_match = pass_match[0]
-              for (var prop in pass_match ) {
-                $scope.players[key][prop] = pass_match[prop];
+              pass_match = pass_match[0];
+              for (var prp in pass_match ) {
+                $scope.players[key][prp] = pass_match[prp];
               }
             });
           });
         });
       });
 
-  $scope.sortType     = 'rank';
+  $scope.propertyName = 'rank';
   $scope.sortReverse  = false;
+
+  $scope.sortBy = function(propertyName) {
+    console.log("Hello");
+    $scope.reverse = ($scope.propertyName === propertyName) ? !$scope.reverse : false;
+    $scope.propertyName = propertyName;
+  };
 
   $scope.greaterThan = function(prop, val){
     return function(item){
@@ -54,36 +60,20 @@ draftApp.filter('ageFilter', function() {
    };
 });
 
-function draftPick(t, p){
-  var teams = t;
-  var pick = p;
-  var snakePick = teams * 2 - pick + 1;
-  var pickSpread = teams * 2;
+draftApp.config(['$routeProvider', function config($routeProvider){
+  $routeProvider.
+    when('/', {
+      templateUrl: 'partials/full_list.html',
+    }).
+    when('/position', {
+      templateUrl: 'partials/by_position.html'
+    }).
+    otherwise({
+      redirectTo: '/'
+    });
+}]);
 
-  for(i=pick; i<330; i+= pickSpread ) {
-    console.log(i);
-    $("tr:eq(" + i + ")").addClass("draftpick");
-  }
 
-  for(i=snakePick; i<330; i+= pickSpread ) {
-    console.log(i);
-    $("tr:eq(" + i + ")").addClass("draftpick");
-  }
-}
-function draftPosClear(){
-  $("tr").removeClass("draftpick");
-}
-
-$('#draftPosEst').click( function(){
-  draftPosClear();
-  var teams = parseInt($('#draftPosTeams').val());
-  var pick = parseInt($('#draftPos').val());
-  draftPick(teams, pick);
-});
-
-$('#draftPosClear').click( function(){
-  draftPosClear();
-});
 
 // $('.drafted').change(function(){
 //   var current_player = $(this).data("check");
