@@ -1,17 +1,19 @@
-.draftpick td { border-bottom: 1px solid red !important; border-top: 1px solid red !important; }
+$spartan-green: #246959;
 
 header {
-  background-color: #26326A;
+  background-color: $spartan-green;
   color: #fff;
   margin-bottom: 20px;
   padding: 20px 0;
   text-align: center;
+
+  a, a:hover {
+    color: #fff;
+    text-decoration: none;
+  }
 }
 
-header a, header a:hover {
-  color: #fff;
-  text-decoration: none;
-}
+.draftpick td { border-bottom: 1px solid red !important; border-top: 1px solid red !important; }
 
 th { cursor: pointer; }
 

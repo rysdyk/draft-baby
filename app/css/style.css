@@ -1,0 +1,29 @@
+header {
+  background-color: #246959;
+  color: #fff;
+  margin-bottom: 20px;
+  padding: 20px 0;
+  text-align: center; }
+  header a, header a:hover {
+    color: #fff;
+    text-decoration: none; }
+
+.draftpick td {
+  border-bottom: 1px solid red !important;
+  border-top: 1px solid red !important; }
+
+th {
+  cursor: pointer; }
+
+span.sortable {
+  color: #31b0d5; }
+
+.filter-tools {
+  margin-bottom: 10px; }
+
+.disclaimer {
+  font: 10px/12px Arial, sans-serif;
+  color: #333; }
+
+tr.fade-out {
+  background-color: #eee; }

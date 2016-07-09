@@ -8,6 +8,7 @@ var uglify = require('gulp-uglify');
 var minifyCSS = require('gulp-minify-css');
 var clean = require('gulp-clean');
 var runSequence = require('run-sequence');
+var sass = require('gulp-sass');
 
 
 // tasks
@@ -55,10 +56,17 @@ gulp.task('connectDist', function () {
     port: 9999
   });
 });
+gulp.task('styles', function() {
+    gulp.src('app/sass/**/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('app/css/'));
+});
 
 // default task
 gulp.task('default',
-  ['lint', 'connect']
+  ['lint', 'connect'], function(){
+    gulp.watch('app/sass/**/*.scss',['styles']);
+  }
 );
 gulp.task('build', function() {
   runSequence(
