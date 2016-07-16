@@ -1,9 +1,9 @@
 <div class="container" ng-controller="PlayerListController">
   <div class="row filter-tools">
-    <div class="col-xs-12 col-md-5 col-md-offset-1">
-      <!-- <label>Search: <input ng-model="searchText"></label> -->
+    <!-- <div class="col-xs-12 col-md-5 col-md-offset-1">
+      <label>Search: <input ng-model="searchText"></label>
       <a href="#/position">View Players by Positions</a>
-    </div>
+    </div> -->
     <div class="col-xs-12 col-md-5">
       <label for="draftPosTeams">Teams <select id="draftPosTeams">
         <option value="8">8</option>
@@ -33,7 +33,7 @@
   </div>
   <div class="row">
 
-    <div class="col-xs-12 col-md-10 col-md-offset-1">
+    <div class="col-xs-12 col-md-8">
       <span class="disclaimer">Standard league scoring data from FantasyPros. Updated: July 1, 2016</span>
       <table class="table">
         <tr>
@@ -63,18 +63,13 @@
             <span class="sortable">Average Rank</span>
             <span class="sortorder" ng-show="propertyName === 'average_rank'" ng-class="{'fa fa-caret-down': !reverse, 'fa fa-caret-up': reverse}"></span>
           </th>
-      <!-- Standard deviation indicates how varied expert opinion is on this player. High standard deviation indication more disagreement. Lower indicates more agreement. -->
-          <th ng-click="sortBy('std_dev')">
-            <span class="sortable">Rank Std Dev</span>
-            <span class="sortorder" ng-show="propertyName === 'std_dev'" ng-class="{'fa fa-caret-down': !reverse, 'fa fa-caret-up': reverse}"></span>
-          </th>
           <th ng-click="sortBy('adp')">
             <span class="sortable">ADP</span>
             <span class="sortorder" ng-show="propertyName === 'adp'" ng-class="{'fa fa-caret-down': !reverse, 'fa fa-caret-up': reverse}"></span>
           </th>
-      <th>Drafted</th>
+          <th>Drafted</th>
         </tr>
-        <tr ng-repeat="player in players | orderBy:propertyName:reverse | filter:searchText | filter: greaterThan('adp', 0)" ng-class="{'fade-out': drafted}">
+        <tr ng-repeat="player in players | orderBy:propertyName:reverse | filter:searchText | filter: greaterThan('adp', 0)" ng-if="!player.drafted">
           <td>{{ player.rank }}</td>
           <td ng-if="player.profile == 'true' ">
             <a href="" data-toggle="modal" data-target="#myModal-{{player.rank}}">{{ player.name }}</a>
@@ -125,11 +120,18 @@
           <td>{{ player.best_rank }}</td>
           <td>{{ player.worst_rank }}</td>
           <td>{{ player.avg_rank | number: 2 }}</td>
-          <td>{{ player.std_dev | number: 2 }}</td>
           <td>{{ player.adp }}</td>
-          <td><input type="checkbox" class="drafted" ng-model="drafted"></td>
+          <td><input type="checkbox" ng-click="draftPlayer(player)"></td>
         </tr>
       </table>
+    </div>
+    <div class="col-md-4">
+      <h2>Drafted:</h2>
+      <button class="btn btn-primary" ng-click="undraftPlayers()">Reset</button>
+      <button class="btn btn-primary" ng-click="undraftLastPlayer()">Undo Last</button>
+      <ul>
+        <li ng-repeat="player in players | reverse" ng-click="undraftPlayer()" ng-if="player.drafted">{{ player.name }}</li>
+      </ul>
     </div>
   </div>
 </div>

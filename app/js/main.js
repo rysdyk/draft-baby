@@ -37,6 +37,25 @@ draftApp.controller('PlayerListController', [ '$scope', 'playersFactory', functi
     });
   }
 
+  $scope.selected = [];
+
+  $scope.draftPlayer = function(player){
+    player.drafted = true;
+    $scope.selected.push(player);
+  };
+
+  $scope.undraftPlayers = function(){
+    angular.forEach($scope.players, function(value, key){
+      value.drafted = false;
+    });
+    $scope.selected = [];
+  };
+
+  $scope.undraftLastPlayer = function(){
+    var last = $scope.selected.pop();
+    last.drafted = false;
+  };
+
   $scope.propertyName = 'rank';
   $scope.sortReverse  = false;
 
@@ -81,6 +100,12 @@ draftApp.filter('ageFilter', function() {
    return function(birthdate) {
          return calculateAge(birthdate);
    };
+});
+
+draftApp.filter('reverse', function(){
+  return function(items){
+    return items.slice().reverse();
+  };
 });
 
 draftApp.config(['$routeProvider', function config($routeProvider){
