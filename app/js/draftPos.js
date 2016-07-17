@@ -26,6 +26,6 @@ $('#draftPosEst').click( function(){
   draftPick(teams, pick);
 });
 
-$('#draftPosClear, th').click( function(){
+$('#draftPosClear, th, #resetDraft').click( function(){
   draftPosClear();
 });

@@ -1,10 +1,10 @@
-<div class="container" ng-controller="PlayerListController">
+<div class="container" ng-controller="PlayerListController" id="full-list">
   <div class="row filter-tools">
     <!-- <div class="col-xs-12 col-md-5 col-md-offset-1">
       <label>Search: <input ng-model="searchText"></label>
       <a href="#/position">View Players by Positions</a>
     </div> -->
-    <div class="col-xs-12 col-md-5">
+    <div class="col-xs-12 col-md-10 col-md-offset-1">
       <label for="draftPosTeams">Teams <select id="draftPosTeams">
         <option value="8">8</option>
         <option value="10">10</option>
@@ -33,7 +33,7 @@
   </div>
   <div class="row">
 
-    <div class="col-xs-12 col-md-8">
+    <div id="fullPlayerList" class="col-xs-12 col-md-8 col-md-offset-1">
       <span class="disclaimer">Standard league scoring data from FantasyPros. Updated: July 1, 2016</span>
       <table class="table">
         <tr>
@@ -67,7 +67,7 @@
             <span class="sortable">ADP</span>
             <span class="sortorder" ng-show="propertyName === 'adp'" ng-class="{'fa fa-caret-down': !reverse, 'fa fa-caret-up': reverse}"></span>
           </th>
-          <th>Drafted</th>
+          <th>Draft</th>
         </tr>
         <tr ng-repeat="player in players | orderBy:propertyName:reverse | filter:searchText | filter: greaterThan('adp', 0)" ng-if="!player.drafted">
           <td>{{ player.rank }}</td>
@@ -90,12 +90,24 @@
                     <p>2014: {{ player.history[0]["2014"] }}</p>
                     <div ng-if="player.full_position == 'Quarterback' ">
                       <h3>2015 Pass Stats</h3>
-                      <p>Attempts: {{ player.Attempts }}</p>
-                      <p>Completions: {{ player.Completions }}</p>
-                      <p>Yards: {{ player.Yards }}</p>
-                      <p>TDs: {{ player.TDs }}</p>
-                      <p>QB Rating: {{ player.qbrating }}</p>
-                      <p>ESPN QB Rating: {{ player.espnqbr }}</p>
+                      <table>
+                        <tr>
+                          <th>Attempts</th>
+                          <th>Completions</th>
+                          <th>Yards</th>
+                          <th>TDs</th>
+                          <th>Interceptions</th>
+                          <th>QB Ratinng</th>
+                        </tr>
+                        <tr>
+                          <td>{{ player.Attempts }}</td>
+                          <td>{{ player.Completions }}</td>
+                          <td>{{ player.Yards }}</td>
+                          <td>{{ player.TDs }}</td>
+                          <td>{{ player.Interceptions }}</td>
+                          <td>{{ player.qbrating }}</td>
+                        </tr>
+                      </table>
                     </div>
                     <hr />
                     <h3>Info</h3>
@@ -121,16 +133,18 @@
           <td>{{ player.worst_rank }}</td>
           <td>{{ player.avg_rank | number: 2 }}</td>
           <td>{{ player.adp }}</td>
-          <td><input type="checkbox" ng-click="draftPlayer(player)"></td>
+          <td ng-click="draftPlayer(player)" class="draft"></td>
         </tr>
       </table>
     </div>
-    <div class="col-md-4">
+    <div id="drafted" class="col-md-2">
       <h2>Drafted:</h2>
-      <button class="btn btn-primary" ng-click="undraftPlayers()">Reset</button>
-      <button class="btn btn-primary" ng-click="undraftLastPlayer()">Undo Last</button>
+      <div class="row">
+        <button id="undoDraft" class="btn btn-warning pull-left" ng-click="undraftLastPlayer()">Undo Last</button>
+        <button id="resetDraft" class="btn btn-danger pull-right" ng-click="undraftPlayers()">Reset</button>
+      </div>
       <ul>
-        <li ng-repeat="player in players | reverse" ng-click="undraftPlayer()" ng-if="player.drafted">{{ player.name }}</li>
+        <li ng-repeat="player in selected | reverse" ng-click="undraftPlayer()" ng-if="player.drafted">{{ selected.length - $index }} - {{ player.name }}</li>
       </ul>
     </div>
   </div>
