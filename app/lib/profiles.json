@@ -1,6 +1,18 @@
 [
   {
     "profile": "true",
+    "name": "Odell Beckham Jr.",
+    "full_position": "Wide Reciever",
+    "full_team": "New York Giants",
+    "college": "Louisiana State",
+    "birthday": "November 5, 1992",
+    "height": "5'11\"",
+    "weight": "198",
+    "outlook": "A slight coaching overhaul for the Giants should be mean good thigns for Eli Manning and Beckham. Beckham is a gifted athlete and should continue to be an elite wide receiver in 2016",
+    "history": [{"2015": "Beckham Jr finished 5th in WR scoring.", "2014": "Beckham missed the first four games but finished the year on a strong note, and finished 5th in WR fantasy scoring."}]
+  },
+  {
+    "profile": "true",
     "name": "Le'Veon Bell",
     "full_position": "Running Back",
     "full_team": "Pittsburgh Steelers",
@@ -25,27 +37,15 @@
   },
   {
     "profile": "true",
-    "name": "Odell Beckham Jr.",
-    "full_position": "Wide Reciever",
-    "full_team": "New York Giants",
-    "college": "Louisiana State",
-    "birthday": "November 5, 1992",
-    "height": "5'11\"",
-    "weight": "198",
-    "outlook": "A slight coaching overhaul for the Giants should be mean good thigns for Eli Manning and Beckham. Beckham is a gifted athlete and should continue to be an elite wide receiver in 2016",
-    "history": [{"2015": "Beckham Jr finished 5th in WR scoring.", "2014": "Beckham missed the first four games but finished the year on a strong note, and finished 5th in WR fantasy scoring."}]
-  },
-  {
-    "profile": "true",
-    "name": "Julio Jones",
-    "full_position": "Wide Receiver",
-    "full_team": "Atlanta Falcons",
-    "college": "Alabama",
-    "birthday": "February 3, 1989",
-    "height": "6'3\"",
-    "weight": "220",
-    "outlook": "Jones is an elite wide receiver talent. He gets a lot of targets and yards; however, the TDs tend to go the Falcons running backs.",
-    "history": [{"2015": "Jones was the most targeted receiver in the league and had the most passing yards. Finished #2 overall to Antonio Brown.", "2014": "Jones finished 8th overall."}]
+    "name": "Rob Gronkowski",
+    "full_position": "Tight End",
+    "full_team": "New England Patriots",
+    "college": "Arizona",
+    "birthday": "May 14, 1989",
+    "height": "6'6\"",
+    "weight": "265",
+    "outlook": "Gronk's performance may slip during Tom Brady's suspension. Over his career, Gronk has put up both yard and touchdowns. He has had issues with arm injuries, but if plays all or most of the season, Gronk should be the #1 fantasy TE.",
+    "history": [{"2015": "The number one fantasy tight end", "2014": "The number one fantasy tight end." }]
   },
   {
     "profile": "true",
@@ -61,6 +61,30 @@
   },
   {
     "profile": "true",
+    "name": "David Johnson",
+    "full_position": "Running Back",
+    "full_team": "Arizon Cardinals",
+    "college": "Northern Iowa",
+    "birthday": "December 16, 1991",
+    "height": "6'1\"",
+    "weight": "224",
+    "outlook": "Johnson should be the clear lead back in Arizona this year. While a promising athlete, he has yet to prove himself over a full season.",
+    "history": [{"2015": "Johnson really took off in the second half of 2013." }]
+  },
+  {
+    "profile": "true",
+    "name": "Julio Jones",
+    "full_position": "Wide Receiver",
+    "full_team": "Atlanta Falcons",
+    "college": "Alabama",
+    "birthday": "February 3, 1989",
+    "height": "6'3\"",
+    "weight": "220",
+    "outlook": "Jones is an elite wide receiver talent. He gets a lot of targets and yards; however, the TDs tend to go the Falcons running backs.",
+    "history": [{"2015": "Jones was the most targeted receiver in the league and had the most passing yards. Finished #2 overall to Antonio Brown.", "2014": "Jones finished 8th overall."}]
+  },
+  {
+    "profile": "true",
     "name": "Cam Newton",
     "full_position": "Quarterback",
     "full_team": "Carolina Panthers",
@@ -70,6 +94,18 @@
     "weight": "244",
     "outlook": "While not necessarily expected to repeat a stellar 2015 outing, Newton is a bonafide elite QB and should be considered at or near the top of QB rankings.",
     "history": [{"2015": "Newton was the top fantasy quarterback.", "2014": "Newton missed 2 games and played hurt in several others."}]
+  },
+  {
+    "profile": "true",
+    "name": "Adrian Peterson",
+    "full_position": "Running Back",
+    "full_team": "Minnesota Vikings",
+    "college": "Oklahoma",
+    "birthday": "March 21, 1985",
+    "height": "6'1\"",
+    "weight": "217",
+    "outlook": "The most dominant and consistent running back over the last decade. Peterson shows no signs of slowing down, but the fact is he is getting older.",
+    "history": [{"2015": "Finished 2nd overall in fantasy scoring, but had the most rushing yards and rushing touchdowns", "2014": "Peterson missed 2014 with legal trouble."}]
   },
   {
     "profile": "true",

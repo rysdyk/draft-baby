@@ -41,9 +41,8 @@ header {
 #full-list #drafted h2 {
   font-size: 16px; }
 
-#full-list #drafted ul {
-  list-style: none;
-  padding: 0; }
+#full-list #drafted td {
+  padding: 3px; }
 
 #full-list td {
   -webkit-touch-callout: none;
@@ -57,3 +56,6 @@ header {
   -ms-user-select: none;
   /* Internet Explorer/Edge */
   user-select: none; }
+
+.modal table td, .modal table th {
+  padding: 0 5px; }
