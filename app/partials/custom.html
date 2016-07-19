@@ -2,6 +2,11 @@
   <div class="row">
     <div class="col-xs-12">
       <ul ui-sortable="sortableOptions" ng-model="players">
+        <li>
+          <span>Rank</span>
+          <span>Name</span>
+          <span>Position</span>
+        </li>
         <li ng-repeat="player in players">
           <span>{{ player.rank }}</span>
           <span>{{ player.name }}</span>

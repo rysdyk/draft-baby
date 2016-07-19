@@ -60,5 +60,13 @@ header {
 .modal table td, .modal table th {
   padding: 0 5px; }
 
-#custom-list tr:nth-child(even) {
-  background-color: #ededed; }
+#custom-list ul {
+  list-style: none; }
+  #custom-list ul li {
+    padding: 3px; }
+    #custom-list ul li:nth-child(even) {
+      background-color: #ededed; }
+    #custom-list ul li span {
+      display: inline-block;
+      text-align: center;
+      width: 33%; }
