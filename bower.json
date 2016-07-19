@@ -23,6 +23,7 @@
     "jquery": "^3.0.0",
     "animate.css": "^3.5.2",
     "bootstrap": "^3.3.6",
-    "font-awesome": "fontawesome#^4.6.3"
+    "font-awesome": "fontawesome#^4.6.3",
+    "angular-ui-sortable": "^0.14.3"
   }
 }

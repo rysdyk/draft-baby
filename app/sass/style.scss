@@ -65,3 +65,7 @@ header {
     td, th { padding: 0 5px; }
   }
 }
+
+#custom-list {
+  tr:nth-child(even) { background-color: #ededed; }
+}

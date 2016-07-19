@@ -1,4 +1,4 @@
-var draftApp = angular.module('draftApp', ['ngRoute']);
+var draftApp = angular.module('draftApp', ['ngRoute', 'ui.sortable']);
 
 draftApp.controller('PlayerListController', [ '$scope', 'playersFactory', function($scope, playersFactory){
 
@@ -72,6 +72,26 @@ draftApp.controller('PlayerListController', [ '$scope', 'playersFactory', functi
   };
 }]);
 
+draftApp.controller('CustomListController', [ '$scope', 'playersFactory', function($scope, playersFactory){
+  getPlayers();
+
+  function getPlayers(){
+    playersFactory.getRankings()
+      .then(function(response){
+        $scope.players = response.data;
+      });
+  }
+
+  $scope.sortingLog = [];
+
+  $scope.sortableOptions = {
+    stop: function(e, ui) {
+      // this callback will update the order for the players
+      
+    }
+  };
+}]);
+
 draftApp.factory('playersFactory', ['$http', function($http){
   var playersFactory = {};
 
@@ -115,6 +135,9 @@ draftApp.config(['$routeProvider', function config($routeProvider){
     }).
     when('/position', {
       templateUrl: 'partials/by_position.html'
+    }).
+    when('/custom', {
+      templateUrl: 'partials/custom.html'
     }).
     otherwise({
       redirectTo: '/'
