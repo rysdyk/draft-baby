@@ -1,18 +1,34 @@
 <div class="container" ng-controller="CustomListController" id="custom-list">
   <div class="row">
-    <div class="col-xs-12">
+    <div class="col-xs-12 col-md-8">
       <ul ui-sortable="sortableOptions" ng-model="players">
         <li>
           <span>Rank</span>
           <span>Name</span>
           <span>Position</span>
+          <span>Draft</span>
         </li>
-        <li ng-repeat="player in players">
+        <li ng-repeat="player in players" ng-hide="player.drafted">
           <span>{{ player.rank }}</span>
           <span>{{ player.name }}</span>
           <span>{{ player.position | uppercase }}</span>
+          <span ng-click="draftPlayer(player)" class="draft"></span>
         </li>
       </ul>
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <h2>Drafted:</h2>
+      <div class="row">
+        <button id="undoDraft" class="btn btn-warning pull-left" ng-click="undraftLastPlayer()">Undo Last</button>
+        <button id="resetDraft" class="btn btn-danger pull-right" ng-click="undraftPlayers()">Reset</button>
+      </div>
+      <table>
+        <tr ng-repeat="player in selected | reverse" ng-click="undraftPlayer()" ng-show="player.drafted">
+          <td>{{ selected.length - $index }}</td>
+          <td>{{ player.position }}</td>
+          <td>{{ player.name }}</td>
+        </tr>
+      </table>
     </div>
   </div>
 </div>

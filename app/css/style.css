@@ -4,11 +4,19 @@ header {
   margin-bottom: 20px;
   padding: 20px 0;
   text-align: center; }
-  header a, header a:hover {
+  header a, header a:hover, header a:active, header a:visited {
     color: #fff;
     text-decoration: none; }
   header h1, header h3 {
     margin-top: 0; }
+
+footer {
+  background-color: #ededed;
+  color: #ccc;
+  padding: 20px 0;
+  text-align: center; }
+  footer span {
+    display: block; }
 
 #full-list .draftpick td {
   border-bottom: 1px solid red !important;
@@ -63,10 +71,22 @@ header {
 #custom-list ul {
   list-style: none; }
   #custom-list ul li {
-    padding: 3px; }
-    #custom-list ul li:nth-child(even) {
+    padding: 3px 0; }
+    #custom-list ul li:hover {
       background-color: #ededed; }
+    #custom-list ul li:first-child:hover {
+      background-color: #fff; }
     #custom-list ul li span {
       display: inline-block;
       text-align: center;
-      width: 33%; }
+      width: 24%; }
+      #custom-list ul li span.draft {
+        height: 20px; }
+
+#custom-list span.draft:hover {
+  cursor: pointer; }
+  #custom-list span.draft:hover:before {
+    content: "\f00c";
+    font-family: FontAwesome;
+    font-size: 16px;
+    position: absolute; }

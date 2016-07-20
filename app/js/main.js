@@ -87,8 +87,27 @@ draftApp.controller('CustomListController', [ '$scope', 'playersFactory', functi
   $scope.sortableOptions = {
     stop: function(e, ui) {
       // this callback will update the order for the players
-      
+
     }
+  };
+
+  $scope.selected = [];
+
+  $scope.draftPlayer = function(player){
+    player.drafted = true;
+    $scope.selected.push(player);
+  };
+
+  $scope.undraftPlayers = function(){
+    angular.forEach($scope.players, function(value, key){
+      value.drafted = false;
+    });
+    $scope.selected = [];
+  };
+
+  $scope.undraftLastPlayer = function(){
+    var last = $scope.selected.pop();
+    last.drafted = false;
   };
 }]);
 

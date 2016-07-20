@@ -9,12 +9,21 @@ header {
   padding: 20px 0;
   text-align: center;
 
-  a, a:hover {
+  a, a:hover, a:active, a:visited {
     color: #fff;
     text-decoration: none;
   }
 
   h1, h3 { margin-top: 0; }
+}
+
+footer {
+  background-color: #ededed;
+  color: #ccc;
+  padding: 20px 0;
+  text-align: center;
+
+  span { display: block; }
 }
 
 #full-list {
@@ -70,16 +79,31 @@ header {
   ul {
     list-style: none;
     li {
-      padding: 3px;
-      &:nth-child(even) { background-color: #ededed; }
+      padding: 3px 0;
+      &:hover { background-color: #ededed; }
+      &:first-child:hover { background-color: #fff; }
 
       span {
         display: inline-block;
         text-align: center;
-        width: 33%;
+        width: 24%;
+
+        &.draft {
+          height: 20px;
+        }
       }
     }
 
+  }
+
+  span.draft:hover {
+    cursor: pointer;
+    &:before {
+      content: "\f00c";
+      font-family: FontAwesome;
+      font-size: 16px;
+      position: absolute;
+    }
   }
 
 }
