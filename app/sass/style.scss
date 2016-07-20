@@ -17,6 +17,8 @@ header {
   h1, h3 { margin-top: 0; }
 }
 
+header + .container { min-height: 500px; }
+
 footer {
   background-color: #ededed;
   color: #ccc;
@@ -79,6 +81,7 @@ footer {
   ul {
     list-style: none;
     li {
+      cursor: pointer;
       padding: 3px 0;
       &:hover { background-color: #ededed; }
       &:first-child:hover { background-color: #fff; }
