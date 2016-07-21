@@ -5,8 +5,7 @@ header {
   padding: 20px 0;
   text-align: center; }
   header a, header a:hover, header a:active, header a:visited {
-    color: #fff !important;
-    text-decoration: none !important; }
+    color: #fff; }
   header h1, header h3 {
     margin-top: 0; }
 
