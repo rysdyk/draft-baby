@@ -10,8 +10,8 @@ header {
   text-align: center;
 
   a, a:hover, a:active, a:visited {
-    color: #fff;
-    text-decoration: none;
+    color: #fff !important;
+    text-decoration: none !important;
   }
 
   h1, h3 { margin-top: 0; }
@@ -81,7 +81,6 @@ footer {
   ul {
     list-style: none;
     li {
-      cursor: pointer;
       padding: 3px 0;
       &:hover { background-color: #ededed; }
       &:first-child:hover { background-color: #fff; }
@@ -89,7 +88,9 @@ footer {
       span {
         display: inline-block;
         text-align: center;
-        width: 24%;
+        width: 19%;
+
+        &:first-child { cursor: pointer; }
 
         &.draft {
           height: 20px;

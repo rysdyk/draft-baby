@@ -5,8 +5,8 @@ header {
   padding: 20px 0;
   text-align: center; }
   header a, header a:hover, header a:active, header a:visited {
-    color: #fff;
-    text-decoration: none; }
+    color: #fff !important;
+    text-decoration: none !important; }
   header h1, header h3 {
     margin-top: 0; }
 
@@ -74,7 +74,6 @@ footer {
 #custom-list ul {
   list-style: none; }
   #custom-list ul li {
-    cursor: pointer;
     padding: 3px 0; }
     #custom-list ul li:hover {
       background-color: #ededed; }
@@ -83,7 +82,9 @@ footer {
     #custom-list ul li span {
       display: inline-block;
       text-align: center;
-      width: 24%; }
+      width: 19%; }
+      #custom-list ul li span:first-child {
+        cursor: pointer; }
       #custom-list ul li span.draft {
         height: 20px; }
 

@@ -28,7 +28,6 @@
     </div>
     <div class="col-xs-12 col-md-4">
       <!-- <label>Search: <input ng-model="searchText"></label> -->
-      <a href="#/custom">Use Customizable Draft List</a>
     </div>
   </div>
   <div class="row">
@@ -69,7 +68,7 @@
           </th>
           <th>Draft</th>
         </tr>
-        <tr ng-repeat="player in players | orderBy:propertyName:reverse | filter:searchText | filter: greaterThan('adp', 0)" ng-if="!player.drafted">
+        <tr ng-repeat="player in players | orderBy:propertyName:reverse | filter:searchText | filter: greaterThan('adp', 0)" ng-hide="player.drafted">
           <td>{{ player.rank }}</td>
           <td ng-if="player.profile == 'true' ">
             <a href="" data-toggle="modal" data-target="#myModal-{{player.rank}}">{{ player.name }}</a>
@@ -146,7 +145,7 @@
         <button id="resetDraft" class="btn btn-danger pull-right" ng-click="undraftPlayers()">Reset</button>
       </div>
       <table>
-        <tr ng-repeat="player in selected | reverse" ng-click="undraftPlayer()" ng-if="player.drafted">
+        <tr ng-repeat="player in selected | reverse" ng-click="undraftPlayer()" ng-show="player.drafted">
           <td>{{ selected.length - $index }}</td>
           <td>{{ player.position }}</td>
           <td>{{ player.name }}</td>
