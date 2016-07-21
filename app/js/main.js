@@ -60,7 +60,6 @@ draftApp.controller('PlayerListController', [ '$scope', 'playersFactory', functi
   $scope.sortReverse  = false;
 
   $scope.sortBy = function(propertyName) {
-    console.log("Hello");
     $scope.reverse = ($scope.propertyName === propertyName) ? !$scope.reverse : false;
     $scope.propertyName = propertyName;
   };

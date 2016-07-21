@@ -33,13 +33,18 @@ footer {
 
   th { cursor: pointer; }
 
-  td.draft:hover {
-    cursor: pointer;
+  td.draft {
     &:before {
+      color: #ededed;
       content: "\f00c";
       font-family: FontAwesome;
       font-size: 16px;
       position: absolute;
+    }
+
+    &:hover:before {
+      color: #32CD32;
+      cursor: pointer;
     }
   }
 
@@ -82,7 +87,7 @@ footer {
     list-style: none;
     li {
       padding: 3px 0;
-      &:hover { background-color: #ededed; }
+      &:hover { background-color: #efefef; }
       &:first-child:hover { background-color: #fff; }
 
       span {
@@ -95,18 +100,29 @@ footer {
         &.draft {
           height: 20px;
         }
+
+        &.first { width: 10%; }
+        &.second { width: 10%; }
+        &.third { width: 55%; }
+        &.fourth { width: 10%; }
+        &.fifth { width: 10%; }
       }
     }
 
   }
 
-  span.draft:hover {
-    cursor: pointer;
+  span.draft {
     &:before {
+      color: #ededed;
       content: "\f00c";
       font-family: FontAwesome;
       font-size: 16px;
       position: absolute;
+    }
+
+    &:hover:before {
+      color: #32CD32;
+      cursor: pointer;
     }
   }
 

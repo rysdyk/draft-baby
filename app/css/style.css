@@ -28,13 +28,16 @@ footer {
 #full-list th {
   cursor: pointer; }
 
-#full-list td.draft:hover {
+#full-list td.draft:before {
+  color: #ededed;
+  content: "\f00c";
+  font-family: FontAwesome;
+  font-size: 16px;
+  position: absolute; }
+
+#full-list td.draft:hover:before {
+  color: #32CD32;
   cursor: pointer; }
-  #full-list td.draft:hover:before {
-    content: "\f00c";
-    font-family: FontAwesome;
-    font-size: 16px;
-    position: absolute; }
 
 #full-list span.sortable {
   color: #31b0d5; }
@@ -76,7 +79,7 @@ footer {
   #custom-list ul li {
     padding: 3px 0; }
     #custom-list ul li:hover {
-      background-color: #ededed; }
+      background-color: #efefef; }
     #custom-list ul li:first-child:hover {
       background-color: #fff; }
     #custom-list ul li span {
@@ -87,11 +90,24 @@ footer {
         cursor: pointer; }
       #custom-list ul li span.draft {
         height: 20px; }
+      #custom-list ul li span.first {
+        width: 10%; }
+      #custom-list ul li span.second {
+        width: 10%; }
+      #custom-list ul li span.third {
+        width: 55%; }
+      #custom-list ul li span.fourth {
+        width: 10%; }
+      #custom-list ul li span.fifth {
+        width: 10%; }
 
-#custom-list span.draft:hover {
+#custom-list span.draft:before {
+  color: #ededed;
+  content: "\f00c";
+  font-family: FontAwesome;
+  font-size: 16px;
+  position: absolute; }
+
+#custom-list span.draft:hover:before {
+  color: #32CD32;
   cursor: pointer; }
-  #custom-list span.draft:hover:before {
-    content: "\f00c";
-    font-family: FontAwesome;
-    font-size: 16px;
-    position: absolute; }
