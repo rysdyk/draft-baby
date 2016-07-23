@@ -12,7 +12,7 @@
         <li ng-repeat="player in players" ng-hide="player.drafted">
           <span class="first"><i class="glyphicon glyphicon-menu-hamburger"></i></span>
           <span class="second">{{ player.rank }}</span>
-          <span class="third">{{ player.name }}</span>
+          <span class="third"><a ng-href="http://games.espn.go.com/ffl/tools/projections?display=alt&avail=-1&search={{ player.name | lastNameUrl }}" target="_blank">{{ player.name }}</a></span>
           <span class="fourth">{{ player.position | uppercase }}</span>
           <span ng-click="draftPlayer(player)" class="fifth draft"></span>
         </li>

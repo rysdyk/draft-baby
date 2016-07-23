@@ -86,7 +86,7 @@ footer {
       text-align: center;
       width: 19%; }
       #custom-list ul li span:first-child {
-        cursor: pointer; }
+        cursor: move; }
       #custom-list ul li span.draft {
         height: 20px; }
       #custom-list ul li span.first {
@@ -100,13 +100,16 @@ footer {
       #custom-list ul li span.fifth {
         width: 10%; }
 
-#custom-list span.draft:before {
-  color: #ededed;
-  content: "\f00c";
-  font-family: FontAwesome;
-  font-size: 16px;
-  position: absolute; }
-
-#custom-list span.draft:hover:before {
-  color: #32CD32;
+#custom-list span.draft {
   cursor: pointer; }
+  #custom-list span.draft:before {
+    color: #ededed;
+    content: "\f00c";
+    font-family: FontAwesome;
+    font-size: 16px;
+    position: absolute; }
+  #custom-list span.draft:hover:before {
+    color: #32CD32; }
+
+#custom-list table td {
+  padding: 3px; }

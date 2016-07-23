@@ -146,6 +146,14 @@ draftApp.filter('reverse', function(){
   };
 });
 
+draftApp.filter('lastNameUrl', function(){
+  return function(name){
+    var splitName = name.split(" ");
+    splitName.shift();
+    return lastName = splitName.join("%20");
+  };
+})
+
 draftApp.config(['$routeProvider', function config($routeProvider){
   $routeProvider.
     when('/', {

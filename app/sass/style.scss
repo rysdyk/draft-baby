@@ -94,7 +94,7 @@ footer {
         text-align: center;
         width: 19%;
 
-        &:first-child { cursor: pointer; }
+        &:first-child { cursor: move; }
 
         &.draft {
           height: 20px;
@@ -111,6 +111,8 @@ footer {
   }
 
   span.draft {
+    cursor: pointer;
+
     &:before {
       color: #ededed;
       content: "\f00c";
@@ -121,8 +123,9 @@ footer {
 
     &:hover:before {
       color: #32CD32;
-      cursor: pointer;
     }
   }
+
+  table td { padding: 3px; }
 
 }

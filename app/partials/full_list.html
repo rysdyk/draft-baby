@@ -26,14 +26,17 @@
       <button class="btn btn-primary" id="draftPosEst">Submit</button>
       <button class="btn btn-default" id="draftPosClear">Clear</button>
     </div>
-    <div class="col-xs-12 col-md-4">
-      <!-- <label>Search: <input ng-model="searchText"></label> -->
+
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <label>Search: <input ng-model="searchText"></label>
     </div>
   </div>
   <div class="row">
 
     <div id="fullPlayerList" class="col-xs-12 col-md-8">
-      <span class="disclaimer">Standard league scoring data from FantasyPros. Updated: July 1, 2016</span>
+      <span class="disclaimer">Standard league ranking data from FantasyPros. Updated: July 1, 2016</span>
       <table class="table">
         <tr>
           <th ng-click="sortBy('rank')">
@@ -70,9 +73,10 @@
         </tr>
         <tr ng-repeat="player in players | orderBy:propertyName:reverse | filter:searchText | filter: greaterThan('adp', 0)" ng-hide="player.drafted">
           <td>{{ player.rank }}</td>
+          <!--
           <td ng-if="player.profile == 'true' ">
             <a href="" data-toggle="modal" data-target="#myModal-{{player.rank}}">{{ player.name }}</a>
-            <!-- Modal -->
+            <!-- Modal
             <div class="modal fade" id="myModal-{{player.rank}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -81,6 +85,7 @@
                     <h4 class="modal-title" id="myModalLabel">{{ player.name }}</h4>
                   </div>
                   <div class="modal-body">
+                    <a ng-href="http://games.espn.go.com/ffl/tools/projections?display=alt&avail=-1&search={{ player.name | lastNameUrl }}" target="_blank">ESPN Profile</a>
                     <h3>Outlook</h3>
                     <p>2016: {{ player.outlook }}</p>
                     <hr />
@@ -127,6 +132,8 @@
             </div>
           </td>
           <td ng-if="player.profile != 'true'">{{ player.name }}</td>
+        -->
+          <td><a ng-href="http://games.espn.go.com/ffl/tools/projections?display=alt&avail=-1&search={{ player.name | lastNameUrl }}" target="_blank">{{ player.name }}</a></td>
           <td>{{ player.position | uppercase }}</td>
           <td>{{ player.team }}</td>
           <td>{{ player.bye_week }}</td>
@@ -138,7 +145,7 @@
         </tr>
       </table>
     </div>
-    <div id="drafted" class="col-md-3">
+    <div id="drafted" class="col-md-4">
       <h2>Drafted:</h2>
       <div class="row">
         <button id="undoDraft" class="btn btn-warning pull-left" ng-click="undraftLastPlayer()">Undo Last</button>
