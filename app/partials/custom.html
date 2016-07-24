@@ -9,6 +9,7 @@
           <span class="fourth">Position</span>
           <span class="fifth">Draft</span>
         </li>
+        <!-- orderBy:['customSort', 'rankings'] -->
         <li ng-repeat="player in players" ng-hide="player.drafted">
           <span class="first"><i class="glyphicon glyphicon-menu-hamburger"></i></span>
           <span class="second">{{ player.rank }}</span>

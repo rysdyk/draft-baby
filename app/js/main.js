@@ -18,21 +18,21 @@ draftApp.controller('PlayerListController', [ '$scope', 'playersFactory', functi
         playersFactory.getPassing()
         .then(function(response){
           $scope.passing = response.data;
-        })
-        .then( function(){
-          angular.forEach($scope.players, function(value, key){
-            var match  = $scope.profiles.filter( function(x){ return value.name == x.name; });
-            match = match[0];
-            for (var prop in match ) {
-              $scope.players[key][prop] = match[prop];
-            }
-            var pass_match = $scope.passing.filter( function(x){ return value.name == x.Name; });
-            pass_match = pass_match[0];
-            for (var prp in pass_match ) {
-              $scope.players[key][prp] = pass_match[prp];
-            }
-          });
         });
+        // .then( function(){
+        //   angular.forEach($scope.players, function(value, key){
+        //     var match  = $scope.profiles.filter( function(x){ return value.name == x.name; });
+        //     match = match[0];
+        //     for (var prop in match ) {
+        //       $scope.players[key][prop] = match[prop];
+        //     }
+        //     var pass_match = $scope.passing.filter( function(x){ return value.name == x.Name; });
+        //     pass_match = pass_match[0];
+        //     for (var prp in pass_match ) {
+        //       $scope.players[key][prp] = pass_match[prp];
+        //     }
+        //   });
+        // });
       });
     });
   }
@@ -71,22 +71,44 @@ draftApp.controller('PlayerListController', [ '$scope', 'playersFactory', functi
   };
 }]);
 
-draftApp.controller('CustomListController', [ '$scope', 'playersFactory', function($scope, playersFactory){
+draftApp.controller('CustomListController', [ '$scope', 'playersFactory', 'orderByFilter', function($scope, playersFactory, orderBy){
   getPlayers();
 
   function getPlayers(){
     playersFactory.getRankings()
       .then(function(response){
         $scope.players = response.data;
+      })
+      .then( function(){
+        if ( localStorage.getItem("customRank") ) {
+          var customRank = JSON.parse(localStorage.getItem("customRank"));
+          angular.forEach($scope.players, function(value, key){
+            var match  = customRank.filter( function(x){ return value.name == x[0]; });
+            match = match[0];
+            for (var prop in match ) {
+              $scope.players[key].customrank = match[prop];
+            }
+          });
+        }
+      })
+      .then( function(){
+        if ( localStorage.getItem("customRank") ) {
+          $scope.players = orderBy($scope.players, 'customrank');
+        }
       });
   }
 
-  $scope.sortingLog = [];
+  var customList = [];
 
   $scope.sortableOptions = {
     stop: function(e, ui) {
       // this callback will update the order for the players
-
+      customList = [];
+      angular.forEach( $scope.players, function(value, key){
+        var newRank = [value.name, key];
+        customList.push( newRank );
+      });
+      localStorage.setItem("customRank", JSON.stringify(customList) );
     }
   };
 
@@ -150,9 +172,10 @@ draftApp.filter('lastNameUrl', function(){
   return function(name){
     var splitName = name.split(" ");
     splitName.shift();
-    return lastName = splitName.join("%20");
+    var lastName = splitName.join("%20");
+    return lastName;
   };
-})
+});
 
 draftApp.config(['$routeProvider', function config($routeProvider){
   $routeProvider.
