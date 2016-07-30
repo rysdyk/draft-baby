@@ -1,0 +1,47 @@
+#full-list {
+  .draftpick td { border-bottom: 1px solid red !important; border-top: 1px solid red !important; }
+
+  th { cursor: pointer; }
+
+  td.draft {
+    &:before {
+      color: #ededed;
+      content: "\f00c";
+      font-family: FontAwesome;
+      font-size: 16px;
+      position: absolute;
+    }
+
+    &:hover:before {
+      color: #32CD32;
+      cursor: pointer;
+    }
+  }
+
+  span.sortable {
+    color: #31b0d5;
+  }
+
+  .filter-tools {
+    margin-bottom: 10px;
+  }
+
+  .disclaimer {
+    font: 10px/12px Arial, sans-serif;
+    color: #333;
+  }
+
+  tr.fade-out { background-color: #eee; }
+
+  #drafted {
+    h2 {
+      font-size: 16px;
+    }
+
+    td {
+      padding: 3px;
+    }
+  }
+
+  td { @include noselect; }
+}

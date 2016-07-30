@@ -1,0 +1,30 @@
+header {
+  background-color: $spartan-green;
+  color: #fff;
+  margin-bottom: 20px;
+  padding: 20px 0;
+  text-align: center;
+
+  a, a:hover, a:active, a:visited {
+    color: #fff;
+  }
+
+  h1, h3 { margin-top: 0; }
+}
+
+header + .container { min-height: 500px; }
+
+footer {
+  background-color: #ededed;
+  color: #ccc;
+  padding: 20px 0;
+  text-align: center;
+
+  span { display: block; }
+}
+
+.modal {
+  table {
+    td, th { padding: 0 5px; }
+  }
+}

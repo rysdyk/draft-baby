@@ -1,0 +1,52 @@
+#custom-list {
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      padding: 3px 0;
+      &:hover { background-color: #efefef; }
+
+      &:first-child {
+        span { font-weight: bold; }
+        &:hover { background-color: #fff; } // prevents hover affect on heading li
+      }
+
+      span {
+        display: inline-block;
+        text-align: center;
+        width: 19%;
+
+        &:first-child { cursor: move; }
+
+        &.draft {
+          height: 20px;
+        }
+
+        &.first { width: 10%; }
+        &.second { width: 10%; }
+        &.third { width: 55%; }
+        &.fourth { width: 10%; }
+        &.fifth { width: 10%; }
+      }
+    }
+  }
+
+  span.draft {
+    cursor: pointer;
+
+    &:before {
+      color: #ededed;
+      content: "\f00c";
+      font-family: FontAwesome;
+      font-size: 16px;
+      position: relative;
+    }
+
+    &:hover:before {
+      color: #32CD32;
+    }
+  }
+
+  table td { padding: 3px; }
+}

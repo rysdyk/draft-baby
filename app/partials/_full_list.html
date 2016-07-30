@@ -35,8 +35,8 @@
   </div>
   <div class="row">
 
-    <div id="fullPlayerList" class="col-xs-12 col-md-8">
-      <span class="disclaimer">Standard league ranking data from FantasyPros. Updated: July 1, 2016</span>
+    <div id="fullPlayerList" class="col-xs-12 col-md-9">
+      <span class="disclaimer">Standard league ranking data from FantasyPros. Updated: July 29, 2016</span>
       <table class="table">
         <tr>
           <th ng-click="sortBy('rank')">
@@ -145,19 +145,8 @@
         </tr>
       </table>
     </div>
-    <div id="drafted" class="col-md-4">
-      <h2>Drafted:</h2>
-      <div class="row">
-        <button id="undoDraft" class="btn btn-warning pull-left" ng-click="undraftLastPlayer()">Undo Last</button>
-        <button id="resetDraft" class="btn btn-danger pull-right" ng-click="undraftPlayers()">Reset</button>
-      </div>
-      <table>
-        <tr ng-repeat="player in selected | reverse" ng-show="player.drafted">
-          <td>{{ selected.length - $index }}</td>
-          <td>{{ player.position }}</td>
-          <td>{{ player.name }}</td>
-        </tr>
-      </table>
+    <div id="drafted" class="col-md-3">
+      <ng-include src="'partials/_drafted.html'"></ng-include>
     </div>
   </div>
 </div>

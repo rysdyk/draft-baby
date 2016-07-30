@@ -1,10 +1,15 @@
 <div ng-controller="CustomListController" id="custom-list">
   <div class="row">
-    <div class="col-xs-12 col-md-8">
+    <div class="col-xs-12">
+      <a ng-click="clearCustomRank()" style="cursor: pointer;">Clear Custom Rank</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-9">
       <ul ui-sortable="sortableOptions" ng-model="players">
         <li>
           <span class="first">Sort</span>
-          <span class="second">Rank</span>
+          <span class="second">FP Rank</span>
           <span class="third">Name</span>
           <span class="fourth">Position</span>
           <span class="fifth">Draft</span>
@@ -19,19 +24,13 @@
         </li>
       </ul>
     </div>
-    <div class="col-xs-12 col-md-4">
-      <h2>Drafted:</h2>
-      <div class="row">
-        <button id="undoDraft" class="btn btn-warning pull-left" ng-click="undraftLastPlayer()">Undo Last</button>
-        <button id="resetDraft" class="btn btn-danger pull-right" ng-click="undraftPlayers()">Reset</button>
-      </div>
-      <table>
-        <tr ng-repeat="player in selected | reverse" ng-click="undraftPlayer()" ng-show="player.drafted">
-          <td>{{ selected.length - $index }}</td>
-          <td>{{ player.position }}</td>
-          <td>{{ player.name }}</td>
-        </tr>
-      </table>
+    <div class="col-xs-12 col-md-3">
+      <ng-include src="'partials/_drafted.html'"></ng-include>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <span class="disclaimer">Standard league ranking data from FantasyPros. Updated: July 29, 2016</span>
     </div>
   </div>
 </div>

@@ -80,8 +80,8 @@ draftApp.controller('CustomListController', [ '$scope', 'playersFactory', 'order
         $scope.players = response.data;
       })
       .then( function(){
-        if ( localStorage.getItem("customRank") ) {
-          var customRank = JSON.parse(localStorage.getItem("customRank"));
+        if ( localStorage.getItem("DraftBabyCustomRank") ) {
+          var customRank = JSON.parse(localStorage.getItem("DraftBabyCustomRank"));
           angular.forEach($scope.players, function(value, key){
             var match  = customRank.filter( function(x){ return value.name == x[0]; });
             match = match[0];
@@ -92,7 +92,7 @@ draftApp.controller('CustomListController', [ '$scope', 'playersFactory', 'order
         }
       })
       .then( function(){
-        if ( localStorage.getItem("customRank") ) {
+        if ( localStorage.getItem("DraftBabyCustomRank") ) {
           $scope.players = orderBy($scope.players, 'customrank');
         }
       });
@@ -108,9 +108,46 @@ draftApp.controller('CustomListController', [ '$scope', 'playersFactory', 'order
         var newRank = [value.name, key];
         customList.push( newRank );
       });
-      localStorage.setItem("customRank", JSON.stringify(customList) );
+      localStorage.setItem("DraftBabyCustomRank", JSON.stringify(customList) );
     }
   };
+
+  $scope.selected = [];
+
+  $scope.draftPlayer = function(player){
+    player.drafted = true;
+    $scope.selected.push(player);
+  };
+
+  $scope.undraftPlayers = function(){
+    angular.forEach($scope.players, function(value, key){
+      value.drafted = false;
+    });
+    $scope.selected = [];
+  };
+
+  $scope.undraftLastPlayer = function(){
+    var last = $scope.selected.pop();
+    last.drafted = false;
+  };
+
+  $scope.clearCustomRank = function(){
+    localStorage.removeItem("DraftBabyCustomRank");
+    $scope.players = orderBy($scope.players, 'rank');
+  };
+}]);
+
+draftApp.controller('PositionsListController', [ '$scope', 'playersFactory', function($scope, playersFactory){
+  getPlayers();
+
+  function getPlayers(){
+    playersFactory.getRankings()
+      .then(function(response){
+        $scope.players = response.data;
+      });
+  }
+
+  $scope.espnurl = "http://games.espn.go.com/ffl/tools/projections?display=alt&avail=-1&search=";
 
   $scope.selected = [];
 
@@ -136,7 +173,7 @@ draftApp.factory('playersFactory', ['$http', function($http){
   var playersFactory = {};
 
   playersFactory.getRankings = function(){
-    return $http.get('../lib/fantasypros.json');
+    return $http.get('../lib/fantasypros-std-7-29-2016.json');
   };
 
   playersFactory.getProfiles = function(){
@@ -158,7 +195,7 @@ draftApp.filter('ageFilter', function() {
    }
 
    return function(birthdate) {
-         return calculateAge(birthdate);
+      return calculateAge(birthdate);
    };
 });
 
@@ -177,16 +214,23 @@ draftApp.filter('lastNameUrl', function(){
   };
 });
 
+draftApp.filter('shortPosition', function(){
+  return function(position){
+    var shortPosition = position.slice(0, 2);
+    return shortPosition;
+  };
+});
+
 draftApp.config(['$routeProvider', function config($routeProvider){
   $routeProvider.
     when('/', {
-      templateUrl: 'partials/full_list.html',
+      templateUrl: 'partials/_full_list.html',
     }).
     when('/position', {
-      templateUrl: 'partials/by_position.html'
+      templateUrl: 'partials/_position.html'
     }).
     when('/custom', {
-      templateUrl: 'partials/custom.html'
+      templateUrl: 'partials/_custom.html'
     }).
     otherwise({
       redirectTo: '/'
