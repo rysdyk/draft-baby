@@ -2,6 +2,7 @@
   padding-bottom: 60px;
 
   h2 {
+    text-decoration: underline;
     font-size: 14px;
   }
 
@@ -14,36 +15,46 @@
     li {
       overflow: hidden;
 
+      &.heading {
+        font-weight: bold;
+        overflow: hidden;
+
+        span {
+          &.rank { width: 30px; }
+
+          &.stats {
+            &:hover:before {
+              background-color: #222;
+              background-color: rgba(#222, .8);
+              color: #fff;
+              content: 'High Rank / Low Rank / ADP ';
+              display: block;
+              height: 20px;
+              margin-left: -120px;
+              margin-top: -20px;
+              position: absolute;
+              text-align: center;
+              width: 240px;
+              z-index: 10;
+            }
+          }
+
+          &.draft:before { display: none; }
+        }
+      }
+
       span {
         display: block;
         float: left;
         //position: relative;
 
         &:first-child {
-          display: inline-block;
           text-align: left;
           width: 30px;
         }
 
         &.name {
           width: 110px;
-        }
-
-        &.vital-stats {
-          &:hover:before {
-            background-color: #222;
-            background-color: rgba(#222, .8);
-            color: #fff;
-            content: 'High Rank / Low Rank / ADP ';
-            display: block;
-            height: 20px;
-            margin-left: -120px;
-            margin-top: -20px;
-            position: absolute;
-            text-align: center;
-            width: 240px;
-            z-index: 10;
-          }
         }
 
         &.draft {
