@@ -139,7 +139,7 @@ footer {
           width: 110px; }
         #position ul.position-list li span.vital-stats:hover:before {
           background-color: #222;
-          background-color: rgba(34, 34, 34, 0.7);
+          background-color: rgba(34, 34, 34, 0.8);
           color: #fff;
           content: 'High Rank / Low Rank / ADP ';
           display: block;
