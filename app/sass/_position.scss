@@ -32,10 +32,12 @@
         &.vital-stats {
           &:hover:before {
             background-color: #222;
+            background-color: rgba(#222, .7);
             color: #fff;
             content: 'High Rank / Low Rank / ADP ';
             display: block;
             height: 20px;
+            margin-left: -120px;
             margin-top: -20px;
             position: absolute;
             text-align: center;
