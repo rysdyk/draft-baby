@@ -1,6 +1,6 @@
 // FULL LIST
 
-draftApp.controller('PlayerListController', [ '$scope', 'playersFactory', function($scope, playersFactory){
+draftApp.controller('PlayerListController', [ '$scope', 'playersFactory', 'draftedFactory', function($scope, playersFactory, draftedFactory){
 
   getPlayers();
 
@@ -19,42 +19,11 @@ draftApp.controller('PlayerListController', [ '$scope', 'playersFactory', functi
         .then(function(response){
           $scope.passing = response.data;
         });
-        // .then( function(){
-        //   angular.forEach($scope.players, function(value, key){
-        //     var match  = $scope.profiles.filter( function(x){ return value.name == x.name; });
-        //     match = match[0];
-        //     for (var prop in match ) {
-        //       $scope.players[key][prop] = match[prop];
-        //     }
-        //     var pass_match = $scope.passing.filter( function(x){ return value.name == x.Name; });
-        //     pass_match = pass_match[0];
-        //     for (var prp in pass_match ) {
-        //       $scope.players[key][prp] = pass_match[prp];
-        //     }
-        //   });
-        // });
       });
     });
   }
 
-  $scope.selected = [];
-
-  $scope.draftPlayer = function(player){
-    player.drafted = true;
-    $scope.selected.push(player);
-  };
-
-  $scope.undraftPlayers = function(){
-    angular.forEach($scope.players, function(value, key){
-      value.drafted = false;
-    });
-    $scope.selected = [];
-  };
-
-  $scope.undraftLastPlayer = function(){
-    var last = $scope.selected.pop();
-    last.drafted = false;
-  };
+  draftedFactory($scope);
 
   $scope.propertyName = 'rank';
   $scope.sortReverse  = false;
@@ -73,7 +42,7 @@ draftApp.controller('PlayerListController', [ '$scope', 'playersFactory', functi
 
 // CUSTOM
 
-draftApp.controller('CustomListController', [ '$scope', 'playersFactory', 'orderByFilter', function($scope, playersFactory, orderBy){
+draftApp.controller('CustomListController', [ '$scope', 'playersFactory', 'draftedFactory', 'orderByFilter', function($scope, playersFactory, draftedFactory, orderBy){
   getPlayers();
 
   function getPlayers(){
@@ -114,24 +83,7 @@ draftApp.controller('CustomListController', [ '$scope', 'playersFactory', 'order
     }
   };
 
-  $scope.selected = [];
-
-  $scope.draftPlayer = function(player){
-    player.drafted = true;
-    $scope.selected.push(player);
-  };
-
-  $scope.undraftPlayers = function(){
-    angular.forEach($scope.players, function(value, key){
-      value.drafted = false;
-    });
-    $scope.selected = [];
-  };
-
-  $scope.undraftLastPlayer = function(){
-    var last = $scope.selected.pop();
-    last.drafted = false;
-  };
+  draftedFactory($scope);
 
   $scope.clearCustomRank = function(){
     localStorage.removeItem("DraftBabyCustomRank");
@@ -141,7 +93,7 @@ draftApp.controller('CustomListController', [ '$scope', 'playersFactory', 'order
 
 // POSITION LIST
 
-draftApp.controller('PositionsListController', [ '$scope', 'playersFactory', 'orderByFilter', function($scope, playersFactory, orderBy){
+draftApp.controller('PositionsListController', [ '$scope', 'playersFactory', 'draftedFactory', 'orderByFilter', function($scope, playersFactory, draftedFactory, orderBy){
   getPlayers();
 
   function getPlayers(){
@@ -171,22 +123,5 @@ draftApp.controller('PositionsListController', [ '$scope', 'playersFactory', 'or
 
   $scope.espnurl = "http://games.espn.go.com/ffl/tools/projections?display=alt&avail=-1&search=";
 
-  $scope.selected = [];
-
-  $scope.draftPlayer = function(player){
-    player.drafted = true;
-    $scope.selected.push(player);
-  };
-
-  $scope.undraftPlayers = function(){
-    angular.forEach($scope.players, function(value, key){
-      value.drafted = false;
-    });
-    $scope.selected = [];
-  };
-
-  $scope.undraftLastPlayer = function(){
-    var last = $scope.selected.pop();
-    last.drafted = false;
-  };
+  draftedFactory($scope);
 }]);

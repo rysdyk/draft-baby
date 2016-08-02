@@ -20,6 +20,30 @@ draftApp.factory('playersFactory', ['$http', function($http){
   return playersFactory;
 }]);
 
+draftApp.factory('draftedFactory', function(){
+  return function($scope){
+    $scope.selected = [];
+
+    $scope.draftPlayer = function(player){
+      player.drafted = true;
+      $scope.selected.push(player);
+    };
+
+    $scope.undraftPlayers = function(){
+      angular.forEach($scope.players, function(value, key){
+        value.drafted = false;
+      });
+      $scope.selected = [];
+    };
+
+    $scope.undraftLastPlayer = function(){
+      var last = $scope.selected.pop();
+      last.drafted = false;
+    };
+
+  }
+});
+
 // filters
 draftApp.filter('ageFilter', function() {
    function calculateAge(birthday) { // birthday is a date
