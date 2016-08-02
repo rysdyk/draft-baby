@@ -1,0 +1,16 @@
+<ul class="position-heading">
+  <li class="heading">
+    <span class="rank" data-toggle="tooltip" data-placement="top" title="FantasyPros Expert Rank">FP</span>
+    <span ng-show="customRankSet" class="custom" data-toggle="tooltip" data-placement="top" title="Your Custom Rank">C</span>
+    <span class="name">Name</span>
+    <span class="bye">Bye</span>
+    <span class="stats" data-toggle="tooltip" data-placement="top" title="High Rank / Low Rank / ADP">Stats</span>
+    <span class="todraft" data-toggle="tooltip" data-placement="top" title="Click when a player has been drafted to add to draft history">D</span>
+  </li>
+</ul>
+
+<script>
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>

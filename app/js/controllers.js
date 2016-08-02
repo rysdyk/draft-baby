@@ -141,13 +141,31 @@ draftApp.controller('CustomListController', [ '$scope', 'playersFactory', 'order
 
 // POSITION LIST
 
-draftApp.controller('PositionsListController', [ '$scope', 'playersFactory', function($scope, playersFactory){
+draftApp.controller('PositionsListController', [ '$scope', 'playersFactory', 'orderByFilter', function($scope, playersFactory, orderBy){
   getPlayers();
 
   function getPlayers(){
     playersFactory.getRankings()
       .then(function(response){
         $scope.players = response.data;
+      })
+      .then( function(){
+        if ( localStorage.getItem("DraftBabyCustomRank") ) {
+          var customRank = JSON.parse(localStorage.getItem("DraftBabyCustomRank"));
+          $scope.customRankSet = true;
+          angular.forEach($scope.players, function(value, key){
+            var match  = customRank.filter( function(x){ return value.name == x[0]; });
+            match = match[0];
+            for (var prop in match ) {
+              $scope.players[key].customrank = match[prop];
+            }
+          });
+        }
+      })
+      .then( function(){
+        if ( localStorage.getItem("DraftBabyCustomRank") ) {
+          $scope.players = orderBy($scope.players, 'customrank');
+        }
       });
   }
 

@@ -1,4 +1,6 @@
-<span>{{ $index + 1 }}</span>
+<span>{{ player.rank }}</span>
+<span ng-show="customRankSet" class="customrank">{{ player.customrank + 1 }}</span>
 <span class="name"><a ng-href="{{ espnurl }}{{ player.name | lastNameUrl }}" target="_blank">{{ player.name }}</a></span>
+<span class="bye">{{ player.bye_week }}</span>
 <span>{{ player.best_rank}}/{{ player.worst_rank }}/{{ player.adp }}</span>
 <span ng-click="draftPlayer(player)" class="draft"></span>

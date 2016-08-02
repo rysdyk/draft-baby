@@ -3,7 +3,7 @@
   color: #333; }
 
 header {
-  background-color: #246959;
+  background-color: #003366;
   color: #fff;
   margin-bottom: 20px;
   padding: 20px 0;
@@ -54,9 +54,6 @@ footer {
 #full-list tr.fade-out {
   background-color: #eee; }
 
-#full-list #drafted h2 {
-  font-size: 16px; }
-
 #full-list #drafted td {
   padding: 3px; }
 
@@ -97,7 +94,7 @@ footer {
       #custom-list ul li span.second {
         width: 10%; }
       #custom-list ul li span.third {
-        width: 55%; }
+        width: 45%; }
       #custom-list ul li span.fourth {
         width: 10%; }
       #custom-list ul li span.fifth {
@@ -120,8 +117,28 @@ footer {
 #position {
   padding-bottom: 60px; }
   #position h2 {
-    text-decoration: underline;
-    font-size: 14px; }
+    font-size: 14px;
+    text-align: center;
+    text-decoration: underline; }
+  #position ul.position-heading {
+    padding: 0;
+    list-style: none; }
+    #position ul.position-heading li.heading {
+      font-weight: bold;
+      overflow: hidden; }
+      #position ul.position-heading li.heading span {
+        display: block;
+        float: left;
+        width: 30px; }
+        #position ul.position-heading li.heading span.name {
+          width: 130px; }
+        #position ul.position-heading li.heading span.stats {
+          width: 65px; }
+        #position ul.position-heading li.heading span.bye {
+          width: 40px; }
+        #position ul.position-heading li.heading span.todraft {
+          float: right;
+          width: 20px; }
   #position ul.position-list {
     height: 300px;
     list-style: none;
@@ -129,38 +146,22 @@ footer {
     padding: 0; }
     #position ul.position-list li {
       overflow: hidden; }
-      #position ul.position-list li.heading {
-        font-weight: bold;
-        overflow: hidden; }
-        #position ul.position-list li.heading span.rank {
-          width: 30px; }
-        #position ul.position-list li.heading span.stats:hover:before {
-          background-color: #222;
-          background-color: rgba(34, 34, 34, 0.8);
-          color: #fff;
-          content: 'High Rank / Low Rank / ADP ';
-          display: block;
-          height: 20px;
-          margin-left: -120px;
-          margin-top: -20px;
-          position: absolute;
-          text-align: center;
-          width: 240px;
-          z-index: 10; }
-        #position ul.position-list li.heading span.draft:before {
-          display: none; }
       #position ul.position-list li span {
         display: block;
         float: left; }
         #position ul.position-list li span:first-child {
           text-align: left;
           width: 30px; }
+        #position ul.position-list li span.customrank {
+          width: 30px; }
         #position ul.position-list li span.name {
-          width: 110px; }
+          width: 130px; }
+        #position ul.position-list li span.bye {
+          width: 40px; }
         #position ul.position-list li span.draft {
           cursor: pointer;
           float: right;
-          width: 40px; }
+          width: 20px; }
           #position ul.position-list li span.draft:before {
             color: #ededed;
             content: "\f00c";
@@ -169,3 +170,15 @@ footer {
             position: relative; }
           #position ul.position-list li span.draft:hover:before {
             color: #32CD32; }
+
+#drafted-wrapper #history {
+  height: 400px;
+  overflow: scroll; }
+
+#drafted-wrapper h2 {
+  font-size: 14px;
+  text-align: center;
+  text-decoration: underline; }
+
+#drafted-wrapper td {
+  padding: 0 5px; }

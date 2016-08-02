@@ -1,5 +1,7 @@
+// init app
 var draftApp = angular.module('draftApp', ['ngRoute', 'ui.sortable']);
 
+// factories and services
 draftApp.factory('playersFactory', ['$http', function($http){
   var playersFactory = {};
 
@@ -18,6 +20,7 @@ draftApp.factory('playersFactory', ['$http', function($http){
   return playersFactory;
 }]);
 
+// filters
 draftApp.filter('ageFilter', function() {
    function calculateAge(birthday) { // birthday is a date
        var ageDifMs = Date.now() - Date.parse(birthday);
@@ -52,6 +55,7 @@ draftApp.filter('shortPosition', function(){
   };
 });
 
+// set routes
 draftApp.config(['$routeProvider', function config($routeProvider){
   $routeProvider.
     when('/', {

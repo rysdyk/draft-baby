@@ -1,7 +1,7 @@
 <div ng-controller="CustomListController" id="custom-list">
   <div class="row">
     <div class="col-xs-12">
-      <a ng-click="clearCustomRank()" style="cursor: pointer;">Clear Custom Rank</a>
+      <a ng-click="clearCustomRank()" style="cursor: pointer;">Reset Custom Rank</a>
     </div>
   </div>
   <div class="row">
@@ -11,6 +11,7 @@
           <span class="first">Sort</span>
           <span class="second">FP Rank</span>
           <span class="third">Name</span>
+          <span class="fourth">Bye Week</span>
           <span class="fourth">Position</span>
           <span class="fifth">Draft</span>
         </li>
@@ -19,6 +20,7 @@
           <span class="first"><i class="glyphicon glyphicon-menu-hamburger"></i></span>
           <span class="second">{{ player.rank }}</span>
           <span class="third"><a ng-href="http://games.espn.go.com/ffl/tools/projections?display=alt&avail=-1&search={{ player.name | lastNameUrl }}" target="_blank">{{ player.name }}</a></span>
+          <span class="fourth">{{ player.bye_week }}</span>
           <span class="fourth">{{ player.position | uppercase }}</span>
           <span ng-click="draftPlayer(player)" class="fifth draft"></span>
         </li>
