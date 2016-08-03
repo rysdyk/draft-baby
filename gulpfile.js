@@ -56,6 +56,12 @@ gulp.task('copy-index-html', function() {
     .pipe(gulp.dest('./dist/'));
 });
 
+gulp.task('copy-lib-files', function() {
+    gulp.src('./lib/*.json')
+    // Perform minification tasks, etc here
+    .pipe(gulp.dest('./dist/lib/'));
+});
+
 gulp.task('connect', function () {
   connect.server({
     root: '',
@@ -65,7 +71,7 @@ gulp.task('connect', function () {
 
 gulp.task('connectDist', function () {
   connect.server({
-    root: '.',
+    root: './dist/',
     port: 9999
   });
 });
