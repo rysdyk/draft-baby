@@ -1,0 +1,153 @@
+<div ng-controller="PlayerListController" id="full-list">
+  <div class="row filter-tools">
+    <div class="col-xs-12 col-md-8">
+      <label for="draftPosTeams">Teams <select id="draftPosTeams">
+        <option value="8">8</option>
+        <option value="10">10</option>
+        <option value="12">12</option>
+        <option value="14">14</option>
+      </select></label>
+      <label for="draftPos">Draft Position <select id="draftPos">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+      </select></label>
+      <button class="btn btn-primary" id="draftPosEst">Submit</button>
+      <button class="btn btn-default" id="draftPosClear">Clear</button>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <label>Search: <input ng-model="searchText"></label>
+    </div>
+  </div>
+  <div class="row">
+
+    <div id="fullPlayerList" class="col-xs-12 col-md-9">
+      <span class="disclaimer">Standard league ranking data from FantasyPros. Updated: July 29, 2016</span>
+      <table class="table">
+        <tr>
+          <th ng-click="sortBy('rank')">
+            <span class="sortable">FP Rank</span>
+            <span class="sortorder" ng-show="propertyName === 'rank'" ng-class="{'fa fa-caret-down': !reverse, 'fa fa-caret-up': reverse}"></span>
+          </th>
+          <th ng-click="sortBy('name')">
+            <span class="sortable">Name</span>
+            <span class="sortorder" ng-show="propertyName === 'name'" ng-class="{'fa fa-caret-down': !reverse, 'fa fa-caret-up': reverse}"></span>
+          </th>
+          <th>Position</th>
+          <th>Team</th>
+          <th ng-click="sortBy('bye_week')">
+            <span class="sortable">Bye Week</span>
+            <span class="sortorder" ng-show="propertyName === 'bye_week'" ng-class="{'fa fa-caret-down': !reverse, 'fa fa-caret-up': reverse}"></span>
+          </th>
+          <th ng-click="sortBy('best_rank')">
+            <span class="sortable">Best Rank</span>
+            <span class="sortorder" ng-show="propertyName === 'best_rank'" ng-class="{'fa fa-caret-down': !reverse, 'fa fa-caret-up': reverse}"></span>
+          </th>
+          <th ng-click="sortBy('worst_rank')">
+            <span class="sortable">Worst Rank</span>
+            <span class="sortorder" ng-show="propertyName === 'worst_rank'" ng-class="{'fa fa-caret-down': !reverse, 'fa fa-caret-up': reverse}"></span>
+          </th>
+          <th ng-click="sortBy('average_rank')">
+            <span class="sortable">Average Rank</span>
+            <span class="sortorder" ng-show="propertyName === 'average_rank'" ng-class="{'fa fa-caret-down': !reverse, 'fa fa-caret-up': reverse}"></span>
+          </th>
+          <th ng-click="sortBy('adp')">
+            <span class="sortable">ADP</span>
+            <span class="sortorder" ng-show="propertyName === 'adp'" ng-class="{'fa fa-caret-down': !reverse, 'fa fa-caret-up': reverse}"></span>
+          </th>
+          <th>Draft</th>
+        </tr>
+        <tr ng-repeat="player in players | orderBy:propertyName:reverse | filter:searchText | filter: greaterThan('adp', 0)" ng-hide="player.drafted">
+          <td>{{ player.rank }}</td>
+          <!--
+          <td ng-if="player.profile == 'true' ">
+            <a href="" data-toggle="modal" data-target="#myModal-{{player.rank}}">{{ player.name }}</a>
+            <!-- Modal
+            <div class="modal fade" id="myModal-{{player.rank}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">{{ player.name }}</h4>
+                  </div>
+                  <div class="modal-body">
+                    <a ng-href="http://games.espn.go.com/ffl/tools/projections?display=alt&avail=-1&search={{ player.name | lastNameUrl }}" target="_blank">ESPN Profile</a>
+                    <h3>Outlook</h3>
+                    <p>2016: {{ player.outlook }}</p>
+                    <hr />
+                    <h3>History</h3>
+                    <p>2015: {{ player.history[0]["2015"] }}</p>
+                    <p>2014: {{ player.history[0]["2014"] }}</p>
+                    <div ng-if="player.full_position == 'Quarterback' ">
+                      <h3>2015 Pass Stats</h3>
+                      <table>
+                        <tr>
+                          <th>Yards</th>
+                          <th>TDs</th>
+                          <th>Interceptions</th>
+                          <th>Attempts</th>
+                          <th>Completions</th>
+                          <th>Completion Percentage</th>
+                          <th>QB Rating</th>
+                        </tr>
+                        <tr>
+                          <td>{{ player.Yards }}</td>
+                          <td>{{ player.TDs }}</td>
+                          <td>{{ player.Interceptions }}</td>
+                          <td>{{ player.Attempts }}</td>
+                          <td>{{ player.Completions }}</td>
+                          <td>{{ player.CompletionPercentage }}</td>
+                          <td>{{ player.qbrating }}</td>
+                        </tr>
+                      </table>
+                    </div>
+                    <hr />
+                    <h3>Info</h3>
+                    <p>Team: {{ player.full_team }}</p>
+                    <p>Position: {{ player.full_position }}</p>
+                    <p>Age: {{ player.birthday | ageFilter }} ({{ player.birthday }})</p>
+                    <p>Height: {{ player.height }}</p>
+                    <p>Weight: {{ player.weight }}lbs</p>
+                    <p>College: {{ player.college }}</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td ng-if="player.profile != 'true'">{{ player.name }}</td>
+        -->
+          <td><a ng-href="http://games.espn.go.com/ffl/tools/projections?display=alt&avail=-1&search={{ player.name | lastNameUrl }}" target="_blank">{{ player.name }}</a></td>
+          <td>{{ player.position | uppercase }}</td>
+          <td>{{ player.team }}</td>
+          <td>{{ player.bye_week }}</td>
+          <td>{{ player.best_rank }}</td>
+          <td>{{ player.worst_rank }}</td>
+          <td>{{ player.avg_rank | number: 2 }}</td>
+          <td>{{ player.adp }}</td>
+          <td ng-click="draftPlayer(player)" class="draft"></td>
+        </tr>
+      </table>
+    </div>
+    <div id="drafted" class="col-md-3">
+      <ng-include src="'partials/_drafted.html'"></ng-include>
+    </div>
+  </div>
+</div>
+<script src="../js/draftPos.js"></script>
