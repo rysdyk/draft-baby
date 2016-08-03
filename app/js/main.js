@@ -22,11 +22,21 @@ draftApp.factory('playersFactory', ['$http', function($http){
 
 draftApp.factory('draftedFactory', function(){
   return function($scope){
-    $scope.selected = [];
+    if ( localStorage.getItem("DraftBabyDraftedList") ) {
+      var draftedList = JSON.parse(localStorage.getItem("DraftBabyDraftedList"));
+      $scope.selected = draftedList;
+    } else {
+      $scope.selected = [];
+    }
 
     $scope.draftPlayer = function(player){
-      player.drafted = true;
+      player.drafted = true; // this isn't being preserved
       $scope.selected.push(player);
+      // var match  = $scope.players.filter( function(x){ return player.name == x.name; });
+      // match = match[0];
+      // console.log(match);
+      // $scope.players[match.rank-1].drafted = true;
+      localStorage.setItem("DraftBabyDraftedList", JSON.stringify($scope.selected) );
     };
 
     $scope.undraftPlayers = function(){
@@ -34,14 +44,15 @@ draftApp.factory('draftedFactory', function(){
         value.drafted = false;
       });
       $scope.selected = [];
+      localStorage.removeItem("DraftBabyDraftedList");
     };
 
     $scope.undraftLastPlayer = function(){
       var last = $scope.selected.pop();
       last.drafted = false;
+      localStorage.setItem("DraftBabyDraftedList", JSON.stringify($scope.selected) );
     };
-
-  }
+  };
 });
 
 // filters

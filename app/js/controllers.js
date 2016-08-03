@@ -10,17 +10,17 @@ draftApp.controller('PlayerListController', [ '$scope', 'playersFactory', 'draft
         $scope.players = response.data;
       })
       .then( function(){
-        playersFactory.getProfiles()
-        .then(function(response){
-          $scope.profiles = response.data;
-        })
-      .then( function(){
-        playersFactory.getPassing()
-        .then(function(response){
-          $scope.passing = response.data;
-        });
+        if ( localStorage.getItem("DraftBabyDraftedList") ) {
+          var draftHist = JSON.parse(localStorage.getItem("DraftBabyDraftedList"));
+          angular.forEach($scope.players, function(value, key){
+            var match  = draftHist.filter( function(x){ return value.name == x.name; });
+            for (var prop in match ) {
+              $scope.players[key].drafted = match[prop];
+            }
+          });
+        }
       });
-    });
+
   }
 
   draftedFactory($scope);
@@ -65,6 +65,17 @@ draftApp.controller('CustomListController', [ '$scope', 'playersFactory', 'draft
       .then( function(){
         if ( localStorage.getItem("DraftBabyCustomRank") ) {
           $scope.players = orderBy($scope.players, 'customrank');
+        }
+      })
+      .then( function(){
+        if ( localStorage.getItem("DraftBabyDraftedList") ) {
+          var draftHist = JSON.parse(localStorage.getItem("DraftBabyDraftedList"));
+          angular.forEach($scope.players, function(value, key){
+            var match  = draftHist.filter( function(x){ return value.name == x.name; });
+            for (var prop in match ) {
+              $scope.players[key].drafted = match[prop];
+            }
+          });
         }
       });
   }
@@ -117,6 +128,17 @@ draftApp.controller('PositionsListController', [ '$scope', 'playersFactory', 'dr
       .then( function(){
         if ( localStorage.getItem("DraftBabyCustomRank") ) {
           $scope.players = orderBy($scope.players, 'customrank');
+        }
+      })
+      .then( function(){
+        if ( localStorage.getItem("DraftBabyDraftedList") ) {
+          var draftHist = JSON.parse(localStorage.getItem("DraftBabyDraftedList"));
+          angular.forEach($scope.players, function(value, key){
+            var match  = draftHist.filter( function(x){ return value.name == x.name; });
+            for (var prop in match ) {
+              $scope.players[key].drafted = match[prop];
+            }
+          });
         }
       });
   }
