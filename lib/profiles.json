@@ -1,0 +1,122 @@
+[
+  {
+    "profile": "true",
+    "name": "Odell Beckham Jr.",
+    "full_position": "Wide Reciever",
+    "full_team": "New York Giants",
+    "college": "Louisiana State",
+    "birthday": "November 5, 1992",
+    "height": "5'11\"",
+    "weight": "198",
+    "outlook": "A slight coaching overhaul for the Giants should be mean good things for Eli Manning and Beckham. Beckham is a gifted athlete and should continue to be an elite wide receiver in 2016",
+    "history": [{"2015": "Beckham Jr finished 5th in WR scoring.", "2014": "Beckham missed the first four games but finished the year on a strong note, and finished 5th in WR fantasy scoring."}]
+  },
+  {
+    "profile": "true",
+    "name": "Le'Veon Bell",
+    "full_position": "Running Back",
+    "full_team": "Pittsburgh Steelers",
+    "college": "Michigan State University",
+    "birthday": "February 18, 1992",
+    "height": "6'1\"",
+    "weight": "244",
+    "outlook": "All signs indicated Bell is recovering from his injury and should be ready to go in 2016",
+    "history": [{"2015": "Bell began the season with a suspension and then experienced a season ending injury in week 8. However, while he played he looked like an elite RB.", "2014": "Bell earned his reputation as the best runner in the NFL in the 2014 season."}]
+  },
+  {
+    "profile": "true",
+    "name": "Antonio Brown",
+    "full_position": "Wide Reciever",
+    "full_team": "Pittsburgh Steelers",
+    "college": "Central Michigan",
+    "birthday": "July 10, 1988",
+    "height": "5'10\"",
+    "weight": "186",
+    "outlook": "Brown is expected to be not only one of the top wide receivers, but one of the top fantasy players for 2016. He should be the first pick in any re-draft league.",
+    "history": [{"2015": "Finished first in WR fantasy scoring.", "2014": "Also, finished first in WR fantasy scoring."}]
+  },
+  {
+    "profile": "true",
+    "name": "Rob Gronkowski",
+    "full_position": "Tight End",
+    "full_team": "New England Patriots",
+    "college": "Arizona",
+    "birthday": "May 14, 1989",
+    "height": "6'6\"",
+    "weight": "265",
+    "outlook": "Gronk's performance may slip during Tom Brady's suspension. Over his career, Gronk has put up both yard and touchdowns. He has had issues with arm injuries, but if plays all or most of the season, Gronk should be the #1 fantasy TE.",
+    "history": [{"2015": "The number one fantasy tight end", "2014": "The number one fantasy tight end." }]
+  },
+  {
+    "profile": "true",
+    "name": "Todd Gurley",
+    "full_position": "Running Back",
+    "full_team": "Los Angeles Rams",
+    "college": "Georgia",
+    "birthday": "August 3, 1994",
+    "height": "6'1\"",
+    "weight": "222",
+    "outlook": "Gurley is the one bright spot on a lackluster Rams team. Only his second season, yet all signs indicate he will be a first tier running back.",
+    "history": [{"2015": "2015 NFL Rookie of the Year. Finished as 5th RB overall despite not playing the first 3 games. Was able to put up both yards and touchdowns. Could have finished as top RB if he played the whole season." }]
+  },
+  {
+    "profile": "true",
+    "name": "David Johnson",
+    "full_position": "Running Back",
+    "full_team": "Arizon Cardinals",
+    "college": "Northern Iowa",
+    "birthday": "December 16, 1991",
+    "height": "6'1\"",
+    "weight": "224",
+    "outlook": "Johnson should be the clear lead back in Arizona this year. While a promising athlete, he has yet to prove himself over a full season.",
+    "history": [{"2015": "Johnson really took off in the second half of 2013." }]
+  },
+  {
+    "profile": "true",
+    "name": "Julio Jones",
+    "full_position": "Wide Receiver",
+    "full_team": "Atlanta Falcons",
+    "college": "Alabama",
+    "birthday": "February 3, 1989",
+    "height": "6'3\"",
+    "weight": "220",
+    "outlook": "Jones is an elite wide receiver talent. He gets a lot of targets and yards; however, the TDs tend to go the Falcons running backs.",
+    "history": [{"2015": "Jones was the most targeted receiver in the league and had the most passing yards. Finished #2 overall to Antonio Brown.", "2014": "Jones finished 8th overall."}]
+  },
+  {
+    "profile": "true",
+    "name": "Cam Newton",
+    "full_position": "Quarterback",
+    "full_team": "Carolina Panthers",
+    "college": "Auburn",
+    "birthday": "May 11, 1989",
+    "height": "6'5\"",
+    "weight": "244",
+    "outlook": "While not necessarily expected to repeat a stellar 2015 outing, Newton is a bonafide elite QB and should be considered at or near the top of QB rankings.",
+    "history": [{"2015": "Newton was the top fantasy quarterback.", "2014": "Newton missed 2 games and played hurt in several others."}]
+  },
+  {
+    "profile": "true",
+    "name": "Adrian Peterson",
+    "full_position": "Running Back",
+    "full_team": "Minnesota Vikings",
+    "college": "Oklahoma",
+    "birthday": "March 21, 1985",
+    "height": "6'1\"",
+    "weight": "217",
+    "outlook": "The most dominant and consistent running back over the last decade. Peterson shows no signs of slowing down, but he has reached the age where most running backs start slowing down.",
+    "history": [{"2015": "Finished 2nd overall in fantasy scoring, but had the most rushing yards and rushing touchdowns", "2014": "Peterson missed 2014 with legal trouble."}]
+  },
+  {
+    "profile": "true",
+    "name": "Aaron Rodgers",
+    "full_position": "Quarterback",
+    "full_team": "Green Bay Packers",
+    "college": "California",
+    "birthday": "December 2, 1983",
+    "height": "6'2\"",
+    "weight": "225",
+    "outlook": "After an underperforming 2015 expect Rodgers to return to being his usual elite self. Expect lots of yards and touchdowns.",
+    "history": [{"2015": "Rodgers worst year so far -- mostly due to overall Packers injuries/dysfunction -- but still finished 12th overall.", "2014": "A typical Rodgers year where he finished as the #2 QB to Andrew Luck."}]
+  }
+]
