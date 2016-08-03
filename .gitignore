@@ -1,16 +1,6 @@
 # front-end dependencies
 app/bower_components
 
-#unignore some bower for gh-pages
-!app/bower_components/angular/angular.min.js
-!app/bower_components/angular-route/angular-route.min.js
-!app/bower_components/bootstrap/dist/*
-!app/bower_components/font-awesome/*
-!app/bower_components/jquery/dist/jquery.min.js
-!app/bower_components/jquery-ui/jquery-ui.min.js
-
-
-
 # node stuff
 node_modules
 
