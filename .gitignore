@@ -1,5 +1,5 @@
 # front-end dependencies
-app/bower_components
+bower_components
 
 # node stuff
 node_modules
