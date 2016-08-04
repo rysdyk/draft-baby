@@ -4,19 +4,19 @@
       <div class="row">
         <div class="col-xs-12 col-md-5" id="runningbacks">
           <h2>Running Backs</h2>
-          <ng-include src="'partials/_position_heading.html'"></ng-include>
+          <ng-include src="'partials/position_heading.html'"></ng-include>
           <ul class="position-list">
             <li ng-repeat="player in players | filter:{position: 'RB'} " ng-hide="player.drafted">
-              <ng-include src="'partials/_position_list.html'"></ng-include>
+              <ng-include src="'partials/position_list.html'"></ng-include>
             </li>
           </ul>
         </div>
         <div class="col-xs-12 col-md-5 col-md-offset-1" id="widereceivers">
           <h2>Wide Receivers</h2>
-          <ng-include src="'partials/_position_heading.html'"></ng-include>
+          <ng-include src="'partials/position_heading.html'"></ng-include>
           <ul class="position-list">
             <li ng-repeat="player in players | filter:{position: 'WR'} " ng-hide="player.drafted">
-              <ng-include src="'partials/_position_list.html'"></ng-include>
+              <ng-include src="'partials/position_list.html'"></ng-include>
             </li>
           </ul>
         </div>
@@ -24,19 +24,19 @@
       <div class="row">
         <div class="col-xs-12 col-md-5" id="quarterbacks">
           <h2>Quarterbacks</h2>
-          <ng-include src="'partials/_position_heading.html'"></ng-include>
+          <ng-include src="'partials/position_heading.html'"></ng-include>
           <ul class="position-list">
             <li ng-repeat="player in players | filter:{position: 'QB'} " ng-hide="player.drafted">
-              <ng-include src="'partials/_position_list.html'"></ng-include>
+              <ng-include src="'partials/position_list.html'"></ng-include>
             </li>
           </ul>
         </div>
         <div class="col-xs-12 col-md-5 col-md-offset-1" id="tightends">
           <h2>Tight Ends</h2>
-          <ng-include src="'partials/_position_heading.html'"></ng-include>
+          <ng-include src="'partials/position_heading.html'"></ng-include>
           <ul class="position-list">
             <li ng-repeat="player in players | filter:{position: 'TE'} " ng-hide="player.drafted">
-              <ng-include src="'partials/_position_list.html'"></ng-include>
+              <ng-include src="'partials/position_list.html'"></ng-include>
             </li>
           </ul>
         </div>
@@ -44,26 +44,26 @@
       <div class="row">
         <div class="col-xs-12 col-md-5" id="kickers">
           <h2>Kickers</h2>
-          <ng-include src="'partials/_position_heading.html'"></ng-include>
+          <ng-include src="'partials/position_heading.html'"></ng-include>
           <ul class="position-list">
             <li ng-repeat="player in players | filter:{position: 'K'} " ng-hide="player.drafted">
-              <ng-include src="'partials/_position_list.html'"></ng-include>
+              <ng-include src="'partials/position_list.html'"></ng-include>
             </li>
           </ul>
         </div>
         <div class="col-xs-12 col-md-5 col-md-offset-1" id="defenses">
           <h2>Defense/Special Teams</h2>
-          <ng-include src="'partials/_position_heading.html'"></ng-include>
+          <ng-include src="'partials/position_heading.html'"></ng-include>
           <ul class="position-list">
             <li ng-repeat="player in players | filter:{position: 'DST'} " ng-hide="player.drafted">
-              <ng-include src="'partials/_position_list.html'"></ng-include>
+              <ng-include src="'partials/position_list.html'"></ng-include>
             </li>
           </ul>
         </div>
       </div>
     </div>
     <div class="col-xs-12 col-md-3">
-      <ng-include src="'partials/_drafted.html'"></ng-include>
+      <ng-include src="'partials/drafted.html'"></ng-include>
     </div>
   </div>
   <div class="row">
