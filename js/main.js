@@ -6,15 +6,15 @@ draftApp.factory('playersFactory', ['$http', function($http){
   var playersFactory = {};
 
   playersFactory.getRankings = function(){
-    return $http.get('../lib/fantasypros-std-7-29-2016.json');
+    return $http.get('lib/fantasypros-std-7-29-2016.json');
   };
 
   playersFactory.getProfiles = function(){
-    return $http.get('../lib/profiles.json');
+    return $http.get('lib/profiles.json');
   };
 
   playersFactory.getPassing = function(){
-    return $http.get('../lib/2015/passing.json');
+    return $http.get('lib/2015/passing.json');
   };
 
   return playersFactory;
@@ -94,16 +94,13 @@ draftApp.filter('shortPosition', function(){
 draftApp.config(['$routeProvider', function config($routeProvider){
   $routeProvider.
     when('/', {
-      templateUrl: 'partials/full_list.html',
-      controller: 'PlayerListController'
+      templateUrl: 'partials/full_list.html'
     }).
     when('/position', {
-      templateUrl: 'partials/position.html',
-      controller: 'PositionsListController'
+      templateUrl: 'partials/position.html'
     }).
     when('/custom', {
-      templateUrl: 'partials/custom.html',
-      controller: 'CustomListController'
+      templateUrl: 'partials/custom.html'
     }).
     otherwise({
       redirectTo: '/'
