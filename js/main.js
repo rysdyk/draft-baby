@@ -94,13 +94,13 @@ draftApp.filter('shortPosition', function(){
 draftApp.config(['$routeProvider', function config($routeProvider){
   $routeProvider.
     when('/', {
-      templateUrl: '/partials/_full_list.html'
+      templateUrl: 'partials/_full_list.html'
     }).
     when('/position', {
-      templateUrl: '/partials/_position.html'
+      templateUrl: 'partials/_position.html'
     }).
     when('/custom', {
-      templateUrl: '/partials/_custom.html'
+      templateUrl: 'partials/_custom.html'
     }).
     otherwise({
       redirectTo: '/'
