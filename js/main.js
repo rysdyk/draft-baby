@@ -94,7 +94,7 @@ draftApp.filter('shortPosition', function(){
 draftApp.config(['$routeProvider', function config($routeProvider){
   $routeProvider.
     when('/', {
-      templateUrl: 'partials/_full_list.html',
+      templateUrl: 'partials/_full_list.html'
     }).
     when('/position', {
       templateUrl: 'partials/_position.html'
@@ -106,7 +106,3 @@ draftApp.config(['$routeProvider', function config($routeProvider){
       redirectTo: '/'
     });
 }]);
-
-draftApp.config(function ($locationProvider) {
-  $locationProvider.html5Mode(true);
-});
