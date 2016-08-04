@@ -106,3 +106,7 @@ draftApp.config(['$routeProvider', function config($routeProvider){
       redirectTo: '/'
     });
 }]);
+
+draftApp.config(function ($locationProvider) {
+  $locationProvider.html5Mode(true);
+});
