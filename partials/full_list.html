@@ -69,7 +69,8 @@
             <span class="sortable">ADP</span>
             <span class="sortorder" ng-show="propertyName === 'adp'" ng-class="{'fa fa-caret-down': !reverse, 'fa fa-caret-up': reverse}"></span>
           </th>
-          <th>Draft</th>
+          <th><span data-toggle="tooltip" data-placement="top" title="Click once to love a player, click again to hate a player, click again to reset to neutral">Tag</span></th>
+          <th><span data-toggle="tooltip" data-placement="top" title="Click when a player has been drafted to add to draft history">Draft</span></th>
         </tr>
         <tr ng-repeat="player in players | orderBy:propertyName:reverse | filter:searchText | filter: greaterThan('adp', 0)" ng-hide="player.drafted">
           <td>{{ player.rank }}</td>
@@ -141,6 +142,11 @@
           <td>{{ player.worst_rank }}</td>
           <td>{{ player.avg_rank | number: 2 }}</td>
           <td>{{ player.adp }}</td>
+          <td ng-click="tagPlayer(player)" class="tag">
+            <i class="fa fa-circle-thin neutral" aria-hidden="true" ng-show="player.tag == 0"></i>
+            <i class="fa fa-star love" ng-show="player.tag == 1"></i>
+            <i class="fa fa-exclamation-triangle hate" ng-show="player.tag == 2"></i>
+          </td>
           <td ng-click="draftPlayer(player)" class="draft"></td>
         </tr>
       </table>
@@ -150,4 +156,10 @@
     </div>
   </div>
 </div>
+
+<script>
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
 <script src="js/draftPos.js"></script>
