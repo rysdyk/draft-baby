@@ -4,3 +4,8 @@
 <span class="bye">{{ player.bye_week }}</span>
 <span>{{ player.best_rank}}/{{ player.worst_rank }}/{{ player.adp }}</span>
 <span ng-click="draftPlayer(player)" class="draft"></span>
+<span ng-click="tagPlayer(player)" class="tag">
+  <i class="fa fa-circle-thin neutral" aria-hidden="true" ng-show="player.tag == 0"></i>
+  <i class="fa fa-star love" ng-show="player.tag == 1"></i>
+  <i class="fa fa-exclamation-triangle hate" ng-show="player.tag == 2"></i>
+</span>

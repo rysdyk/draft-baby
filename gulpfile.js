@@ -91,6 +91,6 @@ gulp.task('default',
 gulp.task('build', function() {
   runSequence(
     ['clean'],
-    ['lint', 'minify-css', 'minify-js', 'copy-partials-files', 'copy-index-html', 'copy-bower-components']
+    ['lint', 'minify-css', 'minify-js', 'copy-partials-files', 'copy-index-html', 'copy-lib-files']
   );
 });
