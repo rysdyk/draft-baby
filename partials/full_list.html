@@ -69,8 +69,8 @@
             <span class="sortable">ADP</span>
             <span class="sortorder" ng-show="propertyName === 'adp'" ng-class="{'fa fa-caret-down': !reverse, 'fa fa-caret-up': reverse}"></span>
           </th>
-          <th data-toggle="tooltip" data-placement="top" title="Click once to love a player, click again to hate a player, click again to reset to neutral">Tag</th>
-          <th data-toggle="tooltip" data-placement="top" title="Click when a player has been drafted to add to draft history">Draft</th>
+          <th><span data-toggle="tooltip" data-placement="top" title="Click once to love a player, click again to hate a player, click again to reset to neutral">Tag</span></th>
+          <th><span data-toggle="tooltip" data-placement="top" title="Click when a player has been drafted to add to draft history">Draft</span></th>
         </tr>
         <tr ng-repeat="player in players | orderBy:propertyName:reverse | filter:searchText | filter: greaterThan('adp', 0)" ng-hide="player.drafted">
           <td>{{ player.rank }}</td>

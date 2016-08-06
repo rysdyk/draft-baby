@@ -24,6 +24,18 @@ draftApp.controller('PlayerListController', [ '$scope', 'playersFactory', 'draft
             }
           });
         }
+      })
+      .then( function(){
+        if ( localStorage.getItem("DraftBabyTaggedList") ) {
+          var tagged = JSON.parse(localStorage.getItem("DraftBabyTaggedList"));
+          angular.forEach($scope.players, function(value, key){
+            var match  = tagged.filter( function(x){ return value.name == x[0]; });
+            match = match[0]
+            for (var prop in match ) {
+              $scope.players[key].tag = match[1];
+            }
+          });
+        }
       });
 
   }
@@ -86,6 +98,18 @@ draftApp.controller('CustomListController', [ '$scope', 'playersFactory', 'draft
             var match  = draftHist.filter( function(x){ return value.name == x.name; });
             for (var prop in match ) {
               $scope.players[key].drafted = match[prop];
+            }
+          });
+        }
+      })
+      .then( function(){
+        if ( localStorage.getItem("DraftBabyTaggedList") ) {
+          var tagged = JSON.parse(localStorage.getItem("DraftBabyTaggedList"));
+          angular.forEach($scope.players, function(value, key){
+            var match  = tagged.filter( function(x){ return value.name == x[0]; });
+            match = match[0]
+            for (var prop in match ) {
+              $scope.players[key].tag = match[1];
             }
           });
         }
@@ -156,6 +180,18 @@ draftApp.controller('PositionsListController', [ '$scope', 'playersFactory', 'dr
             var match  = draftHist.filter( function(x){ return value.name == x.name; });
             for (var prop in match ) {
               $scope.players[key].drafted = match[prop];
+            }
+          });
+        }
+      })
+      .then( function(){
+        if ( localStorage.getItem("DraftBabyTaggedList") ) {
+          var tagged = JSON.parse(localStorage.getItem("DraftBabyTaggedList"));
+          angular.forEach($scope.players, function(value, key){
+            var match  = tagged.filter( function(x){ return value.name == x[0]; });
+            match = match[0]
+            for (var prop in match ) {
+              $scope.players[key].tag = match[1];
             }
           });
         }

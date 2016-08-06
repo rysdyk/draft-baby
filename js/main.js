@@ -30,7 +30,7 @@ draftApp.factory('draftedFactory', function(){
     }
 
     $scope.draftPlayer = function(player){
-      player.drafted = true; // this isn't being preserved
+      player.drafted = true;
       $scope.selected.push(player);
       // var match  = $scope.players.filter( function(x){ return player.name == x.name; });
       // match = match[0];
@@ -57,12 +57,22 @@ draftApp.factory('draftedFactory', function(){
 
 draftApp.factory('tagFactory', function(){
   return function($scope){
+
     $scope.tagPlayer = function(player){
       var newNum = player.tag + 1;
       player.tag = newNum % 3;
-    }
-  }
-})
+
+      var taggedList = [];
+
+      angular.forEach($scope.players, function(value, key){
+        var tagged = [value.name, value.tag];
+        taggedList.push(tagged);
+      });
+
+      localStorage.setItem("DraftBabyTaggedList", JSON.stringify(taggedList) );
+    };
+  };
+});
 
 // filters
 draftApp.filter('ageFilter', function() {
