@@ -1,0 +1,2 @@
+1) add a way to 'favorite' or star players, click again to warn "!" -- the love/hate tool
+2) add tiers

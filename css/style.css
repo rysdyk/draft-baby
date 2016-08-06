@@ -2,6 +2,16 @@
   font: 10px/12px Arial, sans-serif;
   color: #333; }
 
+.tag {
+  cursor: pointer;
+  text-align: center; }
+  .tag .neutral {
+    color: #efefef; }
+  .tag .love {
+    color: #000; }
+  .tag .hate {
+    color: #ff0000; }
+
 header {
   background-color: #003366;
   color: #fff;
@@ -94,11 +104,11 @@ footer {
       #custom-list ul li span.second {
         width: 10%; }
       #custom-list ul li span.third {
-        width: 45%; }
+        width: 40%; }
       #custom-list ul li span.fourth {
         width: 10%; }
       #custom-list ul li span.fifth {
-        width: 10%; }
+        width: 7%; }
 
 #custom-list span.draft {
   cursor: pointer; }
@@ -133,12 +143,12 @@ footer {
         #position ul.position-heading li.heading span.name {
           width: 130px; }
         #position ul.position-heading li.heading span.stats {
-          width: 65px; }
+          width: 55px; }
         #position ul.position-heading li.heading span.bye {
-          width: 40px; }
-        #position ul.position-heading li.heading span.todraft {
-          float: right;
-          width: 20px; }
+          width: 30px; }
+        #position ul.position-heading li.heading span.todraft, #position ul.position-heading li.heading span.tag {
+          width: 30px;
+          text-align: center; }
   #position ul.position-list {
     height: 300px;
     list-style: none;
@@ -157,11 +167,17 @@ footer {
         #position ul.position-list li span.name {
           width: 130px; }
         #position ul.position-list li span.bye {
-          width: 40px; }
+          width: 30px; }
+        #position ul.position-list li span.tag {
+          cursor: pointer;
+          float: right;
+          text-align: center;
+          width: 30px; }
         #position ul.position-list li span.draft {
           cursor: pointer;
           float: right;
-          width: 20px; }
+          text-align: center;
+          width: 30px; }
           #position ul.position-list li span.draft:before {
             color: #ededed;
             content: "\f00c";

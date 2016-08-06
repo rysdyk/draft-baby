@@ -13,3 +13,18 @@ $blue: #003366;
   font: 10px/12px Arial, sans-serif;
   color: #333;
 }
+
+.tag {
+  cursor: pointer;
+  text-align: center;
+
+  .neutral {
+    color: #efefef;
+  }
+  .love {
+    color: #000;
+  }
+  .hate {
+    color: #ff0000;
+  }
+}

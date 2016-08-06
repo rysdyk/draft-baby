@@ -22,12 +22,12 @@
 
         &.name { width: 130px; }
 
-        &.stats { width: 65px; }
-        &.bye { width: 40px; }
+        &.stats { width: 55px; }
+        &.bye { width: 30px; }
 
-        &.todraft {
-          float: right;
-          width: 20px;
+        &.todraft, &.tag {
+          width: 30px;
+          text-align: center;
         }
       }
     }
@@ -56,12 +56,20 @@
 
         &.name { width: 130px; }
 
-        &.bye { width: 40px; }
+        &.bye { width: 30px; }
+
+        &.tag {
+          cursor: pointer;
+          float: right;
+          text-align: center;
+          width: 30px;
+        }
 
         &.draft {
           cursor: pointer;
           float: right;
-          width: 20px;
+          text-align: center;
+          width: 30px;
 
           &:before {
             color: #ededed;

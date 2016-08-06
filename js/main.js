@@ -55,6 +55,15 @@ draftApp.factory('draftedFactory', function(){
   };
 });
 
+draftApp.factory('tagFactory', function(){
+  return function($scope){
+    $scope.tagPlayer = function(player){
+      var newNum = player.tag + 1;
+      player.tag = newNum % 3;
+    }
+  }
+})
+
 // filters
 draftApp.filter('ageFilter', function() {
    function calculateAge(birthday) { // birthday is a date
