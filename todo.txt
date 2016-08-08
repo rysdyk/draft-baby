@@ -1,2 +1,4 @@
-1) add a way to 'favorite' or star players, click again to warn "!" -- the love/hate tool
-2) add tiers
+1) add tiers
+2) refactor for size and performance
+3) make more mobile friendly
+4) add tests
