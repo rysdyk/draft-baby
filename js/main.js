@@ -6,7 +6,7 @@ draftApp.factory('playersFactory', ['$http', function($http){
   var playersFactory = {};
 
   playersFactory.getRankings = function(){
-    return $http.get('lib/fantasypros-std-7-29-2016.json');
+    return $http.get('lib/fantasypros-std-8-16-2016.json');
   };
 
   playersFactory.getProfiles = function(){
