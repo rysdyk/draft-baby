@@ -148,7 +148,8 @@ footer {
           width: 30px; }
         #position ul.position-heading li.heading span.todraft, #position ul.position-heading li.heading span.tag {
           width: 30px;
-          text-align: center; }
+          text-align: center;
+          float: right; }
   #position ul.position-list {
     height: 300px;
     list-style: none;
