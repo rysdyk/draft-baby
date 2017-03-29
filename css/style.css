@@ -35,9 +35,11 @@ footer {
 .modal table td, .modal table th {
   padding: 0 5px; }
 
-.full-list-wrapper {
-  max-width: 100%;
+#fullPlayerList {
   overflow: scroll; }
+
+.full-list-wrapper {
+  min-width: 700px; }
 
 #full-list .draftpick td {
   border-bottom: 1px solid red !important;

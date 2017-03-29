@@ -1,6 +1,9 @@
-.full-list-wrapper {
-  max-width: 100%;
+#fullPlayerList {
   overflow: scroll;
+}
+
+.full-list-wrapper {
+  min-width: 700px;
 }
 
 #full-list {
