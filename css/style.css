@@ -26,6 +26,7 @@ header {
 footer {
   background-color: #ededed;
   color: #ccc;
+  margin-top: 20px;
   padding: 20px 0;
   text-align: center; }
   footer span {
@@ -192,14 +193,14 @@ footer {
 #drafted {
   overflow: hidden; }
 
-#drafted-wrapper {
-  margin-bottom: 20px; }
-  #drafted-wrapper #history {
-    height: 400px;
-    overflow: scroll; }
-  #drafted-wrapper h2 {
-    font-size: 14px;
-    text-align: center;
-    text-decoration: underline; }
-  #drafted-wrapper td {
-    padding: 0 5px; }
+#drafted-wrapper #history {
+  height: 400px;
+  overflow: scroll; }
+
+#drafted-wrapper h2 {
+  font-size: 14px;
+  text-align: center;
+  text-decoration: underline; }
+
+#drafted-wrapper td {
+  padding: 0 5px; }
