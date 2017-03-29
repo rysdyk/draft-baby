@@ -1,3 +1,8 @@
+.full-list-wrapper {
+  max-width: 100%;
+  overflow: scroll;
+}
+
 #full-list {
   .draftpick td { border-bottom: 1px solid red !important; border-top: 1px solid red !important; }
 

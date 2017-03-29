@@ -23,9 +23,6 @@ header {
   header h1, header h3 {
     margin-top: 0; }
 
-header + .container {
-  min-height: 500px; }
-
 footer {
   background-color: #ededed;
   color: #ccc;
@@ -36,6 +33,10 @@ footer {
 
 .modal table td, .modal table th {
   padding: 0 5px; }
+
+.full-list-wrapper {
+  max-width: 100%;
+  overflow: scroll; }
 
 #full-list .draftpick td {
   border-bottom: 1px solid red !important;
@@ -188,14 +189,14 @@ footer {
           #position ul.position-list li span.draft:hover:before {
             color: #32CD32; }
 
-#drafted-wrapper #history {
-  height: 400px;
-  overflow: scroll; }
-
-#drafted-wrapper h2 {
-  font-size: 14px;
-  text-align: center;
-  text-decoration: underline; }
-
-#drafted-wrapper td {
-  padding: 0 5px; }
+#drafted-wrapper {
+  margin-bottom: 20px; }
+  #drafted-wrapper #history {
+    height: 400px;
+    overflow: scroll; }
+  #drafted-wrapper h2 {
+    font-size: 14px;
+    text-align: center;
+    text-decoration: underline; }
+  #drafted-wrapper td {
+    padding: 0 5px; }
