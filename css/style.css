@@ -13,7 +13,7 @@
     color: #ff0000; }
 
 header {
-  background-color: #003366;
+  background-color: #31b0d5;
   color: #fff;
   margin-bottom: 20px;
   padding: 20px 0;
@@ -188,6 +188,9 @@ footer {
             position: relative; }
           #position ul.position-list li span.draft:hover:before {
             color: #32CD32; }
+
+#drafted {
+  overflow: hidden; }
 
 #drafted-wrapper {
   margin-bottom: 20px; }
