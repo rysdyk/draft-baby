@@ -34,8 +34,8 @@
     </div>
   </div>
   <div class="row">
-    <div class="full-list-wrapper">
-      <div id="fullPlayerList" class="col-xs-12 col-md-9">
+    <div id="fullPlayerList" class="col-xs-12 col-md-9">
+      <div class="full-list-wrapper">
         <span class="disclaimer">Standard league ranking data from FantasyPros. Updated: August 28, 2016</span>
         <table class="table">
           <tr>
@@ -90,12 +90,12 @@
             <td ng-click="draftPlayer(player)" class="draft"></td>
           </tr>
         </table>
-      </div>
       </div> <!-- wrapper -->
-      <div id="drafted" class="col-md-3">
-        <ng-include src="'partials/drafted.html'"></ng-include>
-      </div>
     </div>
+    <div id="drafted" class="col-md-3">
+      <ng-include src="'partials/drafted.html'"></ng-include>
+    </div>
+  </div>
 </div>
 
 <script>
