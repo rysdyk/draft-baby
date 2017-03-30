@@ -9,6 +9,7 @@ var minifyCSS = require('gulp-minify-css');
 var clean = require('gulp-clean');
 var runSequence = require('run-sequence');
 var sass = require('gulp-sass');
+var browserSync = require('browser-sync').create();
 
 
 // tasks
@@ -79,15 +80,28 @@ gulp.task('connectDist', function () {
 gulp.task('styles', function() {
     gulp.src('./sass/**/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./css/'));
+        .pipe(gulp.dest('./css/'))
+        .pipe(browserSync.reload({stream: true}));
 });
+
+gulp.task('browserSync', function(){
+  browserSync.init({
+    server: {
+      baseDir: './'
+    }
+  });
+});
+
 
 // default task
 gulp.task('default',
-  ['lint', 'connect'], function(){
-    gulp.watch('./sass/**/*.scss',['styles']);
+  ['lint', 'connect', 'browserSync'], function(){
+    gulp.watch('./sass/**/*.scss', ['styles']);
+    gulp.watch('./partials/*.html', browserSync.reload);
+    gulp.watch('./js/*.js', browserSync.reload);
   }
 );
+
 gulp.task('build', function() {
   runSequence(
     ['clean'],
