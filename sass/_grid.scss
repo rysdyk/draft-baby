@@ -1,0 +1,21 @@
+.container {
+  margin: 0 auto;
+  max-width: 960px;
+
+  &:after, &:before {
+    clear: both;
+    content: '';
+    display: block;
+  }
+}
+
+@mixin column($size) {
+  box-sizing: border-box;
+  float: left;
+  width: 100%;
+
+  @media screen and (min-width: 700px) {
+    width: 100% * ($size/12);
+  }
+}
+

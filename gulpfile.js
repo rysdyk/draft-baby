@@ -95,7 +95,7 @@ gulp.task('browserSync', function(){
 
 // default task
 gulp.task('default',
-  ['lint', 'connect', 'browserSync'], function(){
+  [ 'connect', 'browserSync'], function(){
     gulp.watch('./sass/**/*.scss', ['styles']);
     gulp.watch('./partials/*.html', browserSync.reload);
     gulp.watch('./js/*.js', browserSync.reload);

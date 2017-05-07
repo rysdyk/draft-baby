@@ -48,7 +48,7 @@ function makeSortable(table) {
   else return; // if no `<thead>` then do nothing
   while (--i >= 0) (function (i) {
     var dir = 1;
-    th[i].addEventListener('click', function () {sortTable(table, i, (dir = 1 - dir))});
+    th[i].addEventListener('click', function () {sortTable(table, i, (dir = 1 - dir)); });
   }(i));
 }
 
@@ -59,3 +59,27 @@ function makeAllSortable(parent) {
 }
 
 window.onload = function () {makeAllSortable();};
+
+
+// draft
+var drafted = [];
+
+var nodeRows = document.querySelector('tbody').childNodes;
+var rows = Array.prototype.slice.call(nodeRows);
+rows.forEach(function(row){
+  row.addEventListener('click', function(){
+    this.style.display = 'none';
+    drafted.push(this);
+    showDrafted(this);
+  })
+})
+
+
+function showDrafted(player) {
+  var list = document.getElementById('drafted');
+  var item = document.createElement('li');
+  item.appendChild(document.createTextNode(player.children[1].innerText));
+  list.appendChild(item);
+}
+
+

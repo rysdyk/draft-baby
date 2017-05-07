@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i');
 $lato: 'Lato', sans-serif;
 
+body { font-family: $lato; }
+
 @mixin noselect {
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none;   /* Chrome/Safari/Opera */
@@ -32,6 +34,4 @@ $blue: #31b0d5;
   }
 }
 
-html {
-  font-family: $lato;
-}
+h1, h2, h3, h4, h5, h6 { margin-top: 0; }

@@ -1,9 +1,17 @@
-#fullPlayerList {
-  overflow: scroll;
+
+.full-player-list-wrapper {
+  @include column(9);
+  padding: 0 10px;
 }
 
-.full-list-wrapper {
-  min-width: 700px;
+.drafted-wrapper {
+  @include column(3);
+  padding: 0 10px;
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
 }
 
 #full-player-list {
