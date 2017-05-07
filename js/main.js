@@ -83,3 +83,12 @@ function showDrafted(player) {
 }
 
 
+// undo draft
+
+function undoDraft(e) {
+  e.preventDefault();
+  drafted.pop();
+  var list = document.getElementById('drafted');
+  list.removeChild(list.lastChild);
+}
+
