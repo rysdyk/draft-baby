@@ -444,7 +444,10 @@ footer {
   font-family: "Lato", sans-serif;
   padding: 3px; }
 
-#full-player-list tr:hover {
+#full-player-list th {
+  cursor: pointer; }
+
+#full-player-list tr:hover, #full-player-list thead {
   background-color: #efefef; }
 
 #custom-list ul {

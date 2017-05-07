@@ -12,7 +12,9 @@
     padding: 3px;
   }
 
-  tr:hover { background-color: #efefef; }
+  th { cursor: pointer; }
+
+  tr:hover, thead { background-color: #efefef; }
 
   // .draftpick td { border-bottom: 1px solid red !important; border-top: 1px solid red !important; }
 
