@@ -5,49 +5,49 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Draft Baby</title>
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css"/>
     <link rel="stylesheet" href="bower_components/animate.css/animate.css"/>
     <link rel="stylesheet" href="css/style.css"/>
   </head>
 
   <body>
-    <div ng-app="draftApp">
+    <div>
     <header>
       <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <h1>Draft Baby</h1>
-            <h3>Fantasy Football Draft Tool</h3>
-            <a href="#/">Expert Rankings</a> | <a href="#/custom">Customizable Rankings</a> | <a href="#/position">By Position</a>
-          </div>
-        </div>
+        <h1>Draft Baby</h1>
+        <h3>Fantasy Football Draft Tool</h3>
+        <a href="#">Expert Rankings</a> | <a href="/custom.html">Customizable Rankings</a> | <a href="/position.html">By Position</a>
       </div>
     </header>
 
     <div class="container">
-      <div ng-view></div>
+      <div class="full-player-list-wrapper">
+        <table id="full-player-list">
+          <tr>
+            <th>FP Rank</th>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Team</th>
+            <th>Bye Week</th>
+            <th>Best Rank</th>
+            <th>Worst Rank</th>
+            <th>Average Rank</th>
+            <th>Std Dev</th>
+            <th>ADP</th>
+          </tr>
+        </table>
+      </div>
     </div>
 
     <footer>
       <div class="container">
-        <div class="row">
-          <span class="quote">"However beautiful the strategy, you should occassionally look at the results." - Winston Churchill</span>
-          <span>&copy; TacoCorp 2016</span>
-        </div>
+        <span class="quote">"However beautiful the strategy, you should occassionally look at the results." - Winston Churchill</span>
       </div>
     </footer>
     </div>
 
     <!-- Scripts -->
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-    <script src="bower_components/angular/angular.min.js"></script>
-    <script src="bower_components/angular-route/angular-route.min.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <script type="text/javascript" src="bower_components/angular-ui-sortable/sortable.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/controllers.js"></script>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

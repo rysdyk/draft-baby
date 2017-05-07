@@ -1,8 +1,8 @@
 # front-end dependencies
-bower_components
+bower_components/
 
 # node stuff
-node_modules
+node_modules/
 
 
 # Logs and databases #
