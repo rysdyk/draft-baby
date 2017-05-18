@@ -476,6 +476,11 @@ footer {
 #full-player-list tr:hover, #full-player-list thead {
   background-color: #efefef; }
 
+.predicted {
+  border-bottom: 1px solid red;
+  border-top: 1px solid red;
+  background-color: yellow; }
+
 #custom-list ul {
   list-style: none;
   padding: 0; }

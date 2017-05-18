@@ -69,11 +69,10 @@ var rows = Array.prototype.slice.call(nodeRows);
 rows.forEach(function(row){
   row.addEventListener('click', function(){
     this.style.display = 'none';
-    drafted.push(this);
+    drafted.push(this.children[1].innerText);
     showDrafted(this);
   })
 })
-
 
 function showDrafted(player) {
   var list = document.getElementById('drafted');
@@ -82,13 +81,49 @@ function showDrafted(player) {
   list.appendChild(item);
 }
 
-
 // undo draft
-
 function undoDraft(e) {
   e.preventDefault();
-  drafted.pop();
+  var name = drafted.pop();
   var list = document.getElementById('drafted');
   list.removeChild(list.lastChild);
+  console.log(name);
+  var rows = table.querySelector('tbody').childNodes;
+  rows.forEach(function(row){
+    var data = row.childNodes[1].innerText;
+    if (name == data) {
+      row.style.display = 'table-row';
+    }
+  })
 }
 
+
+// draft estimate
+
+function estimate() {
+  var rows = table.querySelector('tbody').childNodes;
+  rows.forEach(function(row){
+    row.classList.remove('predicted');
+  })
+  var teams = document.getElementById('teams').value;
+  var draftPos = document.getElementById('draftPos').value;
+
+  var round = 0;
+
+  for (var i=1; i<=players.length; i++) {
+    var add = round * teams;
+
+    // this needs work!
+    if (round % 2 == 0) {
+      if (i % draftPos == 0) {
+        rows[i - 1 + add].classList.add('predicted')
+      }
+    } else {
+      if (i%(teams-draftPos+1)== 0) {
+        rows[i - 1 + add].classList.add('predicted')
+      }
+    }
+
+    if (i%teams == 0) { round++; }
+  }
+}
