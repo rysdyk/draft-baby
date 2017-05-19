@@ -479,7 +479,7 @@ footer {
 .predicted {
   border-bottom: 1px solid red;
   border-top: 1px solid red;
-  background-color: yellow; }
+  background-color: #ffff99; }
 
 #custom-list ul {
   list-style: none;

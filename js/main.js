@@ -105,25 +105,22 @@ function estimate() {
   rows.forEach(function(row){
     row.classList.remove('predicted');
   })
-  var teams = document.getElementById('teams').value;
-  var draftPos = document.getElementById('draftPos').value;
+  var teams = parseInt(document.getElementById('teams').value);
+  var draftPos = parseInt(document.getElementById('draftPos').value);
 
-  var round = 0;
-
-  for (var i=1; i<=players.length; i++) {
-    var add = round * teams;
-
-    // this needs work!
-    if (round % 2 == 0) {
-      if (i % draftPos == 0) {
-        rows[i - 1 + add].classList.add('predicted')
-      }
-    } else {
-      if (i%(teams-draftPos+1)== 0) {
-        rows[i - 1 + add].classList.add('predicted')
-      }
+  if (draftPos > teams) {
+    alert("Please select valid draft position")
+  } else {
+    // odd rounds picks
+    for (var i=draftPos; i<=players.length; i+=(teams*2)) {
+      console.log(i);
+      rows[i - 1].classList.add('predicted')
     }
 
-    if (i%teams == 0) { round++; }
+    // even round picks
+    for (var i=(teams*2 - draftPos); i<=players.length; i+=(teams*2)) {
+      console.log(i);
+      rows[i].classList.add('predicted')
+    }
   }
 }
