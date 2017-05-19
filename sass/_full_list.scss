@@ -1,11 +1,11 @@
 
 .full-player-list-wrapper {
-  @include column(9);
+  @include columns(9);
   padding: 0 10px;
 }
 
 .drafted-wrapper {
-  @include column(3);
+  @include columns(3);
   padding: 0 10px;
 
   ul {

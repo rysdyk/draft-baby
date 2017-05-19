@@ -9,7 +9,7 @@
   }
 }
 
-@mixin column($size) {
+@mixin columns($size) {
   box-sizing: border-box;
   float: left;
   width: 100%;

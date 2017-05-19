@@ -525,69 +525,34 @@ footer {
 #custom-list table td {
   padding: 3px; }
 
-#position {
-  padding-bottom: 60px; }
-  #position h2 {
-    font-size: 14px;
-    text-align: center;
-    text-decoration: underline; }
-  #position ul.position-heading {
-    padding: 0;
-    list-style: none; }
-    #position ul.position-heading li.heading {
-      font-weight: bold;
-      overflow: hidden; }
-      #position ul.position-heading li.heading span {
-        display: block;
-        float: left;
-        width: 30px; }
-        #position ul.position-heading li.heading span.name {
-          width: 130px; }
-        #position ul.position-heading li.heading span.stats {
-          width: 55px; }
-        #position ul.position-heading li.heading span.bye {
-          width: 30px; }
-        #position ul.position-heading li.heading span.todraft, #position ul.position-heading li.heading span.tag {
-          width: 30px;
-          text-align: center;
-          float: right; }
-  #position ul.position-list {
-    height: 300px;
-    list-style: none;
-    overflow: scroll;
-    padding: 0; }
-    #position ul.position-list li {
-      overflow: hidden; }
-      #position ul.position-list li span {
-        display: block;
-        float: left; }
-        #position ul.position-list li span:first-child {
-          text-align: left;
-          width: 30px; }
-        #position ul.position-list li span.customrank {
-          width: 30px; }
-        #position ul.position-list li span.name {
-          width: 130px; }
-        #position ul.position-list li span.bye {
-          width: 30px; }
-        #position ul.position-list li span.tag {
-          cursor: pointer;
-          float: right;
-          text-align: center;
-          width: 30px; }
-        #position ul.position-list li span.draft {
-          cursor: pointer;
-          float: right;
-          text-align: center;
-          width: 30px; }
-          #position ul.position-list li span.draft:before {
-            color: #ededed;
-            content: "\f00c";
-            font-family: FontAwesome;
-            font-size: 16px;
-            position: relative; }
-          #position ul.position-list li span.draft:hover:before {
-            color: #32CD32; }
+.position-wrapper {
+  box-sizing: border-box;
+  float: left;
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 0 20px; }
+  @media screen and (min-width: 700px) {
+    .position-wrapper {
+      width: 100%; } }
+  .position-wrapper .table-wrapper {
+    max-height: 400px;
+    overflow: scroll; }
+  @media (min-width: 600px) {
+    .position-wrapper {
+      box-sizing: border-box;
+      float: left;
+      width: 100%; } }
+  @media screen and (min-width: 600px) and (min-width: 700px) {
+    .position-wrapper {
+      width: 50%; } }
+  @media (min-width: 900px) {
+    .position-wrapper {
+      box-sizing: border-box;
+      float: left;
+      width: 100%; } }
+  @media screen and (min-width: 900px) and (min-width: 700px) {
+    .position-wrapper {
+      width: 33.33333%; } }
 
 #drafted {
   overflow: hidden; }
