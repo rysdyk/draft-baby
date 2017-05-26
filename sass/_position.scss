@@ -89,6 +89,14 @@
 //   }
 // }
 
+.positions-wrapper {
+  @include columns(9);
+}
+
+.drafted-wrapper {
+  @include columns(3);
+}
+
 .position-wrapper {
   @include columns(12);
   margin-bottom: 30px;
@@ -104,6 +112,6 @@
   }
 
   @media (min-width: 900px) {
-    @include columns(4);
+    @include columns(6);
   }
 }

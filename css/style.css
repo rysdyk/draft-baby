@@ -525,6 +525,22 @@ footer {
 #custom-list table td {
   padding: 3px; }
 
+.positions-wrapper {
+  box-sizing: border-box;
+  float: left;
+  width: 100%; }
+  @media screen and (min-width: 700px) {
+    .positions-wrapper {
+      width: 75%; } }
+
+.drafted-wrapper {
+  box-sizing: border-box;
+  float: left;
+  width: 100%; }
+  @media screen and (min-width: 700px) {
+    .drafted-wrapper {
+      width: 25%; } }
+
 .position-wrapper {
   box-sizing: border-box;
   float: left;
@@ -552,7 +568,7 @@ footer {
       width: 100%; } }
   @media screen and (min-width: 900px) and (min-width: 700px) {
     .position-wrapper {
-      width: 33.33333%; } }
+      width: 50%; } }
 
 #drafted {
   overflow: hidden; }
