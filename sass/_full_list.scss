@@ -1,12 +1,10 @@
 
 .full-player-list-wrapper {
   @include columns(9);
-  padding: 0 10px;
 }
 
 .drafted-wrapper {
   @include columns(3);
-  padding: 0 10px;
 
   ul {
     list-style: none;
@@ -20,20 +18,34 @@
     padding: 3px;
   }
 
-  th { cursor: pointer; }
+  td:hover { cursor: pointer; }
 
   tr:hover, thead { background-color: #efefef; }
 }
 
-.predicted {
+.estimated {
   border-bottom: 1px solid red;
   border-top: 1px solid red;
   background-color: lighten(yellow, 30%);
 }
 
+#filter {
+  @include columns(3);
+
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  input {
+    padding: 4px 6px;
+  }
+}
+
 #estimate {
+  @include columns(9);
   margin-bottom: 20px;
-  padding: 0 10px;
   text-align: center;
 
   h4 { margin-bottom: 3px; }

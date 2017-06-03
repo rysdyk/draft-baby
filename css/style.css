@@ -448,8 +448,8 @@ footer {
 .full-player-list-wrapper {
   box-sizing: border-box;
   float: left;
-  width: 100%;
-  padding: 0 10px; }
+  padding: 0 10px;
+  width: 100%; }
   @media screen and (min-width: 700px) {
     .full-player-list-wrapper {
       width: 75%; } }
@@ -457,8 +457,8 @@ footer {
 .drafted-wrapper {
   box-sizing: border-box;
   float: left;
-  width: 100%;
-  padding: 0 10px; }
+  padding: 0 10px;
+  width: 100%; }
   @media screen and (min-width: 700px) {
     .drafted-wrapper {
       width: 25%; } }
@@ -470,21 +470,42 @@ footer {
   font-family: "Lato", sans-serif;
   padding: 3px; }
 
-#full-player-list th {
+#full-player-list td:hover {
   cursor: pointer; }
 
 #full-player-list tr:hover, #full-player-list thead {
   background-color: #efefef; }
 
-.predicted {
+.estimated {
   border-bottom: 1px solid red;
   border-top: 1px solid red;
   background-color: #ffff99; }
 
-#estimate {
-  margin-bottom: 20px;
+#filter {
+  box-sizing: border-box;
+  float: left;
   padding: 0 10px;
+  width: 100%; }
+  @media screen and (min-width: 700px) {
+    #filter {
+      width: 25%; } }
+  #filter label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px; }
+  #filter input {
+    padding: 4px 6px; }
+
+#estimate {
+  box-sizing: border-box;
+  float: left;
+  padding: 0 10px;
+  width: 100%;
+  margin-bottom: 20px;
   text-align: center; }
+  @media screen and (min-width: 700px) {
+    #estimate {
+      width: 75%; } }
   #estimate h4 {
     margin-bottom: 3px; }
   #estimate select {
@@ -559,6 +580,7 @@ footer {
 .positions-wrapper {
   box-sizing: border-box;
   float: left;
+  padding: 0 10px;
   width: 100%; }
   @media screen and (min-width: 700px) {
     .positions-wrapper {
@@ -567,6 +589,7 @@ footer {
 .drafted-wrapper {
   box-sizing: border-box;
   float: left;
+  padding: 0 10px;
   width: 100%; }
   @media screen and (min-width: 700px) {
     .drafted-wrapper {
@@ -575,6 +598,7 @@ footer {
 .position-wrapper {
   box-sizing: border-box;
   float: left;
+  padding: 0 10px;
   width: 100%;
   margin-bottom: 30px;
   padding: 0 20px; }
@@ -588,6 +612,7 @@ footer {
     .position-wrapper {
       box-sizing: border-box;
       float: left;
+      padding: 0 10px;
       width: 100%; } }
   @media screen and (min-width: 600px) and (min-width: 700px) {
     .position-wrapper {
@@ -596,6 +621,7 @@ footer {
     .position-wrapper {
       box-sizing: border-box;
       float: left;
+      padding: 0 10px;
       width: 100%; } }
   @media screen and (min-width: 900px) and (min-width: 700px) {
     .position-wrapper {

@@ -48,7 +48,10 @@ function makeSortable(table) {
   else return; // if no `<thead>` then do nothing
   while (--i >= 0) (function (i) {
     var dir = 1;
-    th[i].addEventListener('click', function () {sortTable(table, i, (dir = 1 - dir)); });
+    th[i].addEventListener('click', function () {
+      sortTable(table, i, (dir = 1 - dir));
+      clearEstimate();
+    });
   }(i));
 }
 
@@ -66,7 +69,7 @@ window.onload = function () {makeAllSortable();};
 function estimate() {
   var rows = table.querySelector('tbody').childNodes;
   rows.forEach(function(row){
-    row.classList.remove('predicted');
+    row.classList.remove('estimated');
   })
   var teams = parseInt(document.getElementById('teams').value);
   var draftPos = parseInt(document.getElementById('draftPos').value);
@@ -77,13 +80,39 @@ function estimate() {
     // odd rounds picks
     for (var i=draftPos; i<=players.length; i+=(teams*2)) {
       console.log(i);
-      rows[i - 1].classList.add('predicted')
+      rows[i - 1].classList.add('estimated')
     }
 
     // even round picks
     for (var i=(teams*2 - draftPos); i<=players.length; i+=(teams*2)) {
       console.log(i);
-      rows[i].classList.add('predicted')
+      rows[i].classList.add('estimated')
+    }
+  }
+}
+
+function clearEstimate() {
+  var rows = table.querySelector('tbody').childNodes;
+  for (var i = 0; i < rows.length; i++) {
+    rows[i].classList.remove('estimated')
+  }
+}
+
+function filterPlayers() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById('filterInput');
+  filter = input.value.toUpperCase();
+  table = document.getElementById('full-player-list');
+  tr = table.getElementsByTagName('tr');
+
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName('td')[1];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1 ) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = 'none';
+      }
     }
   }
 }
