@@ -1,0 +1,9 @@
+#draft-settings {
+	@include columns(12);
+}
+
+#draftable-player-list-wrapper, #your-team-wrapper, #drafted-wrapper {
+  @media (min-width: 900px) {
+    @include columns(4);
+  }
+}

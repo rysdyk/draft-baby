@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	  <meta charset="utf-8"/>
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <title>Draft Baby</title>
+	  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css"/>
+	  <link rel="stylesheet" href="bower_components/animate.css/animate.css"/>
+	  <link rel="stylesheet" href="css/style.css"/>
+	</head>
+	
+	<body>
+	  <header>
+	    <div class="container">
+	      <h1>Draft Baby</h1>
+	      <h3>Fantasy Football Draft Tool</h3>
+	      <a href="/index.html">Expert Rankings</a> <!-- | <a href="/custom.html">Customizable Rankings</a> --> | <a href="#">By Position</a>
+	    </div>
+	  </header>
+		
+		<div class="container">
+			
+			<section id="draft-settings">
+<!--number of teams in your league-->
+<!--draft position-->
+			</section>
+			
+			<div id="simulator" class="inactive">
+				<section id="draftable-player-list-wrapper">
+	        <table id="draftable-player-list">
+	          <thead>
+	            <tr>
+	              <th>Name</th>
+	              <th>Position</th>
+	              <th>Team</th>
+	              <th>Bye Week</th>
+	            </tr>
+	          </thead>
+	          <tbody></tbody>
+	        </table>
+				</section>
+			
+				<section id="your-team-wrapper">
+					<h3>Your Team</h3>
+					<ul id="team"></ul>
+				</section>
+			
+				<section id="drafted-wrapper">
+					<h3>Drafted</h3>
+					<ul id="drafted"></ul>
+				</section>
+			</div>
+		</div>
+		
+    <script src="js/simulator.js"></script>
+	</body>
+</html>

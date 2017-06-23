@@ -92,8 +92,6 @@
       // remove from local storage
       setLocal();
     }
-
-
   }
 
   draftBaby.init();

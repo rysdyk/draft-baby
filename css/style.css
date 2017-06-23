@@ -641,3 +641,22 @@ footer {
 
 #drafted-wrapper td {
   padding: 0 5px; }
+
+#draft-settings {
+  box-sizing: border-box;
+  float: left;
+  padding: 0 10px;
+  width: 100%; }
+  @media screen and (min-width: 700px) {
+    #draft-settings {
+      width: 100%; } }
+
+@media (min-width: 900px) {
+  #draftable-player-list-wrapper, #your-team-wrapper, #drafted-wrapper {
+    box-sizing: border-box;
+    float: left;
+    padding: 0 10px;
+    width: 100%; } }
+  @media screen and (min-width: 900px) and (min-width: 700px) {
+    #draftable-player-list-wrapper, #your-team-wrapper, #drafted-wrapper {
+      width: 33.33333%; } }
