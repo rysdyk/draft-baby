@@ -14,7 +14,7 @@
 	    <div class="container">
 	      <h1>Draft Baby</h1>
 	      <h3>Fantasy Football Draft Tool</h3>
-	      <a href="/index.html">Expert Rankings</a> <!-- | <a href="/custom.html">Customizable Rankings</a> --> | <a href="#">By Position</a>
+	      <a href="/index.html">Expert Rankings</a> | <a href="#">Draft Simulator</a> | <a href="/position.html">By Position</a>
 	    </div>
 	  </header>
 		
@@ -26,6 +26,11 @@
 			</section>
 			
 			<div id="simulator" class="inactive">
+				<section id="your-team-wrapper">
+					<h3>Your Team</h3>
+					<ul id="team"></ul>
+				</section>
+				
 				<section id="draftable-player-list-wrapper">
 	        <table id="draftable-player-list">
 	          <thead>
@@ -33,16 +38,11 @@
 	              <th>Name</th>
 	              <th>Position</th>
 	              <th>Team</th>
-	              <th>Bye Week</th>
+	              <th>Bye</th>
 	            </tr>
 	          </thead>
 	          <tbody></tbody>
 	        </table>
-				</section>
-			
-				<section id="your-team-wrapper">
-					<h3>Your Team</h3>
-					<ul id="team"></ul>
 				</section>
 			
 				<section id="drafted-wrapper">

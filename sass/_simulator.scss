@@ -2,8 +2,22 @@
 	@include columns(12);
 }
 
-#draftable-player-list-wrapper, #your-team-wrapper, #drafted-wrapper {
+#draftable-player-list-wrapper {
   @media (min-width: 900px) {
-    @include columns(4);
+    @include columns(6);
+  }
+	
+	#draftable-player-list {
+		tr:hover {
+			background-color: #ededed;
+			cursor: pointer;
+		}
+		td { text-align: center; }
+	}
+}
+
+#your-team-wrapper, #drafted-wrapper {
+  @media (min-width: 900px) {
+    @include columns(2);
   }
 }

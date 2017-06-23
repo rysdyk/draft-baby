@@ -652,11 +652,28 @@ footer {
       width: 100%; } }
 
 @media (min-width: 900px) {
-  #draftable-player-list-wrapper, #your-team-wrapper, #drafted-wrapper {
+  #draftable-player-list-wrapper {
     box-sizing: border-box;
     float: left;
     padding: 0 10px;
     width: 100%; } }
   @media screen and (min-width: 900px) and (min-width: 700px) {
-    #draftable-player-list-wrapper, #your-team-wrapper, #drafted-wrapper {
-      width: 33.33333%; } }
+    #draftable-player-list-wrapper {
+      width: 50%; } }
+
+#draftable-player-list-wrapper #draftable-player-list tr:hover {
+  background-color: #ededed;
+  cursor: pointer; }
+
+#draftable-player-list-wrapper #draftable-player-list td {
+  text-align: center; }
+
+@media (min-width: 900px) {
+  #your-team-wrapper, #drafted-wrapper {
+    box-sizing: border-box;
+    float: left;
+    padding: 0 10px;
+    width: 100%; } }
+  @media screen and (min-width: 900px) and (min-width: 700px) {
+    #your-team-wrapper, #drafted-wrapper {
+      width: 16.66667%; } }
