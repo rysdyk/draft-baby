@@ -670,6 +670,10 @@ footer {
 #draftable-player-list-wrapper #draftable-player-list td {
   text-align: center; }
 
+#draftable-player-list-wrapper .picked {
+  display: none;
+  transition: .5s; }
+
 @media (min-width: 900px) {
   #your-team-wrapper, #drafted-wrapper {
     box-sizing: border-box;
@@ -679,3 +683,9 @@ footer {
   @media screen and (min-width: 900px) and (min-width: 700px) {
     #your-team-wrapper, #drafted-wrapper {
       width: 16.66667%; } }
+
+#drafted-wrapper ul, #team {
+  list-style: none;
+  padding-left: 5px; }
+  #drafted-wrapper ul li, #team li {
+    margin-bottom: 5px; }

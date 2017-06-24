@@ -22,7 +22,7 @@ players.forEach(function(player){
   tbody[0].appendChild(tr);
 
   for (var data in player) {
-    if (data == 'name' || data == 'position' || data == 'team' || data == 'bye_week' ) {
+    if (data == 'name' || data == 'position' || data == 'team' || data == 'bye' ) {
 			var td = document.createElement('td');
       td.appendChild(document.createTextNode(player[data]));
 			tr.appendChild(td);
@@ -79,11 +79,12 @@ function computerPicks() {
 	//console.log(selected)
 	draftSelected(selected)
 	
-	run = setTimeout( function(){ computerPicks(teams, draftPos)}, 500);
+	run = setTimeout( function(){ computerPicks(teams, draftPos)}, 750);
 
 	if ( picks.includes(count) ) {
 	 	//console.log("got here")
   	userDraft();	
+		count++
 	} else {
 		count++
 		//console.log(count);
@@ -92,17 +93,56 @@ function computerPicks() {
 
 function userDraft(){
 	clearTimeout(run);
-	// user draft
-	// get click
-	// pop it
-	count++
-	// resume draft: computerPicks();
+	
+	var nodeRows = document.querySelector('tbody').childNodes;
+	
+  nodeRows.forEach(function(row){
+    row.addEventListener('click', function(){
+			//console.log(players)
+			for (var i=0; i<players.length; i++) {
+				if (players[i].name == this.childNodes[0].innerHTML) {
+					selected = players[i];
+					break;
+				}
+			}
+			// remove selected player from sorted player list. this doesn't work yet.
+			var ind = players.indexOf(selected)
+			players.slice(ind)
+			// add to your team
+		  var team = document.getElementById('team');
+		  var member = document.createElement('li');
+		  team.appendChild(document.createTextNode(selected.name));
+		  team.appendChild(member);
+			
+			// hide from main list and add to drafted
+      draftSelected(selected)
+			
+			// start comptuer picker
+			computerPicks()
+
+    })
+  });
 }
 
 var fullDraftedList = []
 
 function draftSelected(selected) {
 	fullDraftedList.push(selected);
+	//console.log(selected)
+	
+	// hide selected
+	var nodeRows = document.querySelector('tbody').childNodes;
+  nodeRows.forEach(function(row){
+    var data = row.childNodes[0].innerText;
+    if (selected.name == data) {
+      row.classList.add('picked');
+    }
+  })
+	// add to draftted list
+  var list = document.getElementById('drafted');
+  var item = document.createElement('li');
+  item.appendChild(document.createTextNode(selected.name + " " + selected.position + " " + selected.team ));
+  list.prepend(item);
 }
 
 // click event to start draft
