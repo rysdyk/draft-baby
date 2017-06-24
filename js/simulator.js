@@ -10,11 +10,9 @@
 // toggle whether to hide drafted
 
 var request = new XMLHttpRequest();
-request.open("GET", "../lib/fantasypros-std-8-28-2016.json", false);
+request.open("GET", "../lib/ffc_2017_6_23.json", false);
 request.send(null);
 var players = JSON.parse(request.responseText);
-
-
 
 var table = document.getElementById('draftable-player-list');
 var tbody = table.getElementsByTagName('tbody');
@@ -31,9 +29,6 @@ players.forEach(function(player){
     }
   }
 });
-
-
-
 
 // add sorted_pos to players
 players.forEach(function(player, index){
@@ -56,7 +51,7 @@ players.sort(function(a, b) {
 
 var count = 1;
 var run;
-
+var picks = [];
 var teams;
 var draftPos;
 
@@ -64,30 +59,35 @@ function startDraft() {
 	// fade out settings
 	teams = parseInt(document.getElementById('teams').value);
 	draftPos = parseInt(document.getElementById('draftPos').value);
-	computerPicks(teams, draftPos);
-}
-
-function resumeDraft() {
-	// fade out settings
+	setPicks(teams, draftPos);
 	computerPicks();
 }
 
-function computerPicks(teams, draftPos) {
-	var selected = players.shift();
-	//console.log(selected);
-	draftSelected(selected)
-	run = setTimeout( function(){ computerPicks(teams, draftPos)}, 500);
-	count++
-	if (count % 10 == 0 ) userDraft();
-	
+function setPicks(teams, draftPos) {
+	// odd round picks
   for (var i=draftPos; i<=players.length; i+=(teams*2)) {
-    clearTimeout(run);
+    picks.push(i)
   }
-
   // even round picks
   for (var i=(teams*2 - draftPos); i<=players.length; i+=(teams*2)) {
-    clearTimeout(run);
+    picks.push(i)
   }
+}
+
+function computerPicks() {
+	var selected = players.shift();
+	//console.log(selected)
+	draftSelected(selected)
+	
+	run = setTimeout( function(){ computerPicks(teams, draftPos)}, 500);
+
+	if ( picks.includes(count) ) {
+	 	//console.log("got here")
+  	userDraft();	
+	} else {
+		count++
+		//console.log(count);
+	}
 }
 
 function userDraft(){
@@ -95,10 +95,14 @@ function userDraft(){
 	// user draft
 	// get click
 	// pop it
+	count++
+	// resume draft: computerPicks();
 }
 
+var fullDraftedList = []
+
 function draftSelected(selected) {
-	
+	fullDraftedList.push(selected);
 }
 
 // click event to start draft

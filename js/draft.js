@@ -44,6 +44,7 @@
       var setLocal = this.setLocal;
       var undo = document.getElementById('undo-draft');
       var undoDraft = this.undoDraft;
+			var clear = document.getElementById('clear-draft')
 
       this.nodeRows.forEach(function(row){
         row.addEventListener('click', function(){
@@ -57,6 +58,11 @@
       undo.addEventListener('click', function(e){
         undoDraft(e);
       })
+			
+			// clear.addEventListener('click', function(e){
+			// 	localStorage.clear();
+			// 	this.drafted = [];
+			// })
     },
 
     showDrafted: function(player) {
@@ -67,7 +73,8 @@
     },
 
     setLocal: function() {
-      var drafted = this.drafted;
+      var drafted = draftBaby.drafted;
+			// drafted not being set properly
       if (typeof(Storage) !== "undefined") {
         localStorage.setItem('drafted', JSON.stringify(drafted) )
       } else {
