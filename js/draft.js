@@ -74,7 +74,6 @@
 
     setLocal: function() {
       var drafted = draftBaby.drafted;
-			// drafted not being set properly
       if (typeof(Storage) !== "undefined") {
         localStorage.setItem('drafted', JSON.stringify(drafted) )
       } else {

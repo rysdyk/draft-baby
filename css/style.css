@@ -648,10 +648,15 @@ footer {
   box-sizing: border-box;
   float: left;
   padding: 0 10px;
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 20px; }
   @media screen and (min-width: 700px) {
     #draft-settings {
       width: 100%; } }
+  #draft-settings.hidden {
+    height: 0;
+    overflow: hidden;
+    transition: 1s; }
 
 @media (min-width: 900px) {
   #draftable-player-list-wrapper {
@@ -671,8 +676,7 @@ footer {
   text-align: center; }
 
 #draftable-player-list-wrapper .picked {
-  display: none;
-  transition: .5s; }
+  display: none; }
 
 @media (min-width: 900px) {
   #your-team-wrapper, #drafted-wrapper {
@@ -689,3 +693,7 @@ footer {
   padding-left: 5px; }
   #drafted-wrapper ul li, #team li {
     margin-bottom: 5px; }
+
+#draftable-player-list-wrapper, #drafted-wrapper {
+  max-height: 500px;
+  overflow: scroll; }

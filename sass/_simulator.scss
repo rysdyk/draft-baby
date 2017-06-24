@@ -1,5 +1,12 @@
 #draft-settings {
 	@include columns(12);
+	margin-bottom: 20px;
+	
+	&.hidden {
+		height: 0;
+		overflow: hidden;
+		transition: 1s;
+	}
 }
 
 #draftable-player-list-wrapper {
@@ -17,7 +24,6 @@
 	
 	.picked {
 		display: none;
-		transition: .5s;
 	}
 }
 
@@ -32,4 +38,9 @@
 	padding-left: 5px;
 	
 	li { margin-bottom: 5px; }
+}
+
+#draftable-player-list-wrapper, #drafted-wrapper {
+	max-height: 500px;
+	overflow: scroll;
 }

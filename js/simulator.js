@@ -1,19 +1,10 @@
-// players can move up at least 3
-// players can move down at least 3
-// but never below 0
-// position divided by 4 is the range
-// use their range to generate random number
-// then sort
-// results remain hidden
-// run sorted players - stop for each player draft pick - pop that player
-// three columns. Available / Drafted / Your Team
-// toggle whether to hide drafted
-
+// get player data
 var request = new XMLHttpRequest();
 request.open("GET", "../lib/ffc_2017_6_23.json", false);
 request.send(null);
 var players = JSON.parse(request.responseText);
 
+// set global ui variables
 var table = document.getElementById('draftable-player-list');
 var tbody = table.getElementsByTagName('tbody');
 
@@ -33,10 +24,22 @@ players.forEach(function(player){
 // add sorted_pos to players
 players.forEach(function(player, index){
 	var startPos = players.indexOf(player);
-	var max = startPos * 1.3 + 4;
-	var min = startPos * .5 - 4;
+	
+	if (index < 25) {
+		var max = startPos * 1.3 + 4;
+		var min = startPos * .6 - 4;
+	} else if (index >= 25 && index < 51) {
+		var max = startPos * 1.2;
+		var min = startPos * .7;
+	} else if (index >=51 && index < 100) {
+		var max = startPos * 1.1;
+		var min = startPos * .8;
+	} else {
+		var max = startPos * 1.1;
+		var min = startPos * .9;
+	}
+	
 	if (min < 0) { min = 0; }
-	//console.log("start pos: " + startPos + ", Max: " + max + " , Min: " + min);
 	sorted_pos = Math.random() * (max - min) + min
 	players[index].sorted_pos = sorted_pos
 	
@@ -46,8 +49,6 @@ players.sort(function(a, b) {
   return a.sorted_pos - b.sorted_pos;
 });
 
-// players is an array of objects
-//console.log(players)
 
 var count = 1;
 var run;
@@ -57,10 +58,12 @@ var draftPos;
 
 function startDraft() {
 	// fade out settings
+	var settings = document.getElementById('draft-settings');
+	settings.classList.add('hidden')
 	teams = parseInt(document.getElementById('teams').value);
 	draftPos = parseInt(document.getElementById('draftPos').value);
 	setPicks(teams, draftPos);
-	computerPicks();
+	computerPicks(players);
 }
 
 function setPicks(teams, draftPos) {
@@ -69,26 +72,24 @@ function setPicks(teams, draftPos) {
     picks.push(i)
   }
   // even round picks
-  for (var i=(teams*2 - draftPos); i<=players.length; i+=(teams*2)) {
+  for (var i=(teams*2 - draftPos + 1); i<=players.length; i+=(teams*2)) {
     picks.push(i)
   }
 }
 
 function computerPicks() {
-	var selected = players.shift();
-	//console.log(selected)
-	draftSelected(selected)
-	
-	run = setTimeout( function(){ computerPicks(teams, draftPos)}, 750);
+	console.log(players)
 
 	if ( picks.includes(count) ) {
-	 	//console.log("got here")
   	userDraft();	
-		count++
 	} else {
+		var chosen = players.shift();
+		draftSelected(chosen)
 		count++
 		//console.log(count);
+		run = setTimeout( function(){ computerPicks()}, 750);
 	}
+	
 }
 
 function userDraft(){
@@ -101,24 +102,27 @@ function userDraft(){
 			//console.log(players)
 			for (var i=0; i<players.length; i++) {
 				if (players[i].name == this.childNodes[0].innerHTML) {
-					selected = players[i];
+					var selected = players[i];
+					players.splice(i, 1);
+					draftSelected(selected);
+					count++;
+				  var team = document.getElementById('team');
+				  var member = document.createElement('li');
+				  team.appendChild(document.createTextNode(selected.position + ' ' + selected.name));
+				  team.appendChild(member);
+					setTimeout( function(){ computerPicks()}, 750);
 					break;
 				}
 			}
 			// remove selected player from sorted player list. this doesn't work yet.
-			var ind = players.indexOf(selected)
-			players.slice(ind)
 			// add to your team
-		  var team = document.getElementById('team');
-		  var member = document.createElement('li');
-		  team.appendChild(document.createTextNode(selected.name));
-		  team.appendChild(member);
+		  
 			
 			// hide from main list and add to drafted
-      draftSelected(selected)
+      
 			
 			// start comptuer picker
-			computerPicks()
+			
 
     })
   });
@@ -141,7 +145,7 @@ function draftSelected(selected) {
 	// add to draftted list
   var list = document.getElementById('drafted');
   var item = document.createElement('li');
-  item.appendChild(document.createTextNode(selected.name + " " + selected.position + " " + selected.team ));
+  item.appendChild(document.createTextNode(count + ". " + selected.name ));
   list.prepend(item);
 }
 
