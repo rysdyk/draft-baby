@@ -105,6 +105,8 @@
   .table-wrapper {
     max-height: 400px;
     overflow: scroll;
+		
+		tr:hover { cursor: pointer; }
   }
 
   @media (min-width: 600px) {

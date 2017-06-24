@@ -38,7 +38,7 @@ players.forEach(function(player){
 // add sorted_pos to players
 players.forEach(function(player, index){
 	var startPos = players.indexOf(player);
-	var max = startPos * 1.5 + 4;
+	var max = startPos * 1.3 + 4;
 	var min = startPos * .5 - 4;
 	if (min < 0) { min = 0; }
 	//console.log("start pos: " + startPos + ", Max: " + max + " , Min: " + min);
@@ -57,16 +57,37 @@ players.sort(function(a, b) {
 var count = 1;
 var run;
 
+var teams;
+var draftPos;
+
 function startDraft() {
+	// fade out settings
+	teams = parseInt(document.getElementById('teams').value);
+	draftPos = parseInt(document.getElementById('draftPos').value);
+	computerPicks(teams, draftPos);
+}
+
+function resumeDraft() {
+	// fade out settings
 	computerPicks();
 }
 
-function computerPicks() {
+function computerPicks(teams, draftPos) {
 	var selected = players.shift();
-	console.log(selected);
-	run = setTimeout( function(){ computerPicks()}, 500);
+	//console.log(selected);
+	draftSelected(selected)
+	run = setTimeout( function(){ computerPicks(teams, draftPos)}, 500);
 	count++
 	if (count % 10 == 0 ) userDraft();
+	
+  for (var i=draftPos; i<=players.length; i+=(teams*2)) {
+    clearTimeout(run);
+  }
+
+  // even round picks
+  for (var i=(teams*2 - draftPos); i<=players.length; i+=(teams*2)) {
+    clearTimeout(run);
+  }
 }
 
 function userDraft(){
@@ -76,9 +97,9 @@ function userDraft(){
 	// pop it
 }
 
-
-
-
+function draftSelected(selected) {
+	
+}
 
 // click event to start draft
 // grays out draft settings

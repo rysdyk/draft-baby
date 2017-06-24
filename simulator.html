@@ -14,15 +14,42 @@
 	    <div class="container">
 	      <h1>Draft Baby</h1>
 	      <h3>Fantasy Football Draft Tool</h3>
-	      <a href="/index.html">Expert Rankings</a> | <a href="#">Draft Simulator</a> | <a href="/position.html">By Position</a>
+	      <a href="/index.html">Rankings</a> | <a href="#">Draft Simulator</a> | <a href="/position.html">By Position</a>
 	    </div>
 	  </header>
 		
 		<div class="container">
 			
 			<section id="draft-settings">
-<!--number of teams in your league-->
-<!--draft position-->
+<!-- conservative or aggressive setting -->
+        <h4>Draft Simulator Settings</h4>
+        <label for="teams"># of Teams
+          <select name="teams" id="teams">
+            <option value="8">8</option>
+            <option value="10">10</option>
+            <option value="12">12</option>
+            <option value="14">14</option>
+          </select>
+        </label>
+        <label for="draftPos">Draft Position
+          <select name="draftPos" id="draftPos">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+          </select>
+        </label>
+				<button onClick="startDraft()">Start Draft</button>
 			</section>
 			
 			<div id="simulator" class="inactive">

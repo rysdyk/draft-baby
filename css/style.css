@@ -608,6 +608,8 @@ footer {
   .position-wrapper .table-wrapper {
     max-height: 400px;
     overflow: scroll; }
+    .position-wrapper .table-wrapper tr:hover {
+      cursor: pointer; }
   @media (min-width: 600px) {
     .position-wrapper {
       box-sizing: border-box;
