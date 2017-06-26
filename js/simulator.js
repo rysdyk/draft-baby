@@ -108,22 +108,12 @@ function userDraft(){
 					count++;
 				  var team = document.getElementById('team');
 				  var member = document.createElement('li');
-				  team.appendChild(document.createTextNode(selected.position + ' ' + selected.name));
+				  team.appendChild(document.createTextNode(selected.position + ' ' + selected.name + ' ' + selected.bye));
 				  team.appendChild(member);
 					setTimeout( function(){ computerPicks()}, 750);
 					break;
 				}
 			}
-			// remove selected player from sorted player list. this doesn't work yet.
-			// add to your team
-		  
-			
-			// hide from main list and add to drafted
-      
-			
-			// start comptuer picker
-			
-
     })
   });
 }
@@ -132,8 +122,6 @@ var fullDraftedList = []
 
 function draftSelected(selected) {
 	fullDraftedList.push(selected);
-	//console.log(selected)
-	
 	// hide selected
 	var nodeRows = document.querySelector('tbody').childNodes;
   nodeRows.forEach(function(row){
@@ -149,6 +137,10 @@ function draftSelected(selected) {
   list.prepend(item);
 }
 
-// click event to start draft
-// grays out draft settings
-// starts popping off sorted players
+// things to add next:
+// adjust settings so that draft position can't exceed number of teams
+// add pick #, round, overall numbers to player
+// add round markers to total drafted list
+// choose different league formats
+// improve picking algorithm to pick according to team needs
+

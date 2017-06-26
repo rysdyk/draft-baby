@@ -666,7 +666,7 @@ footer {
     width: 100%; } }
   @media screen and (min-width: 900px) and (min-width: 700px) {
     #draftable-player-list-wrapper {
-      width: 50%; } }
+      width: 41.66667%; } }
 
 #draftable-player-list-wrapper #draftable-player-list tr:hover {
   background-color: #ededed;
@@ -679,13 +679,23 @@ footer {
   display: none; }
 
 @media (min-width: 900px) {
-  #your-team-wrapper, #drafted-wrapper {
+  #your-team-wrapper {
     box-sizing: border-box;
     float: left;
     padding: 0 10px;
     width: 100%; } }
   @media screen and (min-width: 900px) and (min-width: 700px) {
-    #your-team-wrapper, #drafted-wrapper {
+    #your-team-wrapper {
+      width: 25%; } }
+
+@media (min-width: 900px) {
+  #drafted-wrapper {
+    box-sizing: border-box;
+    float: left;
+    padding: 0 10px;
+    width: 100%; } }
+  @media screen and (min-width: 900px) and (min-width: 700px) {
+    #drafted-wrapper {
       width: 16.66667%; } }
 
 #drafted-wrapper ul, #team {

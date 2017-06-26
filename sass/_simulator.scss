@@ -11,7 +11,7 @@
 
 #draftable-player-list-wrapper {
   @media (min-width: 900px) {
-    @include columns(6);
+    @include columns(5);
   }
 	
 	#draftable-player-list {
@@ -27,7 +27,13 @@
 	}
 }
 
-#your-team-wrapper, #drafted-wrapper {
+#your-team-wrapper {
+  @media (min-width: 900px) {
+    @include columns(3);
+  }
+}
+
+#drafted-wrapper {
   @media (min-width: 900px) {
     @include columns(2);
   }
