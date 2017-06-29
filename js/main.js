@@ -70,23 +70,21 @@ function estimate() {
   var rows = table.querySelector('tbody').childNodes;
   rows.forEach(function(row){
     row.classList.remove('estimated');
-  })
+  });
   var teams = parseInt(document.getElementById('teams').value);
   var draftPos = parseInt(document.getElementById('draftPos').value);
 
   if (draftPos > teams) {
-    alert("Please select valid draft position")
+    alert("Please select valid draft position");
   } else {
     // odd rounds picks
     for (var i=draftPos; i<=players.length; i+=(teams*2)) {
-      console.log(i);
-      rows[i - 1].classList.add('estimated')
+      rows[i - 1].classList.add('estimated');
     }
 
     // even round picks
-    for (var i=(teams*2 - draftPos); i<=players.length; i+=(teams*2)) {
-      console.log(i);
-      rows[i].classList.add('estimated')
+    for (var j=(teams*2 - draftPos); j<=players.length; j+=(teams*2)) {
+      rows[j].classList.add('estimated');
     }
   }
 }
@@ -94,7 +92,7 @@ function estimate() {
 function clearEstimate() {
   var rows = table.querySelector('tbody').childNodes;
   for (var i = 0; i < rows.length; i++) {
-    rows[i].classList.remove('estimated')
+    rows[i].classList.remove('estimated');
   }
 }
 

@@ -11,14 +11,14 @@
     },
 
     cacheDom: function() {
-      this.drafted;
+      this.drafted = [];
       this.nodeRows = document.querySelector('tbody').childNodes;
       this.list = document.getElementById('drafted');
     },
 
     setDrafted: function(){
       if (localStorage.drafted.length > 2) {
-        this.drafted = JSON.parse(localStorage.drafted)
+        this.drafted = JSON.parse(localStorage.drafted);
       } else {
         this.drafted = [];
       }
@@ -35,7 +35,7 @@
           item.appendChild(document.createTextNode(data));
           list.appendChild(item);
         }
-      })
+      });
     },
 
     addClick: function() {
@@ -44,7 +44,7 @@
       var setLocal = this.setLocal;
       var undo = document.getElementById('undo-draft');
       var undoDraft = this.undoDraft;
-			var clear = document.getElementById('clear-draft')
+			var clear = document.getElementById('clear-draft');
 
       this.nodeRows.forEach(function(row){
         row.addEventListener('click', function(){
@@ -52,12 +52,12 @@
           drafted.push(this.children[1].innerText);
           showDrafted(this);
           setLocal();
-        })
+        });
       });
 
       undo.addEventListener('click', function(e){
         undoDraft(e);
-      })
+      });
 			
 			// clear.addEventListener('click', function(e){
 			// 	localStorage.clear();
@@ -75,9 +75,9 @@
     setLocal: function() {
       var drafted = draftBaby.drafted;
       if (typeof(Storage) !== "undefined") {
-        localStorage.setItem('drafted', JSON.stringify(drafted) )
+        localStorage.setItem('drafted', JSON.stringify(drafted) );
       } else {
-        console.log("Sorry, no local storage")
+        console.log("Sorry, no local storage");
       }
     },
 
@@ -94,11 +94,11 @@
         if (name == data) {
           row.style.display = '';
         }
-      })
+      });
       // remove from local storage
       setLocal();
     }
-  }
+  };
 
   draftBaby.init();
 

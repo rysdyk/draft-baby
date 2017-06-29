@@ -34,10 +34,7 @@ gulp.task('minify-css', function() {
 
 gulp.task('minify-js', function() {
   gulp.src(['./js/*.js', '!./bower_components/**'])
-    .pipe(uglify({
-      // inSourceMap:
-      // outSourceMap: "app.js.map"
-    }))
+    .pipe(uglify().on('error', function(e){ console.log(e); }))
     .pipe(gulp.dest('./dist/js/'))
 });
 
@@ -46,13 +43,26 @@ gulp.task('copy-bower-components', function () {
     .pipe(gulp.dest('./dist/bower_components/'));
 });
 
-gulp.task('copy-partials-files', function () {
-  gulp.src('./partials/*.html')
-    .pipe(gulp.dest('./dist/partials/'));
-});
+// not using partials here
+// gulp.task('copy-partials-files', function () {
+//   gulp.src('./partials/*.html')
+//     .pipe(gulp.dest('./dist/partials/'));
+// });
 
 gulp.task('copy-index-html', function() {
     gulp.src('./index.html')
+    // Perform minification tasks, etc here
+    .pipe(gulp.dest('./dist/'));
+});
+
+gulp.task('copy-position-html', function() {
+    gulp.src('./position.html')
+    // Perform minification tasks, etc here
+    .pipe(gulp.dest('./dist/'));
+});
+
+gulp.task('copy-simulator-html', function() {
+    gulp.src('./simulator.html')
     // Perform minification tasks, etc here
     .pipe(gulp.dest('./dist/'));
 });
@@ -105,6 +115,6 @@ gulp.task('default',
 gulp.task('build', function() {
   runSequence(
     ['clean'],
-    ['lint', 'minify-css', 'minify-js', 'copy-partials-files', 'copy-index-html', 'copy-lib-files']
+    ['minify-css', 'minify-js', 'copy-index-html', 'copy-position-html', 'copy-simulator-html', 'copy-lib-files']
   );
 });

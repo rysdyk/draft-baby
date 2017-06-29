@@ -3,7 +3,7 @@
 var drafted;
 
 if (localStorage.drafted) {
-  drafted = JSON.parse(localStorage.drafted)
+  drafted = JSON.parse(localStorage.drafted);
 } else {
   drafted = [];
 }
@@ -12,13 +12,11 @@ var rows = [];
 var tbodies = document.querySelectorAll('tbody');
 
 tbodies.forEach(function(tbody){
-  nRows = tbody.childNodes
+  nRows = tbody.childNodes;
   rows.push(nRows);
 });
 
 catchUp();
-
-//var rows = Array.prototype.slice.call(nodeRows);
 
 rows.forEach(function(nodeList){
   nodeList.forEach( function(row){
@@ -26,10 +24,10 @@ rows.forEach(function(nodeList){
       this.style.display = 'none';
       drafted.push(this.children[1].innerText);
       showDrafted(this);
-      setLocal()
-    })
-  })
-})
+      setLocal();
+    });
+  });
+});
 
 function showDrafted(player) {
   var list = document.getElementById('drafted');
@@ -51,8 +49,8 @@ function undoDraft(e) {
       if (name == data) {
         row.style.display = 'table-row';
       }
-    })
-  })
+    });
+  });
 
   // remove from local storage
   setLocal();
@@ -61,7 +59,7 @@ function undoDraft(e) {
 function setLocal() {
   if (typeof(Storage) !== "undefined") {
       // Code for localStorage/sessionStorage.
-      localStorage.setItem('drafted', JSON.stringify(drafted) )
+		localStorage.setItem('drafted', JSON.stringify(drafted) );
       //console.log(localStorage.drafted)
   } else {
       // Sorry! No Web Storage support..
@@ -80,10 +78,10 @@ function catchUp() {
         if (name == data) {
           row.style.display = 'none';
         }
-      })
-    })
+      });
+    });
     var item = document.createElement('li');
     item.appendChild(document.createTextNode(name));
     list.appendChild(item);
-  })
+  });
 }
