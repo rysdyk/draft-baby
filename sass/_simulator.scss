@@ -21,13 +21,13 @@
 		}
 		td { text-align: center; }
 	}
+}
+
+.fadeOut {
+	opacity: 0;
+	transition: .5s;
 	
-	.picked {
-		opacity: 0;
-		transition: .5s;
-		
-		&.hidden { display: none; }
-	}
+	&.hidden { display: none; }
 }
 
 #your-team-wrapper {
@@ -52,4 +52,13 @@
 #draftable-player-list-wrapper, #drafted-wrapper {
 	max-height: 500px;
 	overflow: scroll;
+}
+
+#draft-progress, #draft-settings {
+	text-align: center;
+}
+
+.eligible {
+	color: green;
+	transition: .2s;
 }

@@ -7,6 +7,8 @@ var players = JSON.parse(request.responseText);
 // set global ui variables
 var table = document.getElementById('draftable-player-list');
 var tbody = table.getElementsByTagName('tbody');
+var teams = document.getElementById('teams');
+var draftPos = document.getElementById('draftPos');
 
 players.forEach(function(player){
   var tr = document.createElement('tr');
@@ -51,6 +53,16 @@ players.sort(function(a, b) {
   return a.sorted_pos - b.sorted_pos;
 });
 
+teams.addEventListener('change', function() {
+	var totalTeams = parseInt(teams.value);
+	draftPos.innerHTML = '';
+	for (var i=1; i<=totalTeams; i++) {
+		var option = document.createElement('option');
+		option.text = i;
+		option.value = i;
+		draftPos.add(option);
+	}
+});
 
 var count = 1;
 var run;
@@ -61,10 +73,10 @@ var draftPos;
 function startDraft() {
 	// fade out settings
 	var settings = document.getElementById('draft-settings');
-	settings.classList.add('hidden');
-	teams = parseInt(document.getElementById('teams').value);
-	draftPos = parseInt(document.getElementById('draftPos').value);
-	setPicks(teams, draftPos);
+	var chosenTeams = parseInt(teams.value);
+	var chosenDraftPos = parseInt(draftPos.value);
+	fadeOut(settings);
+	setPicks(chosenTeams, chosenDraftPos);
 	computerPicks(players);
 }
 
@@ -97,6 +109,7 @@ function increaseCount() {
 
 function userDraft(){
 	clearTimeout(run);
+	document.getElementById('draft-progress').classList.add('eligible')
 	tbody[0].classList.add('active');
 	
 	var nodeRows = document.querySelector('tbody.active').childNodes;
@@ -105,6 +118,7 @@ function userDraft(){
     row.addEventListener('click', function(){
 			if (tbody[0].classList.contains('active')) {
 				tbody[0].classList.remove('active');
+				document.getElementById('draft-progress').classList.remove('eligible');
 				for (var i=0; i<players.length; i++) {
 					if (players[i].name == this.childNodes[0].innerHTML) {
 						var selected = players[i];
@@ -133,8 +147,7 @@ function draftSelected(selected) {
   nodeRows.forEach(function(row){
     var data = row.childNodes[0].innerText;
     if (selected.name == data) {
-      row.classList.add('picked');
-			setTimeout( function(){ row.classList.add('hidden'); }, 500);
+			fadeOut(row)
     }
   });
 	// add to draftted list
@@ -142,6 +155,11 @@ function draftSelected(selected) {
   var item = document.createElement('li');
   item.appendChild(document.createTextNode(count + ". " + selected.name ));
   list.prepend(item);
+}
+
+function fadeOut(el) {
+	el.classList.add('fadeOut');
+	setTimeout( function(){ el.classList.add('hidden'); }, 500);
 }
 
 // things to add next:

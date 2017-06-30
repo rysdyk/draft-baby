@@ -675,10 +675,10 @@ footer {
 #draftable-player-list-wrapper #draftable-player-list td {
   text-align: center; }
 
-#draftable-player-list-wrapper .picked {
+.fadeOut {
   opacity: 0;
   transition: .5s; }
-  #draftable-player-list-wrapper .picked.hidden {
+  .fadeOut.hidden {
     display: none; }
 
 @media (min-width: 900px) {
@@ -710,3 +710,10 @@ footer {
 #draftable-player-list-wrapper, #drafted-wrapper {
   max-height: 500px;
   overflow: scroll; }
+
+#draft-progress, #draft-settings {
+  text-align: center; }
+
+.eligible {
+  color: green;
+  transition: .2s; }
