@@ -676,7 +676,10 @@ footer {
   text-align: center; }
 
 #draftable-player-list-wrapper .picked {
-  display: none; }
+  opacity: 0;
+  transition: .5s; }
+  #draftable-player-list-wrapper .picked.hidden {
+    display: none; }
 
 @media (min-width: 900px) {
   #your-team-wrapper {

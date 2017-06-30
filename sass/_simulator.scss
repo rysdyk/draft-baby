@@ -23,7 +23,10 @@
 	}
 	
 	.picked {
-		display: none;
+		opacity: 0;
+		transition: .5s;
+		
+		&.hidden { display: none; }
 	}
 }
 

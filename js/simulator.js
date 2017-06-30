@@ -85,9 +85,14 @@ function computerPicks() {
 	} else {
 		var chosen = players.shift();
 		draftSelected(chosen);
-		count++;
+		increaseCount();
 		run = setTimeout( function(){ computerPicks(); }, 750);
 	}
+}
+
+function increaseCount() {
+	count++;
+	document.getElementById('pick-number').innerHTML = count;
 }
 
 function userDraft(){
@@ -105,7 +110,7 @@ function userDraft(){
 						var selected = players[i];
 						players.splice(i, 1);
 						draftSelected(selected);
-						count++;
+						increaseCount();
 					  var team = document.getElementById('team');
 					  var member = document.createElement('li');
 					  team.appendChild(document.createTextNode(selected.position + ' ' + selected.name + ' ' + selected.bye));
@@ -129,6 +134,7 @@ function draftSelected(selected) {
     var data = row.childNodes[0].innerText;
     if (selected.name == data) {
       row.classList.add('picked');
+			setTimeout( function(){ row.classList.add('hidden'); }, 500);
     }
   });
 	// add to draftted list
