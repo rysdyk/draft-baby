@@ -17,7 +17,7 @@
     },
 
     setDrafted: function(){
-      if (localStorage.drafted.length > 2) {
+      if (localStorage.drafted) {
         this.drafted = JSON.parse(localStorage.drafted);
       } else {
         this.drafted = [];
