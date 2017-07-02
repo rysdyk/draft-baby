@@ -5,6 +5,8 @@ var players = JSON.parse(request.responseText);
 
 var table = document.getElementById('full-player-list');
 var tbody = table.getElementsByTagName('tbody');
+var teams = document.getElementById('teams');
+var draftPos = document.getElementById('draftPos');
 
 players.forEach(function(player){
   var tr = document.createElement('tr');
@@ -65,27 +67,33 @@ window.onload = function () {makeAllSortable();};
 
 
 // draft estimate
+teams.addEventListener('change', function() {
+	var totalTeams = parseInt(teams.value);
+	draftPos.innerHTML = '';
+	for (var i=1; i<=totalTeams; i++) {
+		var option = document.createElement('option');
+		option.text = i;
+		option.value = i;
+		draftPos.add(option);
+	}
+});
 
 function estimate() {
   var rows = table.querySelector('tbody').childNodes;
   rows.forEach(function(row){
     row.classList.remove('estimated');
   });
-  var teams = parseInt(document.getElementById('teams').value);
-  var draftPos = parseInt(document.getElementById('draftPos').value);
+  var teamsVal = parseInt(teams.value);
+  var draftPosVal = parseInt(draftPos.value);
 
-  if (draftPos > teams) {
-    alert("Please select valid draft position");
-  } else {
-    // odd rounds picks
-    for (var i=draftPos; i<=players.length; i+=(teams*2)) {
-      rows[i - 1].classList.add('estimated');
-    }
+  // odd rounds picks
+  for (var i=draftPosVal; i<=players.length; i+=(teamsVal*2)) {
+    rows[i - 1].classList.add('estimated');
+  }
 
-    // even round picks
-    for (var j=(teams*2 - draftPos); j<=players.length; j+=(teams*2)) {
-      rows[j].classList.add('estimated');
-    }
+  // even round picks
+  for (var j=(teamsVal*2 - draftPosVal); j<=players.length; j+=(teamsVal*2)) {
+    rows[j].classList.add('estimated');
   }
 }
 
