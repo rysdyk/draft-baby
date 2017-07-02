@@ -8,7 +8,6 @@
       this.catchUp();
       this.addClick();
       this.setLocal();
-      //this.undoDraft();
     },
 
     cacheDom: function() {
@@ -24,7 +23,6 @@
 				  draftBaby.nodeRows.push(row);
 				});
 			});
-			console.log(draftBaby.nodeRows);
 		},
 
     setDrafted: function(){
