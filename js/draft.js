@@ -3,6 +3,7 @@
 
     init: function(){
       this.cacheDom();
+			this.setNodeRows();
       this.setDrafted();
       this.catchUp();
       this.addClick();
@@ -12,9 +13,19 @@
 
     cacheDom: function() {
       this.drafted = [];
-      this.nodeRows = document.querySelector('tbody').childNodes;
+      this.tbodies = document.querySelectorAll('tbody');
+			this.nodeRows = []
       this.list = document.getElementById('drafted');
     },
+		
+		setNodeRows: function() {
+			this.tbodies.forEach(function(tbody){
+				tbody.childNodes.forEach(function(row){
+				  draftBaby.nodeRows.push(row);
+				});
+			});
+			console.log(draftBaby.nodeRows);
+		},
 
     setDrafted: function(){
       if (localStorage.drafted) {

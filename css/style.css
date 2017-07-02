@@ -410,6 +410,10 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0; }
 
+span.disclaimer {
+  clear: both;
+  display: block; }
+
 .container {
   margin: 0 auto;
   max-width: 960px; }
@@ -606,7 +610,7 @@ footer {
     .position-wrapper {
       width: 100%; } }
   .position-wrapper .table-wrapper {
-    max-height: 400px;
+    height: 400px;
     overflow: scroll; }
     .position-wrapper .table-wrapper tr:hover {
       cursor: pointer; }
