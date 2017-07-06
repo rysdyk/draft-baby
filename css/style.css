@@ -416,7 +416,8 @@ span.disclaimer {
 
 .container {
   margin: 0 auto;
-  max-width: 960px; }
+  width: 90%;
+  min-width: 800px; }
   .container:after, .container:before {
     clear: both;
     content: '';
@@ -610,9 +611,11 @@ footer {
     .position-wrapper {
       width: 100%; } }
   .position-wrapper .table-wrapper {
+    background-color: #ededed;
     height: 400px;
     overflow: scroll; }
     .position-wrapper .table-wrapper tr:hover {
+      background-color: #fff;
       cursor: pointer; }
   @media (min-width: 600px) {
     .position-wrapper {
@@ -631,7 +634,7 @@ footer {
       width: 100%; } }
   @media screen and (min-width: 900px) and (min-width: 700px) {
     .position-wrapper {
-      width: 50%; } }
+      width: 33.33333%; } }
 
 #drafted {
   overflow: hidden; }

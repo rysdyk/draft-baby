@@ -103,10 +103,14 @@
   padding: 0 20px;
 
   .table-wrapper {
+    background-color: #ededed;
     height: 400px;
     overflow: scroll;
 		
-		tr:hover { cursor: pointer; }
+		tr:hover {
+      background-color: #fff;
+      cursor: pointer;
+    }
   }
 
   @media (min-width: 600px) {
@@ -114,6 +118,6 @@
   }
 
   @media (min-width: 900px) {
-    @include columns(6);
+    @include columns(4);
   }
 }

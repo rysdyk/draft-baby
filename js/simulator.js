@@ -1,169 +1,203 @@
-// get player data
-var request = new XMLHttpRequest();
-request.open("GET", "lib/ffc_2017_6_23.json", false);
-request.send(null);
-var players = JSON.parse(request.responseText);
+(function(){
+	var draftBaby = {
+		init: function(){
+			this.cacheDom();
+			this.getPlayers();
+			this.renderPlayers();
+			this.assignSortedPosition();
+			this.sortPlayers();
+			this.draftSettings();
+			this.setVariables();
+      this.addClick();
+			//this.startDraft();
+		},
+		
+		cacheDom: function() {
+			this.table = document.getElementById('draftable-player-list');
+			this.tbody = this.table.getElementsByTagName('tbody');
+      this.team = document.getElementById('team');
+			this.teams = document.getElementById('teams');
+			this.draftPos = document.getElementById('draftPos');
+			this.settings = document.getElementById('draft-settings');
+			this.pickNumber = document.getElementById('pick-number');
+			this.draftProgress = document.getElementById('draft-progress');
+      this.draftedList = document.getElementById('drafted');
+      this.start = document.getElementById('startDraftButton');
+		},
+		
+		getPlayers: function() {
+			var request = new XMLHttpRequest();
+			request.open("GET", "lib/ffc_2017_6_23.json", false);
+			request.send(null);
+			this.players = JSON.parse(request.responseText);
+		},
+		
+		renderPlayers: function() {
+			this.players.forEach(function(player){
+			  var tr = document.createElement('tr');
+			  draftBaby.tbody[0].appendChild(tr);
 
-// set global ui variables
-var table = document.getElementById('draftable-player-list');
-var tbody = table.getElementsByTagName('tbody');
-var teams = document.getElementById('teams');
-var draftPos = document.getElementById('draftPos');
-
-players.forEach(function(player){
-  var tr = document.createElement('tr');
-  tbody[0].appendChild(tr);
-
-  for (var data in player) {
-    if (data == 'name' || data == 'position' || data == 'team' || data == 'bye' ) {
-			var td = document.createElement('td');
-      td.appendChild(document.createTextNode(player[data]));
-			tr.appendChild(td);
-    }
-  }
-});
-
-// add sorted_pos to players
-players.forEach(function(player, index){
-	var startPos = players.indexOf(player);
-	var max, min;
+			  for (var data in player) {
+			    if (data == 'name' || data == 'position' || data == 'team' || data == 'bye' ) {
+						var td = document.createElement('td');
+			      td.appendChild(document.createTextNode(player[data]));
+						tr.appendChild(td);
+			    }
+			  }
+			});
+		},
+		
+		assignSortedPosition: function() {
+			this.players.forEach(function(player, index){
+				var startPos = draftBaby.players.indexOf(player);
+				var max, min;
 	
-	if (index < 25) {
-		max = startPos * 1.2 + 4;
-		min = startPos * 0.7 - 4;
-	} else if (index >= 25 && index < 51) {
-		max = startPos * 1.1;
-		min = startPos * 0.8;
-	} else if (index >=51 && index < 100) {
-		max = startPos * 1.05;
-		min = startPos * 0.9;
-	} else {
-		max = startPos * 1.05;
-		min = startPos * 0.9;
-	}
+				if (index < 25) {
+					max = startPos * 1.2 + 4;
+					min = startPos * 0.7 - 4;
+				} else if (index >= 25 && index < 51) {
+					max = startPos * 1.1;
+					min = startPos * 0.8;
+				} else if (index >=51 && index < 100) {
+					max = startPos * 1.05;
+					min = startPos * 0.9;
+				} else {
+					max = startPos * 1.05;
+					min = startPos * 0.9;
+				}
 	
-	if (min < 0) { 
-		min = 0;
-	}
-	sorted_pos = Math.random() * (max - min) + min;
-	players[index].sorted_pos = sorted_pos;
-});
+				if (min < 0) { 
+					min = 0;
+				}
+				sorted_pos = Math.random() * (max - min) + min;
+				draftBaby.players[index].sorted_pos = sorted_pos;
+			});
+		},
+		
+		sortPlayers: function() {
+			this.players.sort(function(a, b) {
+			  return a.sorted_pos - b.sorted_pos;
+			});
+		},
+		
+		draftSettings: function() {
+			this.teams.addEventListener('change', function() {
+				var totalTeams = parseInt(draftBaby.teams.value);
+				draftBaby.draftPos.innerHTML = '';
+				for (var i=1; i<=totalTeams; i++) {
+					var option = document.createElement('option');
+					option.text = i;
+					option.value = i;
+					draftBaby.draftPos.add(option);
+				}
+			});
+		},
+		
+		setVariables: function() {
+			this.count = 1;
+			this.run = "";
+			this.picks = [];
+			this.fullDraftedList = [];
+		},
+    
+    addClick: function() {
+      this.start.addEventListener('click', function(){
+        draftBaby.startDraft();
+      });
+    },
+    
+		startDraft: function() {
+			var chosenTeams = parseInt(this.teams.value);
+			var chosenDraftPos = parseInt(this.draftPos.value);
+			draftBaby.fadeOut(this.settings);
+			draftBaby.setPicks(chosenTeams, chosenDraftPos);
+			draftBaby.computerPicks();
+		},
+    
+		setPicks: function(teams, draftPos) {
+			// odd round picks
+		  for (var i=draftPos; i<=this.players.length; i+=(teams*2)) {
+		    this.picks.push(i);
+		  }
+		  // even round picks
+		  for (var j=(teams*2 - draftPos + 1); j<=this.players.length; j+=(teams*2)) {
+		    this.picks.push(j);
+		  }
+		},
 
-players.sort(function(a, b) {
-  return a.sorted_pos - b.sorted_pos;
-});
-
-teams.addEventListener('change', function() {
-	var totalTeams = parseInt(teams.value);
-	draftPos.innerHTML = '';
-	for (var i=1; i<=totalTeams; i++) {
-		var option = document.createElement('option');
-		option.text = i;
-		option.value = i;
-		draftPos.add(option);
-	}
-});
-
-var count = 1;
-var run;
-var picks = [];
-var teams;
-var draftPos;
-
-function startDraft() {
-	// fade out settings
-	var settings = document.getElementById('draft-settings');
-	var chosenTeams = parseInt(teams.value);
-	var chosenDraftPos = parseInt(draftPos.value);
-	fadeOut(settings);
-	setPicks(chosenTeams, chosenDraftPos);
-	computerPicks(players);
-}
-
-function setPicks(teams, draftPos) {
-	// odd round picks
-  for (var i=draftPos; i<=players.length; i+=(teams*2)) {
-    picks.push(i);
-  }
-  // even round picks
-  for (var j=(teams*2 - draftPos + 1); j<=players.length; j+=(teams*2)) {
-    picks.push(j);
-  }
-}
-
-function computerPicks() {
-	if ( picks.includes(count) ) {
-  	userDraft();	
-	} else {
-		var chosen = players.shift();
-		draftSelected(chosen);
-		increaseCount();
-		run = setTimeout( function(){ computerPicks(); }, 750);
-	}
-}
-
-function increaseCount() {
-	count++;
-	document.getElementById('pick-number').innerHTML = count;
-}
-
-function userDraft(){
-	clearTimeout(run);
-	document.getElementById('draft-progress').classList.add('eligible')
-	tbody[0].classList.add('active');
-	
-	var nodeRows = document.querySelector('tbody.active').childNodes;
-	
-  nodeRows.forEach(function(row){
-    row.addEventListener('click', function(){
-			if (tbody[0].classList.contains('active')) {
-				tbody[0].classList.remove('active');
-				document.getElementById('draft-progress').classList.remove('eligible');
-				for (var i=0; i<players.length; i++) {
-					if (players[i].name == this.childNodes[0].innerHTML) {
-						var selected = players[i];
-						players.splice(i, 1);
-						draftSelected(selected);
-						increaseCount();
-					  var team = document.getElementById('team');
-					  var member = document.createElement('li');
-					  team.appendChild(document.createTextNode(selected.position + ' ' + selected.name + ' ' + selected.bye));
-					  team.appendChild(member);
-						setTimeout( function(){ computerPicks(); }, 750);
-						break;
-					}
-				}	
+		computerPicks: function() {
+			if ( this.picks.includes(this.count) ) {
+		  	draftBaby.userDraft();	
+			} else {
+				var chosen = this.players.shift();
+				draftBaby.draftSelected(chosen);
+				draftBaby.increaseCount();
+				this.run = setTimeout( function(){ draftBaby.computerPicks(); }, 750);
 			}
-    });
-  });
-}
+		},
+		
+		increaseCount: function() {
+			this.count++;
+			this.pickNumber.innerHTML = this.count;
+		},
+		
+		userDraft: function(){
+			clearTimeout(this.run);
+			this.draftProgress.classList.add('eligible')
+			this.tbody[0].classList.add('active');
+	
+			var nodeRows = document.querySelector('tbody.active').childNodes;
+	
+		  nodeRows.forEach(function(row){
+		    row.addEventListener('click', function(){
+					if (draftBaby.tbody[0].classList.contains('active')) {
+						draftBaby.tbody[0].classList.remove('active');
+						draftBaby.draftProgress.classList.remove('eligible');
+						for (var i=0; i<draftBaby.players.length; i++) {
+							if (draftBaby.players[i].name == this.childNodes[0].innerHTML) {
+								var selected = draftBaby.players[i];
+								draftBaby.players.splice(i, 1);
+								draftBaby.draftSelected(selected);
+								draftBaby.increaseCount();
+							  var member = document.createElement('li');
+							  draftBaby.team.appendChild(document.createTextNode(selected.position + ' ' + selected.name + ' ' + selected.bye));
+							  draftBaby.team.appendChild(member);
+								setTimeout( function(){ draftBaby.computerPicks(); }, 750);
+								break;
+							}
+						}	
+					}
+		    });
+		  });
+		},
+		
+		draftSelected: function(selected) {
+			this.fullDraftedList.push(selected);
+			// hide selected
+			var nodeRows = this.tbody[0].childNodes;
+		  nodeRows.forEach(function(row){
+		    var data = row.childNodes[0].innerText;
+		    if (selected.name == data) {
+					draftBaby.fadeOut(row)
+		    }
+		  });
+			// add to draftted list
+		  
+		  var item = document.createElement('li');
+		  item.appendChild(document.createTextNode(this.count + ". " + selected.name ));
+		  this.draftedList.prepend(item);
+		},
 
-var fullDraftedList = [];
-
-function draftSelected(selected) {
-	fullDraftedList.push(selected);
-	// hide selected
-	var nodeRows = document.querySelector('tbody').childNodes;
-  nodeRows.forEach(function(row){
-    var data = row.childNodes[0].innerText;
-    if (selected.name == data) {
-			fadeOut(row)
-    }
-  });
-	// add to draftted list
-  var list = document.getElementById('drafted');
-  var item = document.createElement('li');
-  item.appendChild(document.createTextNode(count + ". " + selected.name ));
-  list.prepend(item);
-}
-
-function fadeOut(el) {
-	el.classList.add('fadeOut');
-	setTimeout( function(){ el.classList.add('hidden'); }, 500);
-}
+		fadeOut: function(el) {
+			el.classList.add('fadeOut');
+			setTimeout( function(){ el.classList.add('hidden'); }, 500);
+		}	
+	}
+	
+	draftBaby.init();
+})()
 
 // things to add next:
-// adjust settings so that draft position can't exceed number of teams
 // add pick #, round, overall numbers to player
 // add round markers to total drafted list
 // choose different league formats
