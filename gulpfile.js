@@ -55,8 +55,8 @@ gulp.task('copy-index-html', function() {
     .pipe(gulp.dest('./dist/'));
 });
 
-gulp.task('copy-position-html', function() {
-    gulp.src('./position.html')
+gulp.task('copy-full-list-html', function() {
+    gulp.src('./full-list.html')
     // Perform minification tasks, etc here
     .pipe(gulp.dest('./dist/'));
 });
@@ -115,6 +115,6 @@ gulp.task('default',
 gulp.task('build', function() {
   runSequence(
     ['clean'],
-    ['minify-css', 'minify-js', 'copy-index-html', 'copy-position-html', 'copy-simulator-html', 'copy-lib-files']
+    ['minify-css', 'minify-js', 'copy-index-html', 'copy-full-list-html', 'copy-simulator-html', 'copy-lib-files']
   );
 });
