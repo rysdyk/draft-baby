@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Draft Baby</title>
+    <link rel="stylesheet" href="css/style.css"/>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Draft Baby</h1>
+        <h3>Fantasy Football Draft Tool</h3>
+				<a href="index.html">By Position</a> | 
+        <a href="#">Full List</a> | 
+				<a href="simulator.html">Draft Simulator</a>
+      </div>
+    </header>
+
+    <div class="container">
+
+      <section id="filter">
+        <label for="filterInput">Search for Player</label>
+        <input type="text" id="filterInput" placeholder="Player Name">
+      </section>
+
+      <section id="estimate">
+        <h4>Draft Position Estimate</h4>
+        <label for="teams"># of Teams
+          <select name="teams" id="teams">
+            <option value="8">8</option>
+            <option value="10">10</option>
+            <option value="12">12</option>
+            <option value="14">14</option>
+          </select>
+        </label>
+        <label for="draftPos">Draft Position
+          <select name="draftPos" id="draftPos">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+          </select>
+        </label>
+        <button id="estimateDraft">
+          Estimate
+        </button>
+        <!-- Add toggle to hide drafted? -->
+      </section>
+
+      <div class="full-player-list-wrapper">
+				<span class="disclaimer">Player Rankings as of June 23, 2017</span>
+        <table id="full-player-list">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Name</th>
+              <th>Position</th>
+              <th>Team</th>
+              <th>Bye</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="drafted-wrapper">
+        <h2>Drafted</h2>
+        <a href="#" id="undo-draft">Undo</a>
+				<!-- <a href="#" id="clear-draft">Clear All</a> -->
+        <ul id="drafted"></ul>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <span class="quote">"Stats are for losers." - Bill Belichick</span>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/draft.js"></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-82203305-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </body>
+</html>
