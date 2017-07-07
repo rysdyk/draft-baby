@@ -7,7 +7,7 @@
 		
 		getPlayers: function() {
 			var request = new XMLHttpRequest();
-			request.open("GET", "lib/ffc_2017_6_23.json", false);
+			request.open("GET", "lib/tiers/2017_7_6.json", false);
 			request.send(null);
 			this.players = JSON.parse(request.responseText);
 		},
@@ -28,9 +28,11 @@
 			  posPlayers.forEach(function(player){
 			    var tr = document.createElement('tr');
 			    tbody[0].appendChild(tr);
+          
+          if ( player['tier']) { tr.classList.add( 'tier-' + player['tier']); }
 
 			    for (var data in player) {
-			      if (data == 'rank' || data == 'name' || data == 'team' || data == 'bye') {
+			      if (data == 'name' || data == 'team' || data == 'bye') {
 			        var td = document.createElement('td');
 			        td.appendChild(document.createTextNode(player[data]));
 			        tr.appendChild(td);

@@ -614,6 +614,20 @@ footer {
     background-color: #ededed;
     height: 400px;
     overflow: scroll; }
+    .position-wrapper .table-wrapper table {
+      width: 100%; }
+    .position-wrapper .table-wrapper tr.tier-1 {
+      background-color: #bdffe9; }
+    .position-wrapper .table-wrapper tr.tier-2 {
+      background-color: #bbffa6; }
+    .position-wrapper .table-wrapper tr.tier-3 {
+      background-color: #fff69a; }
+    .position-wrapper .table-wrapper tr.tier-4 {
+      background-color: #ffd3a7; }
+    .position-wrapper .table-wrapper tr.tier-5 {
+      background-color: #ffb4b4; }
+    .position-wrapper .table-wrapper tr.tier-6 {
+      background-color: #9ad2cb; }
     .position-wrapper .table-wrapper tr:hover {
       background-color: #fff;
       cursor: pointer; }

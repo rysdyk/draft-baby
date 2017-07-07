@@ -106,6 +106,15 @@
     background-color: #ededed;
     height: 400px;
     overflow: scroll;
+    
+    table { width: 100%; }
+    
+    tr.tier-1 { background-color: #bdffe9; }
+    tr.tier-2 { background-color: #bbffa6; }
+    tr.tier-3 { background-color: #fff69a; }
+    tr.tier-4 { background-color: #ffd3a7; }
+    tr.tier-5 { background-color: #ffb4b4; }
+    tr.tier-6 { background-color: #9ad2cb; }
 		
 		tr:hover {
       background-color: #fff;
