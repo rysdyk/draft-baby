@@ -12,6 +12,8 @@ header {
   a, a:hover, a:active, a:visited {
     color: #fff;
   }
+  
+  h1 { margin-bottom: 0; }
 
   h1, h3 {
     font-family: $lato;
@@ -26,7 +28,10 @@ footer {
   padding: 20px 0;
   text-align: center;
 
-  span { display: block; }
+  span {
+    color: #aaa;
+    display: block;
+  }
 }
 
 .modal {

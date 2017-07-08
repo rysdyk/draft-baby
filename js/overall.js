@@ -20,7 +20,7 @@
 		
 		getPlayers: function() {
 			var request = new XMLHttpRequest();
-			request.open("GET", "lib/tiers/2017_7_6.json", false);
+			request.open("GET", "lib/2017/ffc_2017_6_23.json", false);
 			request.send(null);
 			this.players = JSON.parse(request.responseText);
 		},
@@ -34,7 +34,7 @@
         tr.appendChild(td);
 
 		    for (var data in player) {
-		      if (data == 'name' || data == 'team' || data == 'bye') {
+		      if (data == 'name' || data == 'position' || data == 'team' || data == 'bye') {
 		        var td = document.createElement('td');
 		        td.appendChild(document.createTextNode(player[data]));
 		        tr.appendChild(td);

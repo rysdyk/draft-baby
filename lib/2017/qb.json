@@ -24,7 +24,7 @@
   {    "name": "Carson Wentz",    "position": "QB",    "team": "PHI",    "bye": 10,   "tier": 5  },  
   {    "name": "Alex Smith",    "position": "QB",    "team": "KC",    "bye": 10,   "tier": 5  },
   {    "name": "Sam Bradford",    "position": "QB",    "team": "MIN",    "bye": 9,   "tier": 5  },
-  {    "name": "Trevor Simien",    "position": "QB",    "team": "DEN",    "bye": 5,   "tier": 6  },
+  {    "name": "Trevor Siemian",    "position": "QB",    "team": "DEN",    "bye": 5,   "tier": 6  },
   {    "name": "Brian Hoyer",    "position": "QB",    "team": "SF",    "bye": 11,   "tier": 6  },
   {    "name": "Mike Glennon",    "position": "QB",    "team": "CHI",    "bye": 9,   "tier": 6  }, 
   {    "name": "Josh McCown",    "position": "QB",    "team": "NYJ",    "bye": 11,   "tier": 6  },

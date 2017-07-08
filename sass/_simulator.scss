@@ -11,7 +11,7 @@
 
 #draftable-player-list-wrapper {
   @media (min-width: 900px) {
-    @include columns(5);
+    @include columns(7);
   }
 	
 	#draftable-player-list {
@@ -21,6 +21,39 @@
 		}
 		td { text-align: center; }
 	}
+  
+  section { margin-bottom: 40px; }
+  
+  #full-list {
+    h3 { border-bottom: 1px solid #333; }
+    max-height: 200px;
+    overflow: scroll;
+    
+    table { width: 100%; }
+  }
+  
+  section.position {
+    h3 { border-bottom: 1px solid #333; }
+    
+    @media (min-width: 900px) {
+      @include columns(6);
+    }
+    
+    .table-wrapper {
+      background-color: #ededed;
+      height: 400px;
+      overflow: scroll;
+    }
+    
+    table { width: 100%; }
+    
+    tr.tier-1 { background-color: #bdffe9; }
+    tr.tier-2 { background-color: #bbffa6; }
+    tr.tier-3 { background-color: #fff69a; }
+    tr.tier-4 { background-color: #ffd3a7; }
+    tr.tier-5 { background-color: #ffb4b4; }
+    tr.tier-6 { background-color: #9ad2cb; }
+  }
 }
 
 .fadeOut {
@@ -31,12 +64,14 @@
 }
 
 #your-team-wrapper {
+  h3 { border-bottom: 1px solid #333; }
   @media (min-width: 900px) {
     @include columns(3);
   }
 }
 
 #drafted-wrapper {
+  h3 { border-bottom: 1px solid #333; }
   @media (min-width: 900px) {
     @include columns(2);
   }
@@ -49,7 +84,7 @@
 	li { margin-bottom: 5px; }
 }
 
-#draftable-player-list-wrapper, #drafted-wrapper {
+#drafted-wrapper {
 	max-height: 500px;
 	overflow: scroll;
 }

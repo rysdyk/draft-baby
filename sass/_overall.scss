@@ -13,10 +13,14 @@
 }
 
 #full-player-list {
+  width: 100%; 
+  
   th, td {
     font-family: $lato;
     padding: 3px;
   }
+  
+  td { text-align: center; }
 
   td:hover { cursor: pointer; }
 

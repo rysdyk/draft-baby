@@ -37,7 +37,7 @@
       var drafted = this.drafted;
       var list = this.list;
       this.nodeRows.forEach(function(row){
-        var data = row.childNodes[0].innerText;
+        var data = row.childNodes[1].innerText;
         if (drafted.includes(data)) {
           row.style.display = 'none';
           var item = document.createElement('li');
@@ -58,7 +58,7 @@
       this.nodeRows.forEach(function(row){
         row.addEventListener('click', function(){
           this.style.display = 'none';
-          drafted.push(this.children[0].innerText);
+          drafted.push(this.children[1].innerText);
           showDrafted(this);
           setLocal();
         });
@@ -77,7 +77,7 @@
     showDrafted: function(player) {
       var list = document.getElementById('drafted');
       var item = document.createElement('li');
-      item.appendChild(document.createTextNode(player.children[0].innerText));
+      item.appendChild(document.createTextNode(player.children[1].innerText));
       list.appendChild(item);
     },
 
@@ -99,7 +99,7 @@
       var name = drafted.pop();
       list.removeChild(list.lastChild);
       nodeRows.forEach(function(row){
-        var data = row.childNodes[0].innerText;
+        var data = row.childNodes[1].innerText;
         if (name == data) {
           row.style.display = '';
         }

@@ -9,7 +9,6 @@
 			this.draftSettings();
 			this.setVariables();
       this.addClick();
-			//this.startDraft();
 		},
 		
 		cacheDom: function() {
@@ -33,9 +32,12 @@
 		},
 		
 		renderPlayers: function() {
-			this.players.forEach(function(player){
+			this.players.forEach(function(player, index){
 			  var tr = document.createElement('tr');
 			  draftBaby.tbody[0].appendChild(tr);
+        var td = document.createElement('td');
+	      td.appendChild(document.createTextNode(index + 1));
+				tr.appendChild(td);
 
 			  for (var data in player) {
 			    if (data == 'name' || data == 'position' || data == 'team' || data == 'bye' ) {
@@ -173,7 +175,8 @@
 		
 		draftSelected: function(selected) {
 			this.fullDraftedList.push(selected);
-			// hide selected
+			
+      // hide selected
 			var nodeRows = this.tbody[0].childNodes;
 		  nodeRows.forEach(function(row){
 		    var data = row.childNodes[0].innerText;
@@ -181,8 +184,8 @@
 					draftBaby.fadeOut(row)
 		    }
 		  });
-			// add to draftted list
-		  
+      
+			// add to drafted list
 		  var item = document.createElement('li');
 		  item.appendChild(document.createTextNode(this.count + ". " + selected.name ));
 		  this.draftedList.prepend(item);

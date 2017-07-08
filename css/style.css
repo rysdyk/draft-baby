@@ -434,6 +434,8 @@ header {
   text-align: center; }
   header a, header a:hover, header a:active, header a:visited {
     color: #fff; }
+  header h1 {
+    margin-bottom: 0; }
   header h1, header h3 {
     font-family: "Lato", sans-serif;
     margin-top: 0; }
@@ -445,6 +447,7 @@ footer {
   padding: 20px 0;
   text-align: center; }
   footer span {
+    color: #aaa;
     display: block; }
 
 .modal table td, .modal table th {
@@ -471,15 +474,17 @@ footer {
     list-style: none;
     padding-left: 0; }
 
-#full-player-list th, #full-player-list td {
-  font-family: "Lato", sans-serif;
-  padding: 3px; }
-
-#full-player-list td:hover {
-  cursor: pointer; }
-
-#full-player-list tr:hover, #full-player-list thead {
-  background-color: #efefef; }
+#full-player-list {
+  width: 100%; }
+  #full-player-list th, #full-player-list td {
+    font-family: "Lato", sans-serif;
+    padding: 3px; }
+  #full-player-list td {
+    text-align: center; }
+  #full-player-list td:hover {
+    cursor: pointer; }
+  #full-player-list tr:hover, #full-player-list thead {
+    background-color: #efefef; }
 
 .estimated {
   border-bottom: 1px solid red;
@@ -687,7 +692,7 @@ footer {
     width: 100%; } }
   @media screen and (min-width: 900px) and (min-width: 700px) {
     #draftable-player-list-wrapper {
-      width: 41.66667%; } }
+      width: 58.33333%; } }
 
 #draftable-player-list-wrapper #draftable-player-list tr:hover {
   background-color: #ededed;
@@ -696,11 +701,64 @@ footer {
 #draftable-player-list-wrapper #draftable-player-list td {
   text-align: center; }
 
+#draftable-player-list-wrapper section {
+  margin-bottom: 40px; }
+
+#draftable-player-list-wrapper #full-list {
+  max-height: 200px;
+  overflow: scroll; }
+  #draftable-player-list-wrapper #full-list h3 {
+    border-bottom: 1px solid #333; }
+  #draftable-player-list-wrapper #full-list table {
+    width: 100%; }
+
+#draftable-player-list-wrapper section.position h3 {
+  border-bottom: 1px solid #333; }
+
+@media (min-width: 900px) {
+  #draftable-player-list-wrapper section.position {
+    box-sizing: border-box;
+    float: left;
+    padding: 0 10px;
+    width: 100%; } }
+  @media screen and (min-width: 900px) and (min-width: 700px) {
+    #draftable-player-list-wrapper section.position {
+      width: 50%; } }
+
+#draftable-player-list-wrapper section.position .table-wrapper {
+  background-color: #ededed;
+  height: 400px;
+  overflow: scroll; }
+
+#draftable-player-list-wrapper section.position table {
+  width: 100%; }
+
+#draftable-player-list-wrapper section.position tr.tier-1 {
+  background-color: #bdffe9; }
+
+#draftable-player-list-wrapper section.position tr.tier-2 {
+  background-color: #bbffa6; }
+
+#draftable-player-list-wrapper section.position tr.tier-3 {
+  background-color: #fff69a; }
+
+#draftable-player-list-wrapper section.position tr.tier-4 {
+  background-color: #ffd3a7; }
+
+#draftable-player-list-wrapper section.position tr.tier-5 {
+  background-color: #ffb4b4; }
+
+#draftable-player-list-wrapper section.position tr.tier-6 {
+  background-color: #9ad2cb; }
+
 .fadeOut {
   opacity: 0;
   transition: .5s; }
   .fadeOut.hidden {
     display: none; }
+
+#your-team-wrapper h3 {
+  border-bottom: 1px solid #333; }
 
 @media (min-width: 900px) {
   #your-team-wrapper {
@@ -711,6 +769,9 @@ footer {
   @media screen and (min-width: 900px) and (min-width: 700px) {
     #your-team-wrapper {
       width: 25%; } }
+
+#drafted-wrapper h3 {
+  border-bottom: 1px solid #333; }
 
 @media (min-width: 900px) {
   #drafted-wrapper {
@@ -728,7 +789,7 @@ footer {
   #drafted-wrapper ul li, #team li {
     margin-bottom: 5px; }
 
-#draftable-player-list-wrapper, #drafted-wrapper {
+#drafted-wrapper {
   max-height: 500px;
   overflow: scroll; }
 

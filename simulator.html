@@ -12,8 +12,8 @@
 	    <div class="container">
 	      <h1>Draft Baby</h1>
 	      <h3>Fantasy Football Draft Tool</h3>
-				<a href="index.html">By Position</a> | 
-	      <a href="full-list.html">Full List</a> | 
+				<a href="index.html">Positions</a> | 
+	      <a href="overall.html">Overall</a> | 
 				<a href="#">Draft Simulator</a>
 	    </div>
 	  </header>
@@ -51,23 +51,125 @@
 			</section>
 			
 			<div id="simulator" class="inactive">
+				<section id="draftable-player-list-wrapper">
+					
+					<section id="full-list">
+						<h3>Overall Rankings</h3>
+		        <table id="draftable-player-list">
+		          <thead>
+		            <tr>
+									<th>Rank</th>
+		              <th>Name</th>
+		              <th>Position</th>
+		              <th>Team</th>
+		              <th>Bye</th>
+		            </tr>
+		          </thead>
+		          <tbody></tbody>
+		        </table>
+					</section>
+				
+					<section id="rb-list-wrapper" class="position">
+						<h3>Running Backs</h3>
+	          <div class="table-wrapper">
+	          <table id="rb-list">
+	            <thead>
+	              <tr>
+	                <th>Name</th>
+	                <th>Team</th>
+	                <th>Bye</th>
+	              </tr>
+	            </thead>
+	            <tbody></tbody>
+	          </table>
+	          </div>
+					</section>
+					
+					<section id="wr-list-wrapper" class="position">
+						<h3>Wide Receivers</h3>
+	          <div class="table-wrapper">
+	          <table id="wr-list">
+	            <thead>
+	              <tr>
+	                <th>Name</th>
+	                <th>Team</th>
+	                <th>Bye</th>
+	              </tr>
+	            </thead>
+	            <tbody></tbody>
+	          </table>
+	          </div>
+					</section>
+					
+					<section id="qb-list-wrapper" class="position">
+						<h3>Quarterbacks</h3>
+	          <div class="table-wrapper">
+	          <table id="qb-list">
+	            <thead>
+	              <tr>
+	                <th>Name</th>
+	                <th>Team</th>
+	                <th>Bye</th>
+	              </tr>
+	            </thead>
+	            <tbody></tbody>
+	          </table>
+	          </div>
+					</section>
+					
+					<section id="te-list-wrapper" class="position">
+						<h3>Tight Ends</h3>
+	          <div class="table-wrapper">
+	          <table id="te-list">
+	            <thead>
+	              <tr>
+	                <th>Name</th>
+	                <th>Team</th>
+	                <th>Bye</th>
+	              </tr>
+	            </thead>
+	            <tbody></tbody>
+	          </table>
+	          </div>
+					</section>
+					
+					<section id="def-list-wrapper" class="position">
+						<h3>Defenses</h3>
+	          <div class="table-wrapper">
+	          <table id="def-list">
+	            <thead>
+	              <tr>
+	                <th>Name</th>
+	                <th>Team</th>
+	                <th>Bye</th>
+	              </tr>
+	            </thead>
+	            <tbody></tbody>
+	          </table>
+	          </div>
+					</section>
+					
+					<section id="k-list-wrapper" class="position">
+						<h3>Kickers</h3>
+	          <div class="table-wrapper">
+	          <table id="k-list">
+	            <thead>
+	              <tr>
+	                <th>Name</th>
+	                <th>Team</th>
+	                <th>Bye</th>
+	              </tr>
+	            </thead>
+	            <tbody></tbody>
+	          </table>
+	          </div>
+					</section>
+	        
+				</section>
+				
 				<section id="your-team-wrapper">
 					<h3>Your Team</h3>
 					<ul id="team"></ul>
-				</section>
-				
-				<section id="draftable-player-list-wrapper">
-	        <table id="draftable-player-list">
-	          <thead>
-	            <tr>
-	              <th>Name</th>
-	              <th>Position</th>
-	              <th>Team</th>
-	              <th>Bye</th>
-	            </tr>
-	          </thead>
-	          <tbody></tbody>
-	        </table>
 				</section>
 			
 				<section id="drafted-wrapper">
@@ -79,10 +181,11 @@
 		
     <footer>
       <div class="container">
-        <span class="quote">"Stats are for losers." - Bill Belichick</span>
+        <span id="quote">"Stats are for losers." - Bill Belichick</span>
       </div>
     </footer>
 		
     <script src="js/simulator.js"></script>
+		<script src="js/quotes.js"></script>
 	</body>
 </html>

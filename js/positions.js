@@ -30,11 +30,15 @@
 			  var table = document.getElementById(draftBaby.positions[index] + '-list');
 			  var tbody = table.getElementsByTagName('tbody');
 
-			  posPlayers.forEach(function(player){
+			  posPlayers.forEach(function(player, index){
 			    var tr = document.createElement('tr');
 			    tbody[0].appendChild(tr);
           
           if ( player['tier']) { tr.classList.add( 'tier-' + player['tier']); }
+          
+	        var td = document.createElement('td');
+	        td.appendChild(document.createTextNode(index + 1));
+	        tr.appendChild(td);
 
 			    for (var data in player) {
 			      if (data == 'name' || data == 'team' || data == 'bye') {
