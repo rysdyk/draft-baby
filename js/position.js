@@ -1,28 +1,33 @@
 (function(){
 	var draftBaby = {
 		init: function() {
+      this.allPlayers = [];
+      this.positions = ['qb', 'rb', 'wr', 'te', 'k', 'def'];
 			this.getPlayers();
 			this.renderPlayers();
 		},
 		
 		getPlayers: function() {
-			var request = new XMLHttpRequest();
-			request.open("GET", "lib/tiers/2017_7_6.json", false);
-			request.send(null);
-			this.players = JSON.parse(request.responseText);
+      var players = this.allPlayers;
+      
+      this.positions.forEach( function(position){
+  			var request = new XMLHttpRequest();
+  			request.open("GET", "lib/2017/" + position + ".json", false);
+  			request.send(null);
+        var response = JSON.parse(request.responseText)
+  			players.push(response);
+      });
 		},
 		
 		renderPlayers: function() {
-			var positions = ['qb', 'rb', 'wr', 'te', 'k', 'def'];
-			
-			positions.forEach(function(position){
+			this.allPlayers.forEach(function(posPlayers, index){
 			  
-				var posPlayers = draftBaby.players.filter( function(player){
-			    var pos = position.toUpperCase();
-			    return player.position.includes(pos);
-			  });
+        // var posPlayers = draftBaby.players.filter( function(player){
+        //           var pos = position.toUpperCase();
+        //           return player.position.includes(pos);
+        //         });
 				
-			  var table = document.getElementById(position + '-list');
+			  var table = document.getElementById(draftBaby.positions[index] + '-list');
 			  var tbody = table.getElementsByTagName('tbody');
 
 			  posPlayers.forEach(function(player){

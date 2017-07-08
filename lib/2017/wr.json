@@ -34,7 +34,7 @@
   {    "name": "DeSean Jackson",    "position": "WR",    "team": "TB",    "bye": 11,    "tier": 5  },
   {    "name": "Jamison Crowder",    "position": "WR",    "team": "WAS",    "bye": 5,    "tier": 5  },
   {    "name": "Emmanuel Sanders",    "position": "WR",    "team": "DEN",    "bye": 5,    "tier": 5  },
-  {    "name": "Eric Decker",    "position": "WR",    "team": "TEN",    "bye": 8  },
+  {    "name": "Eric Decker",    "position": "WR",    "team": "TEN",    "bye": 8,    "tier": 5  },
   {    "name": "Stefon Diggs",    "position": "WR",    "team": "MIN",    "bye": 9,    "tier": 5  },
   {    "name": "Jeremy Maclin",    "position": "WR",    "team": "BAL",    "bye": 10,    "tier": 5  },
   {    "name": "Rishard Matthews",    "position": "WR",    "team": "TEN",    "bye": 8,    "tier": 5  },
