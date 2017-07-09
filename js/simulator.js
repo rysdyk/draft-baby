@@ -13,7 +13,7 @@
 		
 		cacheDom: function() {
 			this.table = document.getElementById('draftable-player-list');
-			this.tbody = this.table.getElementsByTagName('tbody');
+			this.tbody = this.table.getElementsByTagName('tbody'); // make sure we get all 7 lists
       this.team = document.getElementById('team');
 			this.teams = document.getElementById('teams');
 			this.draftPos = document.getElementById('draftPos');
@@ -147,6 +147,7 @@
 			clearTimeout(this.run);
 			this.draftProgress.classList.add('eligible')
 			this.tbody[0].classList.add('active');
+      // tbody for each
 	
 			var nodeRows = document.querySelector('tbody.active').childNodes;
 	

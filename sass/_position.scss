@@ -1,94 +1,3 @@
-// #position {
-//   padding-bottom: 60px;
-
-//   h2 {
-//     font-size: 14px;
-//     text-align: center;
-//     text-decoration: underline;
-//   }
-
-//   ul.position-heading {
-//     padding: 0;
-//     list-style: none;
-
-//     li.heading {
-//       font-weight: bold;
-//       overflow: hidden;
-
-//       span {
-//         display: block;
-//         float: left;
-//         width: 30px;
-
-//         &.name { width: 130px; }
-
-//         &.stats { width: 55px; }
-//         &.bye { width: 30px; }
-
-//         &.todraft, &.tag {
-//           width: 30px;
-//           text-align: center;
-//           float: right;
-//         }
-//       }
-//     }
-//   }
-
-//   ul.position-list {
-//     height: 300px;
-//     list-style: none;
-//     overflow: scroll;
-//     padding: 0;
-
-//     li {
-//       overflow: hidden;
-
-//       span {
-//         display: block;
-//         float: left;
-//         //position: relative;
-
-//         &:first-child {
-//           text-align: left;
-//           width: 30px;
-//         }
-
-//         &.customrank { width: 30px; }
-
-//         &.name { width: 130px; }
-
-//         &.bye { width: 30px; }
-
-//         &.tag {
-//           cursor: pointer;
-//           float: right;
-//           text-align: center;
-//           width: 30px;
-//         }
-
-//         &.draft {
-//           cursor: pointer;
-//           float: right;
-//           text-align: center;
-//           width: 30px;
-
-//           &:before {
-//             color: #ededed;
-//             content: "\f00c";
-//             font-family: FontAwesome;
-//             font-size: 16px;
-//             position: relative;
-//           }
-
-//           &:hover:before {
-//             color: #32CD32;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-
 .positions-wrapper {
   @include columns(9);
 }
@@ -128,5 +37,12 @@
 
   @media (min-width: 900px) {
     @include columns(4);
+  }
+}
+
+.def-list-wrapper {
+  tr {
+    th:first-child + th + th { display: none; }
+    td:first-child + td + td { display: none; }
   }
 }

@@ -655,6 +655,12 @@ footer {
     .position-wrapper {
       width: 33.33333%; } }
 
+.def-list-wrapper tr th:first-child + th + th {
+  display: none; }
+
+.def-list-wrapper tr td:first-child + td + td {
+  display: none; }
+
 #drafted {
   overflow: hidden; }
 

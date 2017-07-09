@@ -1,8 +1,8 @@
 (function(){
-	var draftBaby = {
+	var dbPositions = {
 		init: function() {
       this.allPlayers = [];
-      this.positions = ['qb', 'rb', 'wr', 'te', 'k', 'def'];
+      this.positions = ['rb', 'wr', 'qb', 'te', 'k', 'def'];
 			this.getPlayers();
 			this.renderPlayers();
 		},
@@ -21,13 +21,8 @@
 		
 		renderPlayers: function() {
 			this.allPlayers.forEach(function(posPlayers, index){
-			  
-        // var posPlayers = draftBaby.players.filter( function(player){
-        //           var pos = position.toUpperCase();
-        //           return player.position.includes(pos);
-        //         });
 				
-			  var table = document.getElementById(draftBaby.positions[index] + '-list');
+			  var table = document.getElementById(dbPositions.positions[index] + '-list');
 			  var tbody = table.getElementsByTagName('tbody');
 
 			  posPlayers.forEach(function(player, index){
@@ -52,7 +47,7 @@
 		}
 	}
 	
-	draftBaby.init();
+	dbPositions.init();
 })()
 
 // to do next, separate players into tiers
