@@ -1,0 +1,1946 @@
+[
+  {
+    "ADP": 1.02,
+    "Overall": 1.7,
+    "name": "David Johnson",
+    "position": "RB",
+    "team": "ARI",
+    "Times Drafted": 470,
+    "bye": 8
+  },
+  {
+    "ADP": 1.02,
+    "Overall": 2.4,
+    "name": "LeVeon Bell",
+    "position": "RB",
+    "team": "PIT",
+    "Times Drafted": 582,
+    "bye": 9
+  },
+  {
+    "ADP": 1.03,
+    "Overall": 2.9,
+    "name": "Ezekiel Elliott",
+    "position": "RB",
+    "team": "DAL",
+    "Times Drafted": 444,
+    "bye": 6
+  },
+  {
+    "ADP": 1.04,
+    "Overall": 4.2,
+    "name": "Antonio Brown",
+    "position": "WR",
+    "team": "PIT",
+    "Times Drafted": 437,
+    "bye": 9
+  },
+  {
+    "ADP": 1.06,
+    "Overall": 5.8,
+    "name": "Julio Jones",
+    "position": "WR",
+    "team": "ATL",
+    "Times Drafted": 482,
+    "bye": 5
+  },
+  {
+    "ADP": 1.06,
+    "Overall": 6.3,
+    "name": "Odell Beckham Jr",
+    "position": "WR",
+    "team": "NYG",
+    "Times Drafted": 526,
+    "bye": 8
+  },
+  {
+    "ADP": 1.07,
+    "Overall": 6.8,
+    "name": "LeSean McCoy",
+    "position": "RB",
+    "team": "BUF",
+    "Times Drafted": 564,
+    "bye": 6
+  },
+  {
+    "ADP": 1.08,
+    "Overall": 8,
+    "name": "Melvin Gordon",
+    "position": "RB",
+    "team": "LAC",
+    "Times Drafted": 522,
+    "bye": 9
+  },
+  {
+    "ADP": 1.09,
+    "Overall": 9.2,
+    "name": "Mike Evans",
+    "position": "WR",
+    "team": "TB",
+    "Times Drafted": 495,
+    "bye": 11
+  },
+  {
+    "ADP": 1.1,
+    "Overall": 10.1,
+    "name": "Devonta Freeman",
+    "position": "RB",
+    "team": "ATL",
+    "Times Drafted": 527,
+    "bye": 5
+  },
+  {
+    "ADP": 1.11,
+    "Overall": 11.2,
+    "name": "A.J. Green",
+    "position": "WR",
+    "team": "CIN",
+    "Times Drafted": 555,
+    "bye": 6
+  },
+  {
+    "ADP": 1.12,
+    "Overall": 11.6,
+    "name": "Jay Ajayi",
+    "position": "RB",
+    "team": "MIA",
+    "Times Drafted": 517,
+    "bye": 11
+  },
+  {
+    "ADP": 2.02,
+    "Overall": 13.8,
+    "name": "DeMarco Murray",
+    "position": "RB",
+    "team": "TEN",
+    "Times Drafted": 566,
+    "bye": 8
+  },
+  {
+    "ADP": 2.02,
+    "Overall": 14,
+    "name": "Jordan Howard",
+    "position": "RB",
+    "team": "CHI",
+    "Times Drafted": 529,
+    "bye": 9
+  },
+  {
+    "ADP": 2.02,
+    "Overall": 14.1,
+    "name": "Jordy Nelson",
+    "position": "WR",
+    "team": "GB",
+    "Times Drafted": 567,
+    "bye": 8
+  },
+  {
+    "ADP": 2.05,
+    "Overall": 16.5,
+    "name": "Michael Thomas",
+    "position": "WR",
+    "team": "NO",
+    "Times Drafted": 472,
+    "bye": 5
+  },
+  {
+    "ADP": 2.05,
+    "Overall": 17.2,
+    "name": "Marshawn Lynch",
+    "position": "RB",
+    "team": "OAK",
+    "Times Drafted": 441,
+    "bye": 10
+  },
+  {
+    "ADP": 2.06,
+    "Overall": 18,
+    "name": "Todd Gurley",
+    "position": "RB",
+    "team": "LAR",
+    "Times Drafted": 502,
+    "bye": 8
+  },
+  {
+    "ADP": 2.07,
+    "Overall": 19,
+    "name": "T.Y. Hilton",
+    "position": "WR",
+    "team": "IND",
+    "Times Drafted": 497,
+    "bye": 11
+  },
+  {
+    "ADP": 2.07,
+    "Overall": 19.3,
+    "name": "Leonard Fournette",
+    "position": "RB",
+    "team": "JAC",
+    "Times Drafted": 535,
+    "bye": 8
+  },
+  {
+    "ADP": 2.08,
+    "Overall": 20.3,
+    "name": "Dez Bryant",
+    "position": "WR",
+    "team": "DAL",
+    "Times Drafted": 592,
+    "bye": 6
+  },
+  {
+    "ADP": 2.09,
+    "Overall": 20.9,
+    "name": "Rob Gronkowski",
+    "position": "TE",
+    "team": "NE",
+    "Times Drafted": 551,
+    "bye": 9
+  },
+  {
+    "ADP": 2.1,
+    "Overall": 22.3,
+    "name": "Amari Cooper",
+    "position": "WR",
+    "team": "OAK",
+    "Times Drafted": 568,
+    "bye": 10
+  },
+  {
+    "ADP": 2.11,
+    "Overall": 22.7,
+    "name": "Aaron Rodgers",
+    "position": "QB",
+    "team": "GB",
+    "Times Drafted": 391,
+    "bye": 8
+  },
+  {
+    "ADP": 2.12,
+    "Overall": 23.6,
+    "name": "Lamar Miller",
+    "position": "RB",
+    "team": "HOU",
+    "Times Drafted": 518,
+    "bye": 7
+  },
+  {
+    "ADP": 3.02,
+    "Overall": 25.8,
+    "name": "Isaiah Crowell",
+    "position": "RB",
+    "team": "CLE",
+    "Times Drafted": 485,
+    "bye": 9
+  },
+  {
+    "ADP": 3.03,
+    "Overall": 27.3,
+    "name": "Doug Baldwin",
+    "position": "WR",
+    "team": "SEA",
+    "Times Drafted": 570,
+    "bye": 6
+  },
+  {
+    "ADP": 3.03,
+    "Overall": 27.3,
+    "name": "Brandin Cooks",
+    "position": "WR",
+    "team": "NE",
+    "Times Drafted": 469,
+    "bye": 9
+  },
+  {
+    "ADP": 3.05,
+    "Overall": 28.7,
+    "name": "Tom Brady",
+    "position": "QB",
+    "team": "NE",
+    "Times Drafted": 417,
+    "bye": 9
+  },
+  {
+    "ADP": 3.05,
+    "Overall": 28.8,
+    "name": "DeAndre Hopkins",
+    "position": "WR",
+    "team": "HOU",
+    "Times Drafted": 526,
+    "bye": 7
+  },
+  {
+    "ADP": 3.06,
+    "Overall": 30.4,
+    "name": "Joe Mixon",
+    "position": "RB",
+    "team": "CIN",
+    "Times Drafted": 406,
+    "bye": 6
+  },
+  {
+    "ADP": 3.08,
+    "Overall": 31.8,
+    "name": "Terrelle Pryor",
+    "position": "WR",
+    "team": "WAS",
+    "Times Drafted": 437,
+    "bye": 5
+  },
+  {
+    "ADP": 3.1,
+    "Overall": 33.5,
+    "name": "Christian McCaffrey",
+    "position": "RB",
+    "team": "CAR",
+    "Times Drafted": 403,
+    "bye": 11
+  },
+  {
+    "ADP": 3.1,
+    "Overall": 33.8,
+    "name": "Alshon Jeffery",
+    "position": "WR",
+    "team": "PHI",
+    "Times Drafted": 436,
+    "bye": 10
+  },
+  {
+    "ADP": 3.1,
+    "Overall": 34.3,
+    "name": "Carlos Hyde",
+    "position": "RB",
+    "team": "SF",
+    "Times Drafted": 510,
+    "bye": 11
+  },
+  {
+    "ADP": 3.11,
+    "Overall": 34.7,
+    "name": "Spencer Ware",
+    "position": "RB",
+    "team": "KC",
+    "Times Drafted": 424,
+    "bye": 10
+  },
+  {
+    "ADP": 3.12,
+    "Overall": 36.2,
+    "name": "Sammy Watkins",
+    "position": "WR",
+    "team": "BUF",
+    "Times Drafted": 543,
+    "bye": 6
+  },
+  {
+    "ADP": 3.12,
+    "Overall": 36.3,
+    "name": "Allen Robinson",
+    "position": "WR",
+    "team": "JAC",
+    "Times Drafted": 505,
+    "bye": 8
+  },
+  {
+    "ADP": 4.02,
+    "Overall": 37.8,
+    "name": "Travis Kelce",
+    "position": "TE",
+    "team": "KC",
+    "Times Drafted": 436,
+    "bye": 10
+  },
+  {
+    "ADP": 4.02,
+    "Overall": 37.9,
+    "name": "Demaryius Thomas",
+    "position": "WR",
+    "team": "DEN",
+    "Times Drafted": 562,
+    "bye": 5
+  },
+  {
+    "ADP": 4.03,
+    "Overall": 39.5,
+    "name": "Adrian Peterson",
+    "position": "RB",
+    "team": "NO",
+    "Times Drafted": 437,
+    "bye": 5
+  },
+  {
+    "ADP": 4.05,
+    "Overall": 40.8,
+    "name": "Drew Brees",
+    "position": "QB",
+    "team": "NO",
+    "Times Drafted": 351,
+    "bye": 5
+  },
+  {
+    "ADP": 4.05,
+    "Overall": 41.2,
+    "name": "Davante Adams",
+    "position": "WR",
+    "team": "GB",
+    "Times Drafted": 519,
+    "bye": 8
+  },
+  {
+    "ADP": 4.06,
+    "Overall": 41.8,
+    "name": "Doug Martin",
+    "position": "RB",
+    "team": "TB",
+    "Times Drafted": 515,
+    "bye": 11
+  },
+  {
+    "ADP": 4.08,
+    "Overall": 43.5,
+    "name": "Tyreek Hill",
+    "position": "WR",
+    "team": "KC",
+    "Times Drafted": 477,
+    "bye": 10
+  },
+  {
+    "ADP": 4.09,
+    "Overall": 44.5,
+    "name": "Keenan Allen",
+    "position": "WR",
+    "team": "LAC",
+    "Times Drafted": 538,
+    "bye": 9
+  },
+  {
+    "ADP": 4.09,
+    "Overall": 45.1,
+    "name": "Martavis Bryant",
+    "position": "WR",
+    "team": "PIT",
+    "Times Drafted": 534,
+    "bye": 9
+  },
+  {
+    "ADP": 4.1,
+    "Overall": 45.8,
+    "name": "LeGarrette Blount",
+    "position": "RB",
+    "team": "PHI",
+    "Times Drafted": 454,
+    "bye": 10
+  },
+  {
+    "ADP": 4.1,
+    "Overall": 46.3,
+    "name": "Jordan Reed",
+    "position": "TE",
+    "team": "WAS",
+    "Times Drafted": 421,
+    "bye": 5
+  },
+  {
+    "ADP": 4.11,
+    "Overall": 47.3,
+    "name": "Ty Montgomery",
+    "position": "RB",
+    "team": "GB",
+    "Times Drafted": 543,
+    "bye": 8
+  },
+  {
+    "ADP": 5.02,
+    "Overall": 49.5,
+    "name": "Mike Gillislee",
+    "position": "RB",
+    "team": "NE",
+    "Times Drafted": 578,
+    "bye": 9
+  },
+  {
+    "ADP": 5.02,
+    "Overall": 50.3,
+    "name": "Jarvis Landry",
+    "position": "WR",
+    "team": "MIA",
+    "Times Drafted": 492,
+    "bye": 11
+  },
+  {
+    "ADP": 5.04,
+    "Overall": 51.6,
+    "name": "Michael Crabtree",
+    "position": "WR",
+    "team": "OAK",
+    "Times Drafted": 514,
+    "bye": 10
+  },
+  {
+    "ADP": 5.05,
+    "Overall": 52.7,
+    "name": "CJ Anderson",
+    "position": "RB",
+    "team": "DEN",
+    "Times Drafted": 510,
+    "bye": 5
+  },
+  {
+    "ADP": 5.06,
+    "Overall": 53.6,
+    "name": "Greg Olsen",
+    "position": "TE",
+    "team": "CAR",
+    "Times Drafted": 312,
+    "bye": 11
+  },
+  {
+    "ADP": 5.07,
+    "Overall": 55.3,
+    "name": "Eddie Lacy",
+    "position": "RB",
+    "team": "SEA",
+    "Times Drafted": 438,
+    "bye": 6
+  },
+  {
+    "ADP": 5.08,
+    "Overall": 55.9,
+    "name": "Andrew Luck",
+    "position": "QB",
+    "team": "IND",
+    "Times Drafted": 296,
+    "bye": 11
+  },
+  {
+    "ADP": 5.08,
+    "Overall": 56.2,
+    "name": "Dalvin Cook",
+    "position": "RB",
+    "team": "MIN",
+    "Times Drafted": 494,
+    "bye": 9
+  },
+  {
+    "ADP": 5.09,
+    "Overall": 57.4,
+    "name": "Ameer Abdullah",
+    "position": "RB",
+    "team": "DET",
+    "Times Drafted": 492,
+    "bye": 7
+  },
+  {
+    "ADP": 5.1,
+    "Overall": 57.6,
+    "name": "Brandon Marshall",
+    "position": "WR",
+    "team": "NYG",
+    "Times Drafted": 468,
+    "bye": 8
+  },
+  {
+    "ADP": 5.11,
+    "Overall": 58.5,
+    "name": "Matt Ryan",
+    "position": "QB",
+    "team": "ATL",
+    "Times Drafted": 275,
+    "bye": 5
+  },
+  {
+    "ADP": 5.12,
+    "Overall": 60.4,
+    "name": "Julian Edelman",
+    "position": "WR",
+    "team": "NE",
+    "Times Drafted": 410,
+    "bye": 9
+  },
+  {
+    "ADP": 6.01,
+    "Overall": 61.1,
+    "name": "Kelvin Benjamin",
+    "position": "WR",
+    "team": "CAR",
+    "Times Drafted": 435,
+    "bye": 11
+  },
+  {
+    "ADP": 6.04,
+    "Overall": 63.8,
+    "name": "Tevin Coleman",
+    "position": "RB",
+    "team": "ATL",
+    "Times Drafted": 492,
+    "bye": 5
+  },
+  {
+    "ADP": 6.04,
+    "Overall": 64.2,
+    "name": "Donte Moncrief",
+    "position": "WR",
+    "team": "IND",
+    "Times Drafted": 430,
+    "bye": 11
+  },
+  {
+    "ADP": 6.05,
+    "Overall": 64.7,
+    "name": "Paul Perkins",
+    "position": "RB",
+    "team": "NYG",
+    "Times Drafted": 536,
+    "bye": 8
+  },
+  {
+    "ADP": 6.05,
+    "Overall": 65.4,
+    "name": "Jimmy Graham",
+    "position": "TE",
+    "team": "SEA",
+    "Times Drafted": 298,
+    "bye": 6
+  },
+  {
+    "ADP": 6.06,
+    "Overall": 66.3,
+    "name": "Mark Ingram",
+    "position": "RB",
+    "team": "NO",
+    "Times Drafted": 520,
+    "bye": 5
+  },
+  {
+    "ADP": 6.07,
+    "Overall": 66.8,
+    "name": "Derrick Henry",
+    "position": "RB",
+    "team": "TEN",
+    "Times Drafted": 404,
+    "bye": 8
+  },
+  {
+    "ADP": 6.08,
+    "Overall": 67.7,
+    "name": "Derek Carr",
+    "position": "QB",
+    "team": "OAK",
+    "Times Drafted": 285,
+    "bye": 10
+  },
+  {
+    "ADP": 6.08,
+    "Overall": 67.7,
+    "name": "Golden Tate",
+    "position": "WR",
+    "team": "DET",
+    "Times Drafted": 520,
+    "bye": 7
+  },
+  {
+    "ADP": 6.1,
+    "Overall": 69.8,
+    "name": "Larry Fitzgerald",
+    "position": "WR",
+    "team": "ARI",
+    "Times Drafted": 475,
+    "bye": 8
+  },
+  {
+    "ADP": 6.11,
+    "Overall": 71.4,
+    "name": "Bilal Powell",
+    "position": "RB",
+    "team": "NYJ",
+    "Times Drafted": 506,
+    "bye": 11
+  },
+  {
+    "ADP": 6.12,
+    "Overall": 72,
+    "name": "Tyler Eifert",
+    "position": "TE",
+    "team": "CIN",
+    "Times Drafted": 295,
+    "bye": 6
+  },
+  {
+    "ADP": 7.01,
+    "Overall": 72.7,
+    "name": "Jamison Crowder",
+    "position": "WR",
+    "team": "WAS",
+    "Times Drafted": 544,
+    "bye": 5
+  },
+  {
+    "ADP": 7.03,
+    "Overall": 74.8,
+    "name": "Willie Snead",
+    "position": "WR",
+    "team": "NO",
+    "Times Drafted": 524,
+    "bye": 5
+  },
+  {
+    "ADP": 7.03,
+    "Overall": 75.3,
+    "name": "Frank Gore",
+    "position": "RB",
+    "team": "IND",
+    "Times Drafted": 532,
+    "bye": 11
+  },
+  {
+    "ADP": 7.04,
+    "Overall": 75.8,
+    "name": "Delanie Walker",
+    "position": "TE",
+    "team": "TEN",
+    "Times Drafted": 261,
+    "bye": 8
+  },
+  {
+    "ADP": 7.05,
+    "Overall": 77.2,
+    "name": "Martellus Bennett",
+    "position": "TE",
+    "team": "GB",
+    "Times Drafted": 318,
+    "bye": 8
+  },
+  {
+    "ADP": 7.06,
+    "Overall": 77.9,
+    "name": "Cam Newton",
+    "position": "QB",
+    "team": "CAR",
+    "Times Drafted": 280,
+    "bye": 11
+  },
+  {
+    "ADP": 7.07,
+    "Overall": 78.8,
+    "name": "Stefon Diggs",
+    "position": "WR",
+    "team": "MIN",
+    "Times Drafted": 492,
+    "bye": 9
+  },
+  {
+    "ADP": 7.1,
+    "Overall": 81.6,
+    "name": "Russell Wilson",
+    "position": "QB",
+    "team": "SEA",
+    "Times Drafted": 346,
+    "bye": 6
+  },
+  {
+    "ADP": 7.1,
+    "Overall": 81.7,
+    "name": "Samaje Perine",
+    "position": "RB",
+    "team": "WAS",
+    "Times Drafted": 524,
+    "bye": 5
+  },
+  {
+    "ADP": 7.11,
+    "Overall": 83,
+    "name": "DeSean Jackson",
+    "position": "WR",
+    "team": "TB",
+    "Times Drafted": 444,
+    "bye": 11
+  },
+  {
+    "ADP": 7.12,
+    "Overall": 83.8,
+    "name": "Ben Roethlisberger",
+    "position": "QB",
+    "team": "PIT",
+    "Times Drafted": 330,
+    "bye": 9
+  },
+  {
+    "ADP": 7.12,
+    "Overall": 84,
+    "name": "Latavius Murray",
+    "position": "RB",
+    "team": "MIN",
+    "Times Drafted": 347,
+    "bye": 9
+  },
+  {
+    "ADP": 8.01,
+    "Overall": 85.2,
+    "name": "Emmanuel Sanders",
+    "position": "WR",
+    "team": "DEN",
+    "Times Drafted": 428,
+    "bye": 5
+  },
+  {
+    "ADP": 8.01,
+    "Overall": 85.4,
+    "name": "Danny Woodhead",
+    "position": "RB",
+    "team": "BAL",
+    "Times Drafted": 433,
+    "bye": 10
+  },
+  {
+    "ADP": 8.03,
+    "Overall": 87.2,
+    "name": "DeVante Parker",
+    "position": "WR",
+    "team": "MIA",
+    "Times Drafted": 358,
+    "bye": 11
+  },
+  {
+    "ADP": 8.04,
+    "Overall": 88.5,
+    "name": "Rob Kelley",
+    "position": "RB",
+    "team": "WAS",
+    "Times Drafted": 329,
+    "bye": 5
+  },
+  {
+    "ADP": 8.05,
+    "Overall": 89.2,
+    "name": "Jeremy Maclin",
+    "position": "WR",
+    "team": "BAL",
+    "Times Drafted": 492,
+    "bye": 10
+  },
+  {
+    "ADP": 8.06,
+    "Overall": 90.3,
+    "name": "Kirk Cousins",
+    "position": "QB",
+    "team": "WAS",
+    "Times Drafted": 391,
+    "bye": 5
+  },
+  {
+    "ADP": 8.06,
+    "Overall": 90.5,
+    "name": "Kareem Hunt",
+    "position": "RB",
+    "team": "KC",
+    "Times Drafted": 341,
+    "bye": 10
+  },
+  {
+    "ADP": 8.07,
+    "Overall": 91.3,
+    "name": "Hunter Henry",
+    "position": "TE",
+    "team": "LAC",
+    "Times Drafted": 250,
+    "bye": 9
+  },
+  {
+    "ADP": 8.09,
+    "Overall": 92.8,
+    "name": "Jameis Winston",
+    "position": "QB",
+    "team": "TB",
+    "Times Drafted": 399,
+    "bye": 11
+  },
+  {
+    "ADP": 8.09,
+    "Overall": 93.2,
+    "name": "Jamaal Charles",
+    "position": "RB",
+    "team": "DEN",
+    "Times Drafted": 290,
+    "bye": 5
+  },
+  {
+    "ADP": 8.1,
+    "Overall": 93.7,
+    "name": "Randall Cobb",
+    "position": "WR",
+    "team": "GB",
+    "Times Drafted": 396,
+    "bye": 8
+  },
+  {
+    "ADP": 8.11,
+    "Overall": 95.1,
+    "name": "Kenneth Dixon",
+    "position": "RB",
+    "team": "BAL",
+    "Times Drafted": 218,
+    "bye": 10
+  },
+  {
+    "ADP": 8.11,
+    "Overall": 95.3,
+    "name": "Pierre Garcon",
+    "position": "WR",
+    "team": "SF",
+    "Times Drafted": 372,
+    "bye": 11
+  },
+  {
+    "ADP": 9.02,
+    "Overall": 98.3,
+    "name": "Eric Decker",
+    "position": "WR",
+    "team": "TEN",
+    "Times Drafted": 474,
+    "bye": 8
+  },
+  {
+    "ADP": 9.02,
+    "Overall": 98.5,
+    "name": "Matt Forte",
+    "position": "RB",
+    "team": "NYJ",
+    "Times Drafted": 251,
+    "bye": 11
+  },
+  {
+    "ADP": 9.03,
+    "Overall": 98.9,
+    "name": "Marcus Mariota",
+    "position": "QB",
+    "team": "TEN",
+    "Times Drafted": 525,
+    "bye": 8
+  },
+  {
+    "ADP": 9.04,
+    "Overall": 99.9,
+    "name": "Jonathan Stewart",
+    "position": "RB",
+    "team": "CAR",
+    "Times Drafted": 326,
+    "bye": 11
+  },
+  {
+    "ADP": 9.05,
+    "Overall": 100.8,
+    "name": "Kyle Rudolph",
+    "position": "TE",
+    "team": "MIN",
+    "Times Drafted": 252,
+    "bye": 9
+  },
+  {
+    "ADP": 9.06,
+    "Overall": 102.2,
+    "name": "Corey Davis",
+    "position": "WR",
+    "team": "TEN",
+    "Times Drafted": 275,
+    "bye": 8
+  },
+  {
+    "ADP": 9.07,
+    "Overall": 102.9,
+    "name": "Denver Defense",
+    "position": "DEF",
+    "team": "DEN",
+    "Times Drafted": 205,
+    "bye": 5
+  },
+  {
+    "ADP": 9.08,
+    "Overall": 104.2,
+    "name": "John Brown",
+    "position": "WR",
+    "team": "ARI",
+    "Times Drafted": 342,
+    "bye": 8
+  },
+  {
+    "ADP": 9.09,
+    "Overall": 104.6,
+    "name": "Thomas Rawls",
+    "position": "RB",
+    "team": "SEA",
+    "Times Drafted": 278,
+    "bye": 6
+  },
+  {
+    "ADP": 9.1,
+    "Overall": 106.3,
+    "name": "Dak Prescott",
+    "position": "QB",
+    "team": "DAL",
+    "Times Drafted": 340,
+    "bye": 6
+  },
+  {
+    "ADP": 9.11,
+    "Overall": 107.4,
+    "name": "Cameron Meredith",
+    "position": "WR",
+    "team": "CHI",
+    "Times Drafted": 348,
+    "bye": 9
+  },
+  {
+    "ADP": 9.12,
+    "Overall": 107.8,
+    "name": "Terrance West",
+    "position": "RB",
+    "team": "BAL",
+    "Times Drafted": 276,
+    "bye": 10
+  },
+  {
+    "ADP": 9.12,
+    "Overall": 108.4,
+    "name": "Kansas City Defense",
+    "position": "DEF",
+    "team": "KC",
+    "Times Drafted": 213,
+    "bye": 10
+  },
+  {
+    "ADP": 10.03,
+    "Overall": 110.9,
+    "name": "Philip Rivers",
+    "position": "QB",
+    "team": "LAC",
+    "Times Drafted": 436,
+    "bye": 9
+  },
+  {
+    "ADP": 10.04,
+    "Overall": 112.4,
+    "name": "Corey Coleman",
+    "position": "WR",
+    "team": "CLE",
+    "Times Drafted": 231,
+    "bye": 9
+  },
+  {
+    "ADP": 10.05,
+    "Overall": 112.8,
+    "name": "Theo Riddick",
+    "position": "RB",
+    "team": "DET",
+    "Times Drafted": 335,
+    "bye": 7
+  },
+  {
+    "ADP": 10.05,
+    "Overall": 113.3,
+    "name": "Houston Defense",
+    "position": "DEF",
+    "team": "HOU",
+    "Times Drafted": 207,
+    "bye": 7
+  },
+  {
+    "ADP": 10.06,
+    "Overall": 113.7,
+    "name": "O.J. Howard",
+    "position": "TE",
+    "team": "TB",
+    "Times Drafted": 306,
+    "bye": 11
+  },
+  {
+    "ADP": 10.08,
+    "Overall": 115.8,
+    "name": "Jamaal Williams",
+    "position": "RB",
+    "team": "GB",
+    "Times Drafted": 342,
+    "bye": 8
+  },
+  {
+    "ADP": 10.08,
+    "Overall": 115.8,
+    "name": "Marvin Jones",
+    "position": "WR",
+    "team": "DET",
+    "Times Drafted": 281,
+    "bye": 7
+  },
+  {
+    "ADP": 10.1,
+    "Overall": 117.5,
+    "name": "Matthew Stafford",
+    "position": "QB",
+    "team": "DET",
+    "Times Drafted": 403,
+    "bye": 7
+  },
+  {
+    "ADP": 10.11,
+    "Overall": 118.7,
+    "name": "Jeremy Hill",
+    "position": "RB",
+    "team": "CIN",
+    "Times Drafted": 320,
+    "bye": 6
+  },
+  {
+    "ADP": 10.11,
+    "Overall": 118.9,
+    "name": "Seattle Defense",
+    "position": "DEF",
+    "team": "SEA",
+    "Times Drafted": 197,
+    "bye": 6
+  },
+  {
+    "ADP": 10.11,
+    "Overall": 119.1,
+    "name": "Quincy Enunwa",
+    "position": "WR",
+    "team": "NYJ",
+    "Times Drafted": 289,
+    "bye": 11
+  },
+  {
+    "ADP": 10.12,
+    "Overall": 119.6,
+    "name": "Eli Manning",
+    "position": "QB",
+    "team": "NYG",
+    "Times Drafted": 266,
+    "bye": 8
+  },
+  {
+    "ADP": 10.12,
+    "Overall": 119.7,
+    "name": "Mike Williams",
+    "position": "WR",
+    "team": "LAC",
+    "Times Drafted": 149,
+    "bye": 9
+  },
+  {
+    "ADP": 11.01,
+    "Overall": 121,
+    "name": "New England Defense",
+    "position": "DEF",
+    "team": "NE",
+    "Times Drafted": 179,
+    "bye": 9
+  },
+  {
+    "ADP": 11.03,
+    "Overall": 123.3,
+    "name": "CJ Prosise",
+    "position": "RB",
+    "team": "SEA",
+    "Times Drafted": 336,
+    "bye": 6
+  },
+  {
+    "ADP": 11.04,
+    "Overall": 123.5,
+    "name": "Zach Ertz",
+    "position": "TE",
+    "team": "PHI",
+    "Times Drafted": 504,
+    "bye": 10
+  },
+  {
+    "ADP": 11.04,
+    "Overall": 123.6,
+    "name": "Rishard Matthews",
+    "position": "WR",
+    "team": "TEN",
+    "Times Drafted": 125,
+    "bye": 8
+  },
+  {
+    "ADP": 11.04,
+    "Overall": 124.3,
+    "name": "Jacquizz Rodgers",
+    "position": "RB",
+    "team": "TB",
+    "Times Drafted": 374,
+    "bye": 11
+  },
+  {
+    "ADP": 11.06,
+    "Overall": 125.8,
+    "name": "Tyrell Williams",
+    "position": "WR",
+    "team": "LAC",
+    "Times Drafted": 231,
+    "bye": 9
+  },
+  {
+    "ADP": 11.07,
+    "Overall": 126.9,
+    "name": "Arizona Defense",
+    "position": "DEF",
+    "team": "ARI",
+    "Times Drafted": 149,
+    "bye": 8
+  },
+  {
+    "ADP": 11.09,
+    "Overall": 128.7,
+    "name": "Taylor Gabriel",
+    "position": "WR",
+    "team": "ATL",
+    "Times Drafted": 220,
+    "bye": 5
+  },
+  {
+    "ADP": 11.1,
+    "Overall": 130.1,
+    "name": "Minnesota Defense",
+    "position": "DEF",
+    "team": "MIN",
+    "Times Drafted": 128,
+    "bye": 9
+  },
+  {
+    "ADP": 11.11,
+    "Overall": 130.6,
+    "name": "Mike Wallace",
+    "position": "WR",
+    "team": "BAL",
+    "Times Drafted": 160,
+    "bye": 10
+  },
+  {
+    "ADP": 11.11,
+    "Overall": 130.6,
+    "name": "Jack Doyle",
+    "position": "TE",
+    "team": "IND",
+    "Times Drafted": 473,
+    "bye": 11
+  },
+  {
+    "ADP": 11.11,
+    "Overall": 130.8,
+    "name": "Marlon Mack",
+    "position": "RB",
+    "team": "IND",
+    "Times Drafted": 371,
+    "bye": 11
+  },
+  {
+    "ADP": 11.11,
+    "Overall": 130.9,
+    "name": "Tyrod Taylor",
+    "position": "QB",
+    "team": "BUF",
+    "Times Drafted": 233,
+    "bye": 6
+  },
+  {
+    "ADP": 11.12,
+    "Overall": 132,
+    "name": "Andy Dalton",
+    "position": "QB",
+    "team": "CIN",
+    "Times Drafted": 212,
+    "bye": 6
+  },
+  {
+    "ADP": 12.01,
+    "Overall": 133.2,
+    "name": "John Ross",
+    "position": "WR",
+    "team": "CIN",
+    "Times Drafted": 148,
+    "bye": 6
+  },
+  {
+    "ADP": 12.01,
+    "Overall": 133.2,
+    "name": "Adam Thielen",
+    "position": "WR",
+    "team": "MIN",
+    "Times Drafted": 197,
+    "bye": 9
+  },
+  {
+    "ADP": 12.03,
+    "Overall": 134.6,
+    "name": "Jordan Matthews",
+    "position": "WR",
+    "team": "PHI",
+    "Times Drafted": 147,
+    "bye": 10
+  },
+  {
+    "ADP": 12.04,
+    "Overall": 136.1,
+    "name": "James White",
+    "position": "RB",
+    "team": "NE",
+    "Times Drafted": 348,
+    "bye": 9
+  },
+  {
+    "ADP": 12.06,
+    "Overall": 138.1,
+    "name": "NY Giants Defense",
+    "position": "DEF",
+    "team": "NYG",
+    "Times Drafted": 136,
+    "bye": 8
+  },
+  {
+    "ADP": 12.09,
+    "Overall": 141.1,
+    "name": "Kenny Britt",
+    "position": "WR",
+    "team": "CLE",
+    "Times Drafted": 194,
+    "bye": 9
+  },
+  {
+    "ADP": 12.09,
+    "Overall": 141.2,
+    "name": "Carson Wentz",
+    "position": "QB",
+    "team": "PHI",
+    "Times Drafted": 185,
+    "bye": 10
+  },
+  {
+    "ADP": 12.11,
+    "Overall": 143,
+    "name": "Justin Tucker",
+    "position": "PK",
+    "team": "BAL",
+    "Times Drafted": 685,
+    "bye": 10
+  },
+  {
+    "ADP": 12.11,
+    "Overall": 143.1,
+    "name": "Joe Williams",
+    "position": "RB",
+    "team": "SF",
+    "Times Drafted": 303,
+    "bye": 11
+  },
+  {
+    "ADP": 12.12,
+    "Overall": 144.4,
+    "name": "Josh Doctson",
+    "position": "WR",
+    "team": "WAS",
+    "Times Drafted": 154,
+    "bye": 5
+  },
+  {
+    "ADP": 13.02,
+    "Overall": 146,
+    "name": "Kevin White",
+    "position": "WR",
+    "team": "CHI",
+    "Times Drafted": 133,
+    "bye": 9
+  },
+  {
+    "ADP": 13.02,
+    "Overall": 146.3,
+    "name": "Eric Ebron",
+    "position": "TE",
+    "team": "DET",
+    "Times Drafted": 425,
+    "bye": 7
+  },
+  {
+    "ADP": 13.02,
+    "Overall": 146.4,
+    "name": "Julius Thomas",
+    "position": "TE",
+    "team": "MIA",
+    "Times Drafted": 414,
+    "bye": 11
+  },
+  {
+    "ADP": 13.03,
+    "Overall": 146.7,
+    "name": "Duke Johnson",
+    "position": "RB",
+    "team": "CLE",
+    "Times Drafted": 307,
+    "bye": 9
+  },
+  {
+    "ADP": 13.03,
+    "Overall": 147.1,
+    "name": "Stephen Gostkowski",
+    "position": "PK",
+    "team": "NE",
+    "Times Drafted": 454,
+    "bye": 9
+  },
+  {
+    "ADP": 13.07,
+    "Overall": 150.9,
+    "name": "Cameron Brate",
+    "position": "TE",
+    "team": "TB",
+    "Times Drafted": 16,
+    "bye": 11
+  },
+  {
+    "ADP": 13.07,
+    "Overall": 150.9,
+    "name": "Sterling Shepard",
+    "position": "WR",
+    "team": "NYG",
+    "Times Drafted": 182,
+    "bye": 8
+  },
+  {
+    "ADP": 13.07,
+    "Overall": 151,
+    "name": "Breshad Perriman",
+    "position": "WR",
+    "team": "BAL",
+    "Times Drafted": 133,
+    "bye": 10
+  },
+  {
+    "ADP": 13.08,
+    "Overall": 152,
+    "name": "Carolina Defense",
+    "position": "DEF",
+    "team": "CAR",
+    "Times Drafted": 197,
+    "bye": 11
+  },
+  {
+    "ADP": 13.08,
+    "Overall": 152.3,
+    "name": "Dion Lewis",
+    "position": "RB",
+    "team": "NE",
+    "Times Drafted": 198,
+    "bye": 9
+  },
+  {
+    "ADP": 13.08,
+    "Overall": 152.5,
+    "name": "Carson Palmer",
+    "position": "QB",
+    "team": "ARI",
+    "Times Drafted": 163,
+    "bye": 8
+  },
+  {
+    "ADP": 13.1,
+    "Overall": 153.7,
+    "name": "Jared Cook",
+    "position": "TE",
+    "team": "OAK",
+    "Times Drafted": 26,
+    "bye": 10
+  },
+  {
+    "ADP": 13.1,
+    "Overall": 153.8,
+    "name": "Matt Bryant",
+    "position": "PK",
+    "team": "ATL",
+    "Times Drafted": 148,
+    "bye": 5
+  },
+  {
+    "ADP": 13.11,
+    "Overall": 155.3,
+    "name": "Dan Bailey",
+    "position": "PK",
+    "team": "DAL",
+    "Times Drafted": 125,
+    "bye": 6
+  },
+  {
+    "ADP": 13.12,
+    "Overall": 155.6,
+    "name": "DeAndre Washington",
+    "position": "RB",
+    "team": "OAK",
+    "Times Drafted": 179,
+    "bye": 10
+  },
+  {
+    "ADP": 13.12,
+    "Overall": 156.1,
+    "name": "Alvin Kamara",
+    "position": "RB",
+    "team": "NO",
+    "Times Drafted": 75,
+    "bye": 5
+  },
+  {
+    "ADP": 13.12,
+    "Overall": 156.4,
+    "name": "Baltimore Defense",
+    "position": "DEF",
+    "team": "BAL",
+    "Times Drafted": 188,
+    "bye": 10
+  },
+  {
+    "ADP": 13.12,
+    "Overall": 156.4,
+    "name": "Austin Hooper",
+    "position": "TE",
+    "team": "ATL",
+    "Times Drafted": 45,
+    "bye": 5
+  },
+  {
+    "ADP": 14.01,
+    "Overall": 157.1,
+    "name": "Donta Foreman",
+    "position": "RB",
+    "team": "HOU",
+    "Times Drafted": 208,
+    "bye": 7
+  },
+  {
+    "ADP": 14.01,
+    "Overall": 157.3,
+    "name": "Dwayne Allen",
+    "position": "TE",
+    "team": "NE",
+    "Times Drafted": 24,
+    "bye": 9
+  },
+  {
+    "ADP": 14.02,
+    "Overall": 157.5,
+    "name": "Zay Jones",
+    "position": "WR",
+    "team": "BUF",
+    "Times Drafted": 173,
+    "bye": 6
+  },
+  {
+    "ADP": 14.02,
+    "Overall": 157.8,
+    "name": "Giovani Bernard",
+    "position": "RB",
+    "team": "CIN",
+    "Times Drafted": 68,
+    "bye": 6
+  },
+  {
+    "ADP": 14.02,
+    "Overall": 157.9,
+    "name": "David Njoku",
+    "position": "TE",
+    "team": "CLE",
+    "Times Drafted": 95,
+    "bye": 9
+  },
+  {
+    "ADP": 14.02,
+    "Overall": 158.1,
+    "name": "Darren Sproles",
+    "position": "RB",
+    "team": "PHI",
+    "Times Drafted": 69,
+    "bye": 10
+  },
+  {
+    "ADP": 14.03,
+    "Overall": 158.7,
+    "name": "Deshaun Watson",
+    "position": "QB",
+    "team": "HOU",
+    "Times Drafted": 74,
+    "bye": 7
+  },
+  {
+    "ADP": 14.03,
+    "Overall": 159.4,
+    "name": "Coby Fleener",
+    "position": "TE",
+    "team": "NO",
+    "Times Drafted": 166,
+    "bye": 5
+  },
+  {
+    "ADP": 14.04,
+    "Overall": 159.5,
+    "name": "Ted Ginn Jr",
+    "position": "WR",
+    "team": "NO",
+    "Times Drafted": 174,
+    "bye": 5
+  },
+  {
+    "ADP": 14.04,
+    "Overall": 160,
+    "name": "Charles Sims",
+    "position": "RB",
+    "team": "TB",
+    "Times Drafted": 22,
+    "bye": 11
+  },
+  {
+    "ADP": 14.04,
+    "Overall": 160.2,
+    "name": "Evan Engram",
+    "position": "TE",
+    "team": "NYG",
+    "Times Drafted": 80,
+    "bye": 8
+  },
+  {
+    "ADP": 14.04,
+    "Overall": 160.3,
+    "name": "Blake Bortles",
+    "position": "QB",
+    "team": "JAC",
+    "Times Drafted": 139,
+    "bye": 8
+  },
+  {
+    "ADP": 14.04,
+    "Overall": 160.4,
+    "name": "Adam Vinatieri",
+    "position": "PK",
+    "team": "IND",
+    "Times Drafted": 107,
+    "bye": 11
+  },
+  {
+    "ADP": 14.05,
+    "Overall": 160.5,
+    "name": "Kenny Stills",
+    "position": "WR",
+    "team": "MIA",
+    "Times Drafted": 41,
+    "bye": 11
+  },
+  {
+    "ADP": 14.05,
+    "Overall": 160.7,
+    "name": "Sam Bradford",
+    "position": "QB",
+    "team": "MIN",
+    "Times Drafted": 19,
+    "bye": 9
+  },
+  {
+    "ADP": 14.05,
+    "Overall": 160.8,
+    "name": "DeAngelo Williams",
+    "position": "RB",
+    "team": "PIT",
+    "Times Drafted": 65,
+    "bye": 9
+  },
+  {
+    "ADP": 14.05,
+    "Overall": 160.8,
+    "name": "Charcandrick West",
+    "position": "RB",
+    "team": "KC",
+    "Times Drafted": 16,
+    "bye": 10
+  },
+  {
+    "ADP": 14.05,
+    "Overall": 161.1,
+    "name": "Robert Woods",
+    "position": "WR",
+    "team": "LAR",
+    "Times Drafted": 66,
+    "bye": 8
+  },
+  {
+    "ADP": 14.05,
+    "Overall": 161.3,
+    "name": "Cole Beasley",
+    "position": "WR",
+    "team": "DAL",
+    "Times Drafted": 135,
+    "bye": 6
+  },
+  {
+    "ADP": 14.06,
+    "Overall": 161.6,
+    "name": "Ryan Tannehill",
+    "position": "QB",
+    "team": "MIA",
+    "Times Drafted": 121,
+    "bye": 11
+  },
+  {
+    "ADP": 14.06,
+    "Overall": 162.1,
+    "name": "Tyler Lockett",
+    "position": "WR",
+    "team": "SEA",
+    "Times Drafted": 122,
+    "bye": 6
+  },
+  {
+    "ADP": 14.06,
+    "Overall": 162.5,
+    "name": "Allen Hurns",
+    "position": "WR",
+    "team": "JAC",
+    "Times Drafted": 72,
+    "bye": 8
+  },
+  {
+    "ADP": 14.06,
+    "Overall": 162.5,
+    "name": "Mason Crosby",
+    "position": "PK",
+    "team": "GB",
+    "Times Drafted": 98,
+    "bye": 8
+  },
+  {
+    "ADP": 14.07,
+    "Overall": 162.5,
+    "name": "Los Angeles Defense",
+    "position": "DEF",
+    "team": "LAR",
+    "Times Drafted": 228,
+    "bye": 8
+  },
+  {
+    "ADP": 14.07,
+    "Overall": 162.8,
+    "name": "Devontae Booker",
+    "position": "RB",
+    "team": "DEN",
+    "Times Drafted": 78,
+    "bye": 5
+  },
+  {
+    "ADP": 14.07,
+    "Overall": 163,
+    "name": "Rex Burkhead",
+    "position": "RB",
+    "team": "NE",
+    "Times Drafted": 41,
+    "bye": 9
+  },
+  {
+    "ADP": 14.08,
+    "Overall": 163.6,
+    "name": "Atlanta Defense",
+    "position": "DEF",
+    "team": "ATL",
+    "Times Drafted": 115,
+    "bye": 5
+  },
+  {
+    "ADP": 14.08,
+    "Overall": 164.1,
+    "name": "James Conner",
+    "position": "RB",
+    "team": "PIT",
+    "Times Drafted": 53,
+    "bye": 9
+  },
+  {
+    "ADP": 14.08,
+    "Overall": 164.2,
+    "name": "Oakland Defense",
+    "position": "DEF",
+    "team": "OAK",
+    "Times Drafted": 55,
+    "bye": 10
+  },
+  {
+    "ADP": 14.08,
+    "Overall": 164.5,
+    "name": "Jacksonville Defense",
+    "position": "DEF",
+    "team": "JAC",
+    "Times Drafted": 215,
+    "bye": 8
+  },
+  {
+    "ADP": 14.09,
+    "Overall": 164.9,
+    "name": "Tavon Austin",
+    "position": "WR",
+    "team": "LAR",
+    "Times Drafted": 23,
+    "bye": 8
+  },
+  {
+    "ADP": 14.09,
+    "Overall": 165.2,
+    "name": "Joe Flacco",
+    "position": "QB",
+    "team": "BAL",
+    "Times Drafted": 85,
+    "bye": 10
+  },
+  {
+    "ADP": 14.1,
+    "Overall": 165.7,
+    "name": "Will Fuller",
+    "position": "WR",
+    "team": "HOU",
+    "Times Drafted": 93,
+    "bye": 7
+  },
+  {
+    "ADP": 14.1,
+    "Overall": 165.7,
+    "name": "Philadelphia Defense",
+    "position": "DEF",
+    "team": "PHI",
+    "Times Drafted": 175,
+    "bye": 10
+  },
+  {
+    "ADP": 14.1,
+    "Overall": 165.9,
+    "name": "Sebastian Janikowski",
+    "position": "PK",
+    "team": "OAK",
+    "Times Drafted": 92,
+    "bye": 10
+  },
+  {
+    "ADP": 14.1,
+    "Overall": 166.1,
+    "name": "Curtis Samuel",
+    "position": "WR",
+    "team": "CAR",
+    "Times Drafted": 18,
+    "bye": 11
+  },
+  {
+    "ADP": 14.12,
+    "Overall": 167.5,
+    "name": "Matt Prater",
+    "position": "PK",
+    "team": "DET",
+    "Times Drafted": 94,
+    "bye": 7
+  },
+  {
+    "ADP": 14.12,
+    "Overall": 168.1,
+    "name": "Pittsburgh Defense",
+    "position": "DEF",
+    "team": "PIT",
+    "Times Drafted": 100,
+    "bye": 9
+  },
+  {
+    "ADP": 14.12,
+    "Overall": 168.3,
+    "name": "Mohamed Sanu",
+    "position": "WR",
+    "team": "ATL",
+    "Times Drafted": 34,
+    "bye": 5
+  },
+  {
+    "ADP": 14.12,
+    "Overall": 168.3,
+    "name": "San Diego Defense",
+    "position": "DEF",
+    "team": "LAC",
+    "Times Drafted": 35,
+    "bye": 9
+  },
+  {
+    "ADP": 15.01,
+    "Overall": 168.9,
+    "name": "Jalen Richard",
+    "position": "RB",
+    "team": "OAK",
+    "Times Drafted": 15,
+    "bye": 10
+  },
+  {
+    "ADP": 15.01,
+    "Overall": 169.3,
+    "name": "Cairo Santos",
+    "position": "PK",
+    "team": "KC",
+    "Times Drafted": 82,
+    "bye": 10
+  },
+  {
+    "ADP": 15.03,
+    "Overall": 171,
+    "name": "Brandon McManus",
+    "position": "PK",
+    "team": "DEN",
+    "Times Drafted": 91,
+    "bye": 5
+  },
+  {
+    "ADP": 15.04,
+    "Overall": 171.6,
+    "name": "Steven Hauschka",
+    "position": "PK",
+    "team": "BUF",
+    "Times Drafted": 59,
+    "bye": 6
+  },
+  {
+    "ADP": 15.04,
+    "Overall": 171.6,
+    "name": "Chris Boswell",
+    "position": "PK",
+    "team": "PIT",
+    "Times Drafted": 82,
+    "bye": 9
+  },
+  {
+    "ADP": 15.04,
+    "Overall": 171.9,
+    "name": "Graham Gano",
+    "position": "PK",
+    "team": "CAR",
+    "Times Drafted": 81,
+    "bye": 11
+  },
+  {
+    "ADP": 15.04,
+    "Overall": 172.4,
+    "name": "Nick Novak",
+    "position": "PK",
+    "team": "LAC",
+    "Times Drafted": 30,
+    "bye": 9
+  },
+  {
+    "ADP": 15.05,
+    "Overall": 172.8,
+    "name": "Roberto Aguayo",
+    "position": "PK",
+    "team": "TB",
+    "Times Drafted": 23,
+    "bye": 11
+  },
+  {
+    "ADP": 15.06,
+    "Overall": 173.8,
+    "name": "Shayne Graham",
+    "position": "PK",
+    "team": "NO",
+    "Times Drafted": 33,
+    "bye": 5
+  }
+]

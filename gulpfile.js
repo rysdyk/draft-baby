@@ -68,7 +68,7 @@ gulp.task('copy-simulator-html', function() {
 });
 
 gulp.task('copy-lib-files', function() {
-    gulp.src('./lib/*.json')
+    gulp.src('./lib/2017/*.json')
     // Perform minification tasks, etc here
     .pipe(gulp.dest('./dist/lib/'));
 });
