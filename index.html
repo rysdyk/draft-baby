@@ -14,31 +14,13 @@
       <div class="container">
         <h1>Draft Baby</h1>
         <h3>Fantasy Football Draft Tool</h3>
-				<a href="#">By Position</a> | 
-        <a href="full-list.html">Full List</a> | 
+				<a href="#">Position Rankings</a> | 
 				<a href="simulator.html">Draft Simulator</a>
       </div>
     </header>
 
     <div class="container">
       <div class="positions-wrapper">
-        <div class="qb-list-wrapper position-wrapper">
-          <h2>Quarterbacks</h2>
-          <div class="table-wrapper">
-          <table id="qb-list">
-            <thead>
-              <tr>
-                <th>Rank</th>
-                <th>Name</th>
-                <th>Team</th>
-                <th>Bye</th>
-                <!-- <th>Ranks</th> -->
-              </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
-          </div>
-        </div>
 
         <div class="rb-list-wrapper position-wrapper">
           <h2>Running Backs</h2>
@@ -46,28 +28,44 @@
           <table id="rb-list">
             <thead>
               <tr>
-                <th>Rank</th>
+								<th></th>
                 <th>Name</th>
                 <th>Team</th>
                 <th>Bye</th>
-                <!-- <th>Ranks</th> -->
               </tr>
             </thead>
             <tbody></tbody>
           </table>
           </div>
         </div>
+				
         <div class="wr-list-wrapper position-wrapper">
           <h2>Wide Receivers</h2>
           <div class="table-wrapper">
           <table id="wr-list">
             <thead>
               <tr>
-                <th>Rank</th>
+								<th></th>
                 <th>Name</th>
                 <th>Team</th>
                 <th>Bye</th>
-                <!-- <th>Ranks</th> -->
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+          </div>
+        </div>
+				
+        <div class="qb-list-wrapper position-wrapper">
+          <h2>Quarterbacks</h2>
+          <div class="table-wrapper">
+          <table id="qb-list">
+            <thead>
+              <tr>
+								<th></th>
+                <th>Name</th>
+                <th>Team</th>
+                <th>Bye</th>
               </tr>
             </thead>
             <tbody></tbody>
@@ -81,28 +79,27 @@
           <table id="te-list">
             <thead>
               <tr>
-                <th>Rank</th>
+								<th></th>
                 <th>Name</th>
                 <th>Team</th>
                 <th>Bye</th>
-                <!-- <th>Ranks</th> -->
               </tr>
             </thead>
             <tbody></tbody>
           </table>
           </div>
         </div>
-        <div class="dst-list-wrapper position-wrapper">
+				
+        <div class="def-list-wrapper position-wrapper">
           <h2>Defense/Special Teams</h2>
           <div class="table-wrapper">
           <table id="def-list">
             <thead>
               <tr>
-                <th>Rank</th>
+								<th></th>
                 <th>Name</th>
                 <th>Team</th>
                 <th>Bye</th>
-                <!-- <th>Ranks</th> -->
               </tr>
             </thead>
             <tbody></tbody>
@@ -116,11 +113,10 @@
           <table id="k-list">
             <thead>
               <tr>
-                <th>Rank</th>
+								<th></th>
                 <th>Name</th>
                 <th>Team</th>
                 <th>Bye</th>
-                <!-- <th>Ranks</th> -->
               </tr>
             </thead>
             <tbody></tbody>
@@ -135,19 +131,20 @@
 				<!-- <a href="#" id="clear-draft">Clear All</a> -->
         <ul id="drafted"></ul>
       </div>
-			<span class="disclaimer">Player Rankings as of June 23, 2017</span>
+			<span class="disclaimer">Last updated July 11, 2017</span>
     </div>
 
     <footer>
       <div class="container">
-        <span class="quote">"Stats are for losers." - Bill Belichick</span>
+        <span id="quote">"Stats are for losers." - Bill Belichick</span>
       </div>
     </footer>
     </div>
 
     <!-- Scripts -->
-    <script src="js/position.js"></script>
+    <script src="js/positions.js"></script>
     <script src="js/draft.js"></script>
+		<script src="js/quotes.js"></script>
 
     <script>
       // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
