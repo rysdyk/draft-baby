@@ -11,10 +11,10 @@
   {    "name": "Cam Newton",    "team": "CAR",    "bye": 11,    "tier": 2  },
   {    "name": "Kirk Cousins",    "team": "WAS",    "bye": 5,    "tier": 2  },
   
-  {    "name": "Ben Roethlisberger",    "team": "PIT",    "bye": 9,    "tier": 3  },
-  {    "name": "Jameis Winston",    "team": "TB",    "bye": 11,    "tier": 3  },
-  {    "name": "Dak Prescott",    "team": "DAL",    "bye": 6,    "tier": 3  },
   {    "name": "Marcus Mariota",    "team": "TEN",    "bye": 8,    "tier": 3  },
+  {    "name": "Dak Prescott",    "team": "DAL",    "bye": 6,    "tier": 3  },
+  {    "name": "Jameis Winston",    "team": "TB",    "bye": 11,    "tier": 3  },
+  {    "name": "Ben Roethlisberger",    "team": "PIT",    "bye": 9,    "tier": 3  },
   {    "name": "Derek Carr",    "team": "OAK",    "bye": 10,    "tier": 3  },
   {    "name": "Andy Dalton",    "team": "CIN",    "bye": 6,   "tier": 3 },
   {    "name": "Ryan Tannehill",    "team": "MIA",    "bye": 11,   "tier": 3  },

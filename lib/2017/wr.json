@@ -3,14 +3,16 @@
   {    "name": "Julio Jones",    "position": "WR",    "team": "ATL",    "bye": 5,    "tier": 1  },  
   {    "name": "Odell Beckham Jr",    "position": "WR",    "team": "NYG",    "bye": 8,    "tier": 1  },  
   {    "name": "A.J. Green",    "position": "WR",    "team": "CIN",    "bye": 6,    "tier": 1  },  
-  {    "name": "Jordy Nelson",    "position": "WR",    "team": "GB",    "bye": 8,    "tier": 1  },  
+  {    "name": "Jordy Nelson",    "position": "WR",    "team": "GB",    "bye": 8,    "tier": 1  },
+    
   {    "name": "Mike Evans",    "position": "WR",    "team": "TB",    "bye": 11,    "tier": 2  },  
   {    "name": "Michael Thomas",    "position": "WR",    "team": "NO",    "bye": 5,    "tier": 2  },  
   {    "name": "Dez Bryant",    "position": "WR",    "team": "DAL",    "bye": 6,    "tier": 2  },  
   {    "name": "T.Y. Hilton",    "position": "WR",    "team": "IND",    "bye": 11,    "tier": 2  },
   {    "name": "Doug Baldwin",    "position": "WR",    "team": "SEA",    "bye": 6,    "tier": 2  },
+  {    "name": "Demaryius Thomas",    "position": "WR",    "team": "DEN",    "bye": 5,    "tier": 2  },
   {    "name": "Alshon Jeffery",    "position": "WR",    "team": "PHI",    "bye": 10,    "tier": 2  },
-  {    "name": "Demaryius Thomas",    "position": "WR",    "team": "DEN",    "bye": 5,    "tier": 3  },
+  
   {    "name": "DeAndre Hopkins",    "position": "WR",    "team": "HOU",    "bye": 7,    "tier": 3  },
   {    "name": "Brandin Cooks",    "position": "WR",    "team": "NE",    "bye": 9,    "tier": 3  },
   {    "name": "Terrelle Pryor",    "position": "WR",    "team": "WAS",    "bye": 5,    "tier": 3  },
@@ -23,6 +25,7 @@
   {    "name": "Martavis Bryant",    "position": "WR",    "team": "PIT",    "bye": 9,    "tier": 3  },
   {    "name": "Jarvis Landry",    "position": "WR",    "team": "MIA",    "bye": 11,    "tier": 3  },
   {    "name": "Michael Crabtree",    "position": "WR",    "team": "OAK",    "bye": 10,    "tier": 3  },
+  
   {    "name": "Brandon Marshall",    "position": "WR",    "team": "NYG",    "bye": 8,    "tier": 4  },
   {    "name": "Julian Edelman",    "position": "WR",    "team": "NE",    "bye": 9,    "tier": 4  },
   {    "name": "Donte Moncrief",    "position": "WR",    "team": "IND",    "bye": 11,    "tier": 4  },
@@ -34,11 +37,12 @@
   {    "name": "Eric Decker",    "position": "WR",    "team": "TEN",    "bye": 8,    "tier": 4  },
   {    "name": "Jeremy Maclin",    "position": "WR",    "team": "BAL",    "bye": 10,    "tier": 4  },
   {    "name": "Stefon Diggs",    "position": "WR",    "team": "MIN",    "bye": 9,    "tier": 4  },
-  {    "name": "Kelvin Benjamin",    "position": "WR",    "team": "CAR",    "bye": 11,    "tier": 4  },
+  {    "name": "Tyrell Williams",    "position": "WR",    "team": "LAC",    "bye": 9 ,    "tier": 4 },
   {    "name": "Willie Snead",    "position": "WR",    "team": "NO",    "bye": 5,    "tier": 4  },
   {    "name": "Jamison Crowder",    "position": "WR",    "team": "WAS",    "bye": 5,    "tier": 4  },
   {    "name": "Rishard Matthews",    "position": "WR",    "team": "TEN",    "bye": 8,    "tier": 4  },
-  {    "name": "Tyrell Williams",    "position": "WR",    "team": "LAC",    "bye": 9 ,    "tier": 4 },
+  {    "name": "Kelvin Benjamin",    "position": "WR",    "team": "CAR",    "bye": 11,    "tier": 4  },
+  
   {    "name": "Randall Cobb",    "position": "WR",    "team": "GB",    "bye": 8,    "tier": 5  },
   {    "name": "DeVante Parker",    "position": "WR",    "team": "MIA",    "bye": 11,    "tier": 5  },
   {    "name": "Corey Coleman",    "position": "WR",    "team": "CLE",    "bye": 9,    "tier": 5  },
@@ -55,15 +59,16 @@
   {    "name": "John Ross",    "position": "WR",    "team": "CIN",    "bye": 6,    "tier": 5  },
   {    "name": "Quincy Enunwa",    "position": "WR",    "team": "NYJ",    "bye": 11,    "tier": 5  },
   {    "name": "Sterling Shepard",    "position": "WR",    "team": "NYG",    "bye": 8,    "tier": 5  },
+  
   {    "name": "Will Fuller",    "position": "WR",    "team": "HOU",    "bye": 7,    "tier": 6  },
   {    "name": "Allen Hurns",    "position": "WR",    "team": "JAC",    "bye": 8,    "tier": 6  },
   {    "name": "Cole Beasley",    "position": "WR",    "team": "DAL",    "bye": 6,    "tier": 6  },
   {    "name": "Breshad Perriman",    "position": "WR",    "team": "BAL",    "bye": 10,    "tier": 6  },
   {    "name": "Josh Doctson",    "position": "WR",    "team": "WAS",    "bye": 5,    "tier": 6  },
   {    "name": "Ted Ginn Jr",    "position": "WR",    "team": "NO",    "bye": 5,    "tier": 6  },
-  {    "name": "Kevin White",    "position": "WR",    "team": "CHI",    "bye": 9,    "tier": 6  },
   {    "name": "Kenny Britt",    "position": "WR",    "team": "LAR",    "bye": 8,    "tier": 6  },
-  {    "name": "Zay Jones",    "position": "WR",    "team": "BUF",    "bye": 6,    "tier": 6  },
+  {    "name": "Robert Woods",    "position": "WR",    "team": "LAR",    "bye": 8,    "tier": 6  },
+  {    "name": "Kevin White",    "position": "WR",    "team": "CHI",    "bye": 9,    "tier": 6  },
   {    "name": "Chris Hogan",    "position": "WR",    "team": "NE",    "bye": 9,    "tier": 6  },
-  {    "name": "Robert Woods",    "position": "WR",    "team": "LAR",    "bye": 8,    "tier": 6  }
+  {    "name": "Zay Jones",    "position": "WR",    "team": "BUF",    "bye": 6,    "tier": 6  }
 ]

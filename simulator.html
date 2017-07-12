@@ -12,8 +12,7 @@
 	    <div class="container">
 	      <h1>Draft Baby</h1>
 	      <h3>Fantasy Football Draft Tool</h3>
-				<a href="index.html">Positions</a> | 
-	      <a href="overall.html">Overall</a> | 
+				<a href="index.html">Position Rankings</a> | 
 				<a href="#">Draft Simulator</a>
 	    </div>
 	  </header>
@@ -54,8 +53,9 @@
 				<section id="draftable-player-list-wrapper">
 					
 					<section id="full-list">
-						<h3>Overall Rankings</h3>
-		        <table id="draftable-player-list">
+						<h3>Popular Picks</h3>
+						<div class="table-wrapper">
+		        <table id="popular-list" class="draftable-player-list">
 		          <thead>
 		            <tr>
 									<th>Rank</th>
@@ -67,14 +67,16 @@
 		          </thead>
 		          <tbody></tbody>
 		        </table>
+						</div>
 					</section>
 				
 					<section id="rb-list-wrapper" class="position">
 						<h3>Running Backs</h3>
 	          <div class="table-wrapper">
-	          <table id="rb-list">
+	          <table id="rb-list" class="draftable-player-list">
 	            <thead>
 	              <tr>
+									<th></th>
 	                <th>Name</th>
 	                <th>Team</th>
 	                <th>Bye</th>
@@ -88,9 +90,10 @@
 					<section id="wr-list-wrapper" class="position">
 						<h3>Wide Receivers</h3>
 	          <div class="table-wrapper">
-	          <table id="wr-list">
+	          <table id="wr-list" class="draftable-player-list">
 	            <thead>
 	              <tr>
+									<th></th>
 	                <th>Name</th>
 	                <th>Team</th>
 	                <th>Bye</th>
@@ -104,9 +107,10 @@
 					<section id="qb-list-wrapper" class="position">
 						<h3>Quarterbacks</h3>
 	          <div class="table-wrapper">
-	          <table id="qb-list">
+	          <table id="qb-list" class="draftable-player-list">
 	            <thead>
 	              <tr>
+									<th></th>
 	                <th>Name</th>
 	                <th>Team</th>
 	                <th>Bye</th>
@@ -120,9 +124,10 @@
 					<section id="te-list-wrapper" class="position">
 						<h3>Tight Ends</h3>
 	          <div class="table-wrapper">
-	          <table id="te-list">
+	          <table id="te-list" class="draftable-player-list">
 	            <thead>
 	              <tr>
+									<th></th>
 	                <th>Name</th>
 	                <th>Team</th>
 	                <th>Bye</th>
@@ -136,9 +141,10 @@
 					<section id="def-list-wrapper" class="position">
 						<h3>Defenses</h3>
 	          <div class="table-wrapper">
-	          <table id="def-list">
+	          <table id="def-list" class="draftable-player-list">
 	            <thead>
 	              <tr>
+									<th></th>
 	                <th>Name</th>
 	                <th>Team</th>
 	                <th>Bye</th>
@@ -152,9 +158,10 @@
 					<section id="k-list-wrapper" class="position">
 						<h3>Kickers</h3>
 	          <div class="table-wrapper">
-	          <table id="k-list">
+	          <table id="k-list" class="draftable-player-list">
 	            <thead>
 	              <tr>
+									<th></th>
 	                <th>Name</th>
 	                <th>Team</th>
 	                <th>Bye</th>
@@ -177,6 +184,7 @@
 					<ul id="drafted"></ul>
 				</section>
 			</div>
+			<span class="disclaimer">Last updated July 11, 2017</span>
 		</div>
 		
     <footer>

@@ -423,6 +423,11 @@ span.disclaimer {
     content: '';
     display: block; }
 
+.row:after, .row:before {
+  clear: both;
+  content: '';
+  display: block; }
+
 body {
   margin: 0; }
 
@@ -677,14 +682,7 @@ footer {
   padding: 0 5px; }
 
 #draft-settings {
-  box-sizing: border-box;
-  float: left;
-  padding: 0 10px;
-  width: 100%;
   margin-bottom: 20px; }
-  @media screen and (min-width: 700px) {
-    #draft-settings {
-      width: 100%; } }
   #draft-settings.hidden {
     height: 0;
     overflow: hidden;
@@ -700,23 +698,25 @@ footer {
     #draftable-player-list-wrapper {
       width: 58.33333%; } }
 
-#draftable-player-list-wrapper #draftable-player-list tr:hover {
+#draftable-player-list-wrapper tr:hover {
   background-color: #ededed;
   cursor: pointer; }
 
-#draftable-player-list-wrapper #draftable-player-list td {
+#draftable-player-list-wrapper td {
   text-align: center; }
 
 #draftable-player-list-wrapper section {
   margin-bottom: 40px; }
 
-#draftable-player-list-wrapper #full-list {
-  max-height: 200px;
+#draftable-player-list-wrapper #full-list h3 {
+  border-bottom: 1px solid #333; }
+
+#draftable-player-list-wrapper #full-list .table-wrapper {
+  height: 200px;
   overflow: scroll; }
-  #draftable-player-list-wrapper #full-list h3 {
-    border-bottom: 1px solid #333; }
-  #draftable-player-list-wrapper #full-list table {
-    width: 100%; }
+
+#draftable-player-list-wrapper #full-list table {
+  width: 100%; }
 
 #draftable-player-list-wrapper section.position h3 {
   border-bottom: 1px solid #333; }

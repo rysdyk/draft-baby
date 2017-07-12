@@ -4,6 +4,7 @@
 			this.cacheDom();
 			this.getPlayers();
 			this.renderPlayers();
+      this.collectPlayers();
 			this.assignSortedPosition();
 			this.sortPlayers();
 			this.draftSettings();
@@ -12,8 +13,8 @@
 		},
 		
 		cacheDom: function() {
-			this.table = document.getElementById('draftable-player-list');
-			this.tbody = this.table.getElementsByTagName('tbody'); // make sure we get all 7 lists
+			this.tables = document.querySelectorAll('.draftable-player-list');
+			this.tbodies = document.getElementsByTagName('tbody'); // make sure we get all 7 lists
       this.team = document.getElementById('team');
 			this.teams = document.getElementById('teams');
 			this.draftPos = document.getElementById('draftPos');
@@ -26,7 +27,7 @@
 		
 		getPlayers: function() {
 			var request = new XMLHttpRequest();
-			request.open("GET", "lib/2017/ffc_2017_6_23.json", false);
+			request.open("GET", "lib/2017/ffc_7_10.json", false);
 			request.send(null);
 			this.players = JSON.parse(request.responseText);
 		},
@@ -34,7 +35,7 @@
 		renderPlayers: function() {
 			this.players.forEach(function(player, index){
 			  var tr = document.createElement('tr');
-			  draftBaby.tbody[0].appendChild(tr);
+			  draftBaby.tbodies[0].appendChild(tr);
         var td = document.createElement('td');
 	      td.appendChild(document.createTextNode(index + 1));
 				tr.appendChild(td);
@@ -48,6 +49,10 @@
 			  }
 			});
 		},
+    
+    collectPlayers: function(){
+      this.rows = document.querySelectorAll('.draftable-player-list tbody tr');
+    },
 		
 		assignSortedPosition: function() {
 			this.players.forEach(function(player, index){
@@ -146,18 +151,34 @@
 		userDraft: function(){
 			clearTimeout(this.run);
 			this.draftProgress.classList.add('eligible')
-			this.tbody[0].classList.add('active');
+      
+      for (var i=0; i<this.tbodies.length; i++) {
+        this.tbodies[i].classList.add('active');
+      }
       // tbody for each
 	
-			var nodeRows = document.querySelector('tbody.active').childNodes;
-	
-		  nodeRows.forEach(function(row){
+			//var nodeRows = document.querySelectorAll('tbody.active').childNodes;
+      
+      // var nodeRows = []
+      //
+      // for (var i=0; i<this.tbodies.length; i++) {
+      //   if(this.tbodies[i].classList.contains('active')) {
+      //     nodeRows.push(this.tbodies[i].childNodes);
+      //   }
+      // }
+	    
+		  this.rows.forEach(function(row){
 		    row.addEventListener('click', function(){
-					if (draftBaby.tbody[0].classList.contains('active')) {
-						draftBaby.tbody[0].classList.remove('active');
+					if (draftBaby.tbodies[0].classList.contains('active')) {
+            
+            for (var i=0; i<draftBaby.tbodies.length; i++) {
+              draftBaby.tbodies[i].classList.remove('active');
+            }
+            
 						draftBaby.draftProgress.classList.remove('eligible');
+            
 						for (var i=0; i<draftBaby.players.length; i++) {
-							if (draftBaby.players[i].name == this.childNodes[0].innerHTML) {
+							if (draftBaby.players[i].name == this.childNodes[1].innerHTML) {
 								var selected = draftBaby.players[i];
 								draftBaby.players.splice(i, 1);
 								draftBaby.draftSelected(selected);
@@ -172,20 +193,27 @@
 					}
 		    });
 		  });
+		   
 		},
 		
 		draftSelected: function(selected) {
+      //console.log(selected);
 			this.fullDraftedList.push(selected);
 			
       // hide selected
-			var nodeRows = this.tbody[0].childNodes;
-		  nodeRows.forEach(function(row){
-		    var data = row.childNodes[0].innerText;
+			var nodeRows = []
+      
+      for (var i=0; i<this.tbodies.length; i++) {
+        nodeRows.push(this.tbodies[i].childNodes);
+      }
+
+		  this.rows.forEach(function(row){
+		    var data = row.childNodes[1].innerText;
 		    if (selected.name == data) {
 					draftBaby.fadeOut(row)
 		    }
 		  });
-      
+		  
 			// add to drafted list
 		  var item = document.createElement('li');
 		  item.appendChild(document.createTextNode(this.count + ". " + selected.name ));

@@ -1,5 +1,5 @@
 #draft-settings {
-	@include columns(12);
+	//@include columns(12);
 	margin-bottom: 20px;
 	
 	&.hidden {
@@ -14,20 +14,23 @@
     @include columns(7);
   }
 	
-	#draftable-player-list {
-		tr:hover {
-			background-color: #ededed;
-			cursor: pointer;
-		}
-		td { text-align: center; }
+	tr:hover {
+		background-color: #ededed;
+		cursor: pointer;
 	}
+  
+	td { text-align: center; }
   
   section { margin-bottom: 40px; }
   
   #full-list {
     h3 { border-bottom: 1px solid #333; }
-    max-height: 200px;
-    overflow: scroll;
+    
+    .table-wrapper {
+      //background-color: #ededed;
+      height: 200px;
+      overflow: scroll;
+    }
     
     table { width: 100%; }
   }

@@ -10,6 +10,14 @@
   }
 }
 
+.row {
+  &:after, &:before {
+    clear: both;
+    content: '';
+    display: block;
+  }
+}
+
 @mixin columns($size) {
   box-sizing: border-box;
   float: left;
