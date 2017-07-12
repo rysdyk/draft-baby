@@ -70,7 +70,7 @@ gulp.task('copy-simulator-html', function() {
 gulp.task('copy-lib-files', function() {
     gulp.src('./lib/2017/*.json')
     // Perform minification tasks, etc here
-    .pipe(gulp.dest('./dist/lib/'));
+    .pipe(gulp.dest('./dist/lib/2017'));
 });
 
 gulp.task('connect', function () {
