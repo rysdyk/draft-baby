@@ -1,0 +1,28 @@
+[
+  {    "name": "Rob Gronkowski",    "team": "NE",    "bye": 9,    "tier": 1  },
+  
+  {    "name": "Travis Kelce",    "team": "KC",    "bye": 10,    "tier": 2  },
+  {    "name": "Jordan Reed",    "team": "WAS",    "bye": 5,    "tier": 2  },
+  {    "name": "Greg Olsen",    "team": "CAR",    "bye": 11,    "tier": 2  },
+  
+  {    "name": "Jimmy Graham",    "team": "SEA",    "bye": 6,    "tier": 3  },
+  {    "name": "Tyler Eifert",    "team": "CIN",    "bye": 6,    "tier": 3  },
+  {    "name": "Kyle Rudolph",    "team": "MIN",    "bye": 9,    "tier": 3  },
+  {    "name": "Delanie Walker",    "team": "TEN",    "bye": 8,    "tier": 3  },
+  
+  {    "name": "Martellus Bennett",    "team": "GB",    "bye": 8,    "tier": 4  },
+  {    "name": "Hunter Henry",    "team": "LAC",    "bye": 9,    "tier": 4  },
+  {    "name": "Zach Ertz",    "team": "PHI",    "bye": 10,    "tier": 4  },
+  {    "name": "Jack Doyle",    "team": "IND",    "bye": 11,    "tier": 4  },
+  {    "name": "Julius Thomas",    "team": "MIA",    "bye": 11,    "tier": 4  },
+  {    "name": "Eric Ebron",    "team": "DET",    "bye": 7,    "tier": 4  },
+  {    "name": "Coby Fleener",    "team": "NO",    "bye": 5,    "tier": 4  },
+  {    "name": "David Njoku",    "team": "CLE",    "bye": 9,    "tier": 4  },
+  
+  {    "name": "Evan Engram",    "team": "NYG",    "bye": 8,    "tier": 5  },
+  {    "name": "O.J. Howard",    "team": "TB",    "bye": 11,    "tier": 5  },
+  {    "name": "Cameron Brate",    "team": "TB",    "bye": 11,    "tier": 5  },
+  {    "name": "Austin Hooper",    "team": "ATL",    "bye": 5,    "tier": 5  },
+  {    "name": "Jared Cook",    "team": "OAK",    "bye": 10,    "tier": 5  },
+  {    "name": "CJ Fiedorowicz",    "team": "HOU",    "bye": 7,    "tier": 5  }
+]
