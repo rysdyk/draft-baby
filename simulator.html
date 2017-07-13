@@ -20,14 +20,13 @@
 		<div class="container">
 			
 			<section id="draft-settings">
-<!-- conservative or aggressive setting -->
         <h4>Draft Simulator Settings</h4>
         <label for="teams"># of Teams
           <select name="teams" id="teams">
-            <option value="8">8</option>
+            <!-- <option value="8">8</option> -->
             <option value="10">10</option>
             <option value="12">12</option>
-            <option value="14">14</option>
+            <!-- <option value="14">14</option> -->
           </select>
         </label>
         <label for="draftPos">Draft Position
@@ -40,8 +39,15 @@
             <option value="6">6</option>
             <option value="7">7</option>
             <option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
           </select>
         </label>
+				<div id="format">
+					<label><input type="radio" name="format" value="std"> Standard</label>
+					<label><input type="radio" name="format" value="2qb"> 2QB</label>
+					<label><input type="radio" name="format" value="ppr"> PPR</label>
+				</div>
 				<button id="startDraftButton">Start Draft</button>
 			</section>
 			
@@ -184,7 +190,7 @@
 					<ul id="drafted"></ul>
 				</section>
 			</div>
-			<span class="disclaimer">Last updated July 11, 2017</span>
+			<span class="disclaimer">Last updated July 13, 2017</span>
 		</div>
 		
     <footer>

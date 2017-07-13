@@ -2,11 +2,6 @@
 	var draftBaby = {
 		init: function(){
 			this.cacheDom();
-			this.getPlayers();
-			this.renderPlayers();
-      this.collectPlayers();
-			this.assignSortedPosition();
-			this.sortPlayers();
 			this.draftSettings();
 			this.setVariables();
       this.addClick();
@@ -18,6 +13,7 @@
       this.team = document.getElementById('team');
 			this.teams = document.getElementById('teams');
 			this.draftPos = document.getElementById('draftPos');
+      this.formats = document.getElementsByName('format');
 			this.settings = document.getElementById('draft-settings');
 			this.pickNumber = document.getElementById('pick-number');
 			this.draftProgress = document.getElementById('draft-progress');
@@ -25,11 +21,15 @@
       this.start = document.getElementById('startDraftButton');
 		},
 		
-		getPlayers: function() {
+		getPlayers: function(format, teams) {
 			var request = new XMLHttpRequest();
-			request.open("GET", "lib/2017/ffc_7_10.json", false);
+			request.open("GET", "lib/2017/ffc_7_13_" + format + "_" + teams + ".json", false);
 			request.send(null);
 			this.players = JSON.parse(request.responseText);
+      draftBaby.renderPlayers();
+      draftBaby.collectPlayers();
+      draftBaby.assignSortedPosition();
+      draftBaby.sortPlayers();
 		},
 		
 		renderPlayers: function() {
@@ -60,8 +60,8 @@
 				var max, min;
 	
 				if (index < 25) {
-					max = startPos * 1.2 + 4;
-					min = startPos * 0.7 - 4;
+					max = startPos * 1.1 + 3;
+					min = startPos * 0.8 - 3;
 				} else if (index >= 25 && index < 51) {
 					max = startPos * 1.1;
 					min = startPos * 0.8;
@@ -116,10 +116,20 @@
 		startDraft: function() {
 			var chosenTeams = parseInt(this.teams.value);
 			var chosenDraftPos = parseInt(this.draftPos.value);
+      var format = draftBaby.getFormat();
+      draftBaby.getPlayers(format, chosenTeams);
 			draftBaby.fadeOut(this.settings);
 			draftBaby.setPicks(chosenTeams, chosenDraftPos);
 			draftBaby.computerPicks();
 		},
+    
+    getFormat: function() {
+      for (var i = 0; i < this.formats.length; i++) {
+        if (draftBaby.formats[i].checked) {
+          return draftBaby.formats[i].value;
+        }
+      }
+    },
     
 		setPicks: function(teams, draftPos) {
 			// odd round picks

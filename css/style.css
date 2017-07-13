@@ -687,6 +687,9 @@ footer {
     height: 0;
     overflow: hidden;
     transition: 1s; }
+  #draft-settings #format {
+    margin-bottom: 5px;
+    margin-top: 5px; }
 
 @media (min-width: 900px) {
   #draftable-player-list-wrapper {
