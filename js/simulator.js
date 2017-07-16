@@ -23,7 +23,7 @@
 		
 		getPlayers: function(format, teams) {
 			var request = new XMLHttpRequest();
-			request.open("GET", "lib/2017/ffc_7_13_" + format + "_" + teams + ".json", false);
+			request.open("GET", "lib/2017/ffc_7_" + format + "_" + teams + ".json", false);
 			request.send(null);
 			this.players = JSON.parse(request.responseText);
       draftBaby.renderPlayers();

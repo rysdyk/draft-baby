@@ -36,7 +36,7 @@
 	        tr.appendChild(td);
 
 			    for (var data in player) {
-			      if (data == 'name' || data == 'team' || data == 'bye') {
+			      if (data == 'name' || data == 'team' || data == 'bye' || data == 'depth') {
 			        var td = document.createElement('td');
 			        td.appendChild(document.createTextNode(player[data]));
 			        tr.appendChild(td);
