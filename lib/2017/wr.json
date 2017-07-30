@@ -4,8 +4,8 @@
   { "name": "Odell Beckham Jr", "position": "WR", "team": "NYG", "bye": 8, "tier": 1, "depth": 1 },  
   { "name": "A.J. Green", "position": "WR", "team": "CIN", "bye": 6, "tier": 1, "depth": 1 },  
   { "name": "Jordy Nelson", "position": "WR", "team": "GB", "bye": 8, "tier": 1, "depth": 1 },
+  { "name": "Mike Evans", "position": "WR", "team": "TB", "bye": 11, "tier": 1, "depth": 1 },  
     
-  { "name": "Mike Evans", "position": "WR", "team": "TB", "bye": 11, "tier": 2, "depth": 1 },  
   { "name": "Michael Thomas", "position": "WR", "team": "NO", "bye": 5, "tier": 2, "depth": 1 },  
   { "name": "Dez Bryant", "position": "WR", "team": "DAL", "bye": 6, "tier": 2, "depth": 1 },  
   { "name": "T.Y. Hilton", "position": "WR", "team": "IND", "bye": 11, "tier": 2, "depth": 1 },
@@ -66,9 +66,9 @@
   { "name": "Sterling Shepard", "position": "WR", "team": "NYG", "bye": 8, "tier": 6, "depth": 3 },
   { "name": "Ted Ginn Jr", "position": "WR", "team": "NO", "bye": 5, "tier": 6, "depth": 3 },
   { "name": "John Ross", "position": "WR", "team": "CIN", "bye": 6, "tier": 6, "depth": 4 },
-  { "name": "Mike Williams", "position": "WR", "team": "LAC", "bye": 9, "tier": 5, "depth": 4 },
   { "name": "Breshad Perriman", "position": "WR", "team": "BAL", "bye": 10, "tier": 6, "depth": 3 },
   { "name": "Josh Doctson", "position": "WR", "team": "WAS", "bye": 5, "tier": 6, "depth": 3 },
+  { "name": "Chris Hogan", "position": "WR", "team": "NE", "bye": 9, "tier": 6, "depth": 4 },
   { "name": "Kevin White", "position": "WR", "team": "CHI", "bye": 9, "tier": 6, "depth": 2 },
-  { "name": "Chris Hogan", "position": "WR", "team": "NE", "bye": 9, "tier": 6, "depth": 4 }
+  { "name": "Mike Williams", "position": "WR", "team": "LAC", "bye": 9, "tier": 5, "depth": 4 }
 ]

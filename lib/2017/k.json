@@ -11,16 +11,15 @@
   {    "name": "Adam Vinatieri",    "team": "IND",    "bye": 11,    "tier": 2  },
   {    "name": "Blair Walsh",    "team": "SEA",    "bye": 6,    "tier": 2  },
   {    "name": "Cairo Santos",    "team": "KC",    "bye": 10,    "tier": 2  },
+  {    "name": "Mason Crosby",    "team": "GB",    "bye": 8,    "tier": 2  },
   {    "name": "Matt Prater",    "team": "DET",    "bye": 7,    "tier": 2  },
   {    "name": "Sebastian Janikowski",    "team": "OAK",    "bye": 10,    "tier": 2  },
-  {    "name": "Mason Crosby",    "team": "GB",    "bye": 8,    "tier": 2  },
   {    "name": "Brandon McManus",    "team": "DEN",    "bye": 5,    "tier": 2  },
   {    "name": "Graham Gano",    "team": "CAR",    "bye": 11,    "tier": 2  },
   
   {    "name": "Ryan Succop",    "team": "TEN",    "bye": 8,    "tier": 3  },
   {    "name": "Josh Lambo",    "team": "LAC",    "bye": 6,    "tier": 3  },
   {    "name": "Randy Bullock",    "team": "CIN",    "bye": 6,    "tier": 3  },
-  {    "name": "Robert Aguayo",    "team": "TB",    "bye": 11,    "tier": 3  },
   {    "name": "Chris Boswell",    "team": "PIT",    "bye": 9,    "tier": 3  },
   {    "name": "Aldrick Rosas",    "team": "NYG",    "bye": 8,    "tier": 3  },
   {    "name": "Jason Myers",    "team": "JAC",    "bye": 8,    "tier": 3  },
@@ -33,5 +32,6 @@
   {    "name": "Cody Parkey",    "team": "CLE",    "bye": 9,    "tier": 4  },
   {    "name": "Connor Barth",    "team": "CHI",    "bye": 9,    "tier": 4  },
   {    "name": "Robbie Gould",    "team": "SF",    "bye": 11,    "tier": 4  },
-  {    "name": "Greg Zuerlein",    "team": "LAR",    "bye": 11,    "tier": 4  }
+  {    "name": "Greg Zuerlein",    "team": "LAR",    "bye": 11,    "tier": 4  },
+  {    "name": "Robert Aguayo",    "team": "TB",    "bye": 11,    "tier": 4  }
 ]
