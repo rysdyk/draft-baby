@@ -7,7 +7,7 @@
 			this.addEvents();
 			this.getDraftSettings();
 		},
-		
+
 		cacheDOM: function() {
 			this.table = document.getElementById('full-player-list');
 			this.tbody = this.table.getElementsByTagName('tbody');
@@ -17,14 +17,14 @@
 			this.filterInput = document.getElementById('filterInput');
 			this.draftButton = document.getElementById('estimateDraft');
 		},
-		
+
 		getPlayers: function() {
 			var request = new XMLHttpRequest();
 			request.open("GET", "lib/2017/ffc_2017_6_23.json", false);
 			request.send(null);
 			this.players = JSON.parse(request.responseText);
 		},
-		
+
 		renderPlayers: function() {
 			this.players.forEach(function(player, index){
 			  var tr = document.createElement('tr');
@@ -42,14 +42,14 @@
 		    }
 			});
 		},
-		
+
 		addEvents: function() {
 			var renderDraftEstimate = this.renderDraftEstimate;
 			var filterPlayers = this.filterPlayers;
 			this.draftButton.addEventListener('click', function(){ renderDraftEstimate(); });
 			this.filterInput.addEventListener('keyup', function(){ filterPlayers(); })
 		},
-		
+
 		getDraftSettings: function() {
 			this.teams.addEventListener('change', function() {
 				var totalTeams = parseInt(draftBaby.teams.value);
@@ -62,15 +62,15 @@
 				}
 			});
 		},
-		
-		
+
+
 		renderDraftEstimate: function() {
 			var rows = draftBaby.rows;
-		  
+
 			rows.forEach(function(row){
 		    row.classList.remove('estimated');
 		  });
-			
+
 		  var teamsVal = parseInt(this.teams.value);
 		  var draftPosVal = parseInt(this.draftPos.value);
 
@@ -84,13 +84,13 @@
 		    rows[j].classList.add('estimated');
 		  }
 		},
-		
+
 		// clearDraftEstimate: function() {
 		//   for (var i = 0; i < this.rows.length; i++) {
 		//     this.rows[i].classList.remove('estimated');
 		//   }
 		// },
-		
+
 		filterPlayers: function() {
 			var rows = draftBaby.rows;
 		  var input, filter, tr, td, i;
@@ -107,9 +107,9 @@
 		      }
 		    }
 		  }
-		}		
+		}
 	}
-	
+
 	draftBaby.init();
 })();
 
