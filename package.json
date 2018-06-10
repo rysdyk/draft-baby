@@ -1,33 +1,44 @@
 {
-  "name": "DraftBaby",
+  "name": "draft-baby",
   "version": "3.0.0",
-  "description": "Fantasy Football Draft Aid Tool",
-  "main": "app/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server",
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rysdyk/fantasy-football-draft-helper.git"
-  },
-  "author": "sam rysdyk <samuel.rysdyk@gmail.com>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/rysdyk/fantasy-football-draft-helper/issues"
-  },
-  "homepage": "https://rysdyk.com/draft-baby",
-  "dependencies": {
-    "@fortawesome/fontawesome": "^1.1.8",
-    "animate.css": "^3.6.1",
-    "sortablejs": "^1.7.0"
-  },
+  "description": "Fantasy Football Draft Helper",
+  "main": "./dist/main.js",
   "directories": {
     "lib": "lib"
   },
-  "devDependencies": {
-    "webpack": "^4.8.3",
-    "webpack-dev-server": "^3.1.4"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": []
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rysdyk/draft-baby.git"
+  },
+  "keywords": [
+    "fantasy",
+    "football",
+    "nfl",
+    "typescript"
+  ],
+  "author": "sam rysdyk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rysdyk/draft-baby/issues"
+  },
+  "homepage": "https://github.com/rysdyk/draft-baby#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^8.0.0",
+    "browserify": "^16.2.2",
+    "gulp": "^3.9.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-typescript": "^4.0.2",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8",
+    "tsify": "^4.0.0",
+    "typescript": "^2.9.1",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0",
+    "watchify": "^3.11.0"
+  }
 }
