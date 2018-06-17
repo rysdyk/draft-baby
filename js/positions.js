@@ -4,6 +4,7 @@
             this.allPlayers = [];
             this.positions = ['rb', 'wr', 'qb', 'te', 'k', 'def'];
             this.getPlayers();
+            this.getByeWeeks();
             this.renderPlayers();
         },
         getPlayers: function () {
@@ -16,12 +17,12 @@
                 players.push(response);
             });
         },
-        // getByeWeeks: function() {
-        //  var request = new XMLHttpRequest();
-        //  request.open("GET", "lib/2018/bye_weeks.json", false);
-        //  request.send(null);
-        //  this.bye_weeks = JSON.parse(request.responseText);
-        // },
+        getByeWeeks: function () {
+            var request = new XMLHttpRequest();
+            request.open("GET", "lib/2018/bye_weeks.json", false);
+            request.send(null);
+            this.bye_weeks = JSON.parse(request.responseText);
+        },
         renderPlayers: function () {
             this.allPlayers.forEach(function (posPlayers, index) {
                 var table = document.getElementById(dbPositions.positions[index] + '-list');
@@ -36,13 +37,16 @@
                     td.appendChild(document.createTextNode(index + 1));
                     tr.appendChild(td);
                     for (var data in player) {
-                        if (data == 'name' || data == 'team' || data == 'bye' || data == 'depth') {
+                        if (data == 'name' || data == 'team') {
                             var td = document.createElement('td');
                             td.appendChild(document.createTextNode(player[data]));
                             tr.appendChild(td);
                         }
-                        // add bye week here, remove from line 46
                     }
+                    var bw = dbPositions.bye_weeks[player['team']];
+                    var td = document.createElement('td');
+                    td.appendChild(document.createTextNode(bw));
+                    tr.appendChild(td);
                 });
             });
         }
