@@ -36,7 +36,7 @@ var quotes = [
   "Stats are for losers. - Bill Belichick"
 ]
 
-var quote = quotes[Math.floor(Math.random()*quotes.length)];
+var quote:string = quotes[Math.floor(Math.random()*quotes.length)];
 
 var quoteEl = document.getElementById("quote");
 

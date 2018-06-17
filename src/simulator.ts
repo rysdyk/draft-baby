@@ -23,7 +23,7 @@
 
 		getPlayers: function(format:any, teams:any) {
 			var request = new XMLHttpRequest();
-			request.open("GET", "lib/2017/ffc_7_" + format + "_" + teams + ".json", false);
+			request.open("GET", "lib/2018/ffc_7_" + format + "_" + teams + ".json", false);
 			request.send(null);
 			this.players = JSON.parse(request.responseText);
       draftBaby.renderPlayers();
@@ -41,7 +41,7 @@
 				tr.appendChild(td);
 
 			  for (var data in player) {
-			    if (data == 'name' || data == 'position' || data == 'team' || data == 'bye' ) {
+			    if (data == 'name' || data == 'position' || data == 'team') {
 						var td = document.createElement('td');
 			      td.appendChild(document.createTextNode(player[data]));
 						tr.appendChild(td);
@@ -55,7 +55,7 @@
     },
 
 		assignSortedPosition: function() {
-			this.players.forEach(function(player:any, index:any){
+			this.players.forEach(function(player:any, index:number){
 				var startPos = draftBaby.players.indexOf(player);
 				var max, min, sorted_pos;
 

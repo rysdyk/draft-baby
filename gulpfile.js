@@ -67,8 +67,8 @@ gulp.task('compile-js', function() {
 })
 
 gulp.task("default", function () {
-  ['connect', 'browserSync'], function(){
+  ['copy-lib-files', 'copy-index-html', 'copy-simulator-html',
+  'compile-js', 'connectDist', 'browserSync'], function(){
     gulp.watch('./scss/**/*.scss', ['styles']);
-    gulp.watch('./dist/js/*.js', browserSync.reload);
   }
 });

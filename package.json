@@ -9,11 +9,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rysdyk/draft-baby.git"
-  },
-  "author": "",
+  "repository": "git+https://github.com/rysdyk/draft-baby.git",
+  "author": "sam rysdyk <samuel.rysdyk@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/rysdyk/draft-baby/issues"
@@ -26,5 +23,9 @@
     "gulp-sass": "^4.0.1",
     "gulp-typescript": "^5.0.0-alpha.1",
     "typescript": "^2.9.2"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.8",
+    "animate.css": "^3.6.1"
   }
 }
