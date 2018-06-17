@@ -1,47 +1,74 @@
 var gulp = require("gulp");
-var browserify = require("browserify");
-var source = require('vinyl-source-stream');
-var watchify = require("watchify");
-var tsify = require("tsify");
-var gutil = require("gulp-util");
-var uglify = require('gulp-uglify');
-var sourcemaps = require('gulp-sourcemaps');
-var buffer = require('vinyl-buffer');
-var paths = {
-    pages: ['src/*.html']
-};
+var ts = require("gulp-typescript");
+var tsProject = ts.createProject("tsconfig.json");
 
-var watchedBrowserify = watchify(browserify({
-    basedir: '.',
-    debug: true,
-    entries: ['src/main.ts'],
-    cache: {},
-    packageCache: {}
-}).plugin(tsify));
+var connect = require('gulp-connect');
+var sass = require('gulp-sass');
+var browserSync = require('browser-sync').create();
 
-gulp.task("copy-html", function () {
-    return gulp.src(paths.pages)
-        .pipe(gulp.dest("dist"));
+gulp.task('copy-index-html', function() {
+    gulp.src('./index.html')
+    // Perform minification tasks, etc here
+    .pipe(gulp.dest('./dist/'));
 });
 
-gulp.task("default", ["copy-html"], function () {
-    return browserify({
-        basedir: '.',
-        debug: true,
-        entries: ['src/main.ts'],
-        cache: {},
-        packageCache: {}
-    })
-    .plugin(tsify)
-    .transform('babelify', {
-        presets: ['es2015'],
-        extensions: ['.ts']
-    })
-    .bundle()
-    .pipe(source('bundle.js'))
-    .pipe(buffer())
-    .pipe(sourcemaps.init({loadMaps: true}))
-    .pipe(uglify())
-    .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest("dist"));
+// gulp.task('copy-full-list-html', function() {
+//     gulp.src('./full-list.html')
+//     // Perform minification tasks, etc here
+//     .pipe(gulp.dest('./dist/'));
+// });
+
+gulp.task('copy-simulator-html', function() {
+    gulp.src('./simulator.html')
+    // Perform minification tasks, etc here
+    .pipe(gulp.dest('./dist/'));
+});
+
+gulp.task('copy-lib-files', function() {
+    gulp.src('./lib/2018/*.json')
+    // Perform minification tasks, etc here
+    .pipe(gulp.dest('./dist/lib/2018'));
+});
+
+
+gulp.task('connect', function () {
+  connect.server({
+    root: '',
+    port: 8888
+  });
+});
+
+gulp.task('connectDist', function () {
+  connect.server({
+    root: './dist/',
+    port: 9999
+  });
+});
+
+gulp.task('styles', function() {
+    gulp.src('./scss/**/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('./css/'))
+        .pipe(browserSync.reload({stream: true}));
+});
+
+gulp.task('browserSync', function(){
+  browserSync.init({
+    server: {
+      baseDir: './'
+    }
+  });
+});
+
+gulp.task('compile-js', function() {
+  return tsProject.src()
+      .pipe(tsProject())
+      .js.pipe(gulp.dest("dist/js"));
+})
+
+gulp.task("default", function () {
+  ['connect', 'browserSync'], function(){
+    gulp.watch('./scss/**/*.scss', ['styles']);
+    gulp.watch('./dist/js/*.js', browserSync.reload);
+  }
 });

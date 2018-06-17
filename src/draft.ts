@@ -1,5 +1,5 @@
 (function(){
-  var draftBaby = {
+  var draftBaby: any = {
 
     init: function(){
       this.cacheDom();
@@ -16,10 +16,10 @@
 			this.nodeRows = []
       this.list = document.getElementById('drafted');
     },
-		
+
 		setNodeRows: function() {
-			this.tbodies.forEach(function(tbody){
-				tbody.childNodes.forEach(function(row){
+			this.tbodies.forEach(function(tbody: any){
+				tbody.childNodes.forEach(function(row: any){
 				  draftBaby.nodeRows.push(row);
 				});
 			});
@@ -36,7 +36,7 @@
     catchUp: function() {
       var drafted = this.drafted;
       var list = this.list;
-      this.nodeRows.forEach(function(row){
+      this.nodeRows.forEach(function(row: any){
         var data = row.childNodes[1].innerText;
         if (drafted.includes(data)) {
           row.style.display = 'none';
@@ -55,7 +55,7 @@
       var undoDraft = this.undoDraft;
 			var clear = document.getElementById('clear-draft');
 
-      this.nodeRows.forEach(function(row){
+      this.nodeRows.forEach(function(row: any){
         row.addEventListener('click', function(){
           this.style.display = 'none';
           drafted.push(this.children[1].innerText);
@@ -67,14 +67,14 @@
       undo.addEventListener('click', function(e){
         undoDraft(e);
       });
-			
+
 			// clear.addEventListener('click', function(e){
 			// 	localStorage.clear();
 			// 	this.drafted = [];
 			// })
     },
 
-    showDrafted: function(player) {
+    showDrafted: function(player: any) {
       var list = document.getElementById('drafted');
       var item = document.createElement('li');
       item.appendChild(document.createTextNode(player.children[1].innerText));
@@ -90,7 +90,7 @@
       }
     },
 
-    undoDraft: function(e) {
+    undoDraft: function(e: any) {
       e.preventDefault();
       var drafted = draftBaby.drafted;
       var list = draftBaby.list;
@@ -98,7 +98,7 @@
       var setLocal = draftBaby.setLocal;
       var name = drafted.pop();
       list.removeChild(list.lastChild);
-      nodeRows.forEach(function(row){
+      nodeRows.forEach(function(row: any){
         var data = row.childNodes[1].innerText;
         if (name == data) {
           row.style.display = '';

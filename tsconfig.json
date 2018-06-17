@@ -1,7 +1,10 @@
 {
   "files": [
-    "src/main.ts",
-    "src/greet.ts"
+    "src/draft.ts",
+    "src/overall.ts",
+    "src/positions.ts",
+    "src/quotes.ts",
+    "src/simulator.ts"
   ],
   "compilerOptions": {
     "noImplicitAny": true,

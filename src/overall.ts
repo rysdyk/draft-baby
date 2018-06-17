@@ -1,5 +1,5 @@
 (function(){
-	var draftBaby = {
+	var draftBaby: any = {
 		init: function() {
 			this.cacheDOM();
 			this.getPlayers();
@@ -26,7 +26,7 @@
 		},
 
 		renderPlayers: function() {
-			this.players.forEach(function(player, index){
+			this.players.forEach(function(player: any, index: any){
 			  var tr = document.createElement('tr');
 			  draftBaby.tbody[0].appendChild(tr);
 				var td = document.createElement('td');
@@ -55,7 +55,7 @@
 				var totalTeams = parseInt(draftBaby.teams.value);
 				draftBaby.draftPos.innerHTML = '';
 				for (var i=1; i<=totalTeams; i++) {
-					var option = document.createElement('option');
+					var option:any = document.createElement('option');
 					option.text = i;
 					option.value = i;
 					draftBaby.draftPos.add(option);
@@ -67,7 +67,7 @@
 		renderDraftEstimate: function() {
 			var rows = draftBaby.rows;
 
-			rows.forEach(function(row){
+			rows.forEach(function(row: any){
 		    row.classList.remove('estimated');
 		  });
 

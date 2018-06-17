@@ -1,5 +1,6 @@
 (function(){
-	var dbPositions = {
+	var dbPositions:any = {
+
 		init: function() {
       this.allPlayers = [];
       this.positions = ['rb', 'wr', 'qb', 'te', 'k', 'def'];
@@ -10,7 +11,7 @@
 		getPlayers: function() {
       var players = this.allPlayers;
 
-      this.positions.forEach( function(position){
+      this.positions.forEach( function(position: any){
   			var request = new XMLHttpRequest();
   			request.open("GET", "lib/2018/" + position + ".json", false);
   			request.send(null);
@@ -27,12 +28,12 @@
     // },
 
 		renderPlayers: function() {
-			this.allPlayers.forEach(function(posPlayers, index){
+			this.allPlayers.forEach(function(posPlayers:any, index:any){
 
 			  var table = document.getElementById(dbPositions.positions[index] + '-list');
 			  var tbody = table.getElementsByTagName('tbody');
 
-			  posPlayers.forEach(function(player, index){
+			  posPlayers.forEach(function(player:any, index:any){
 			    var tr = document.createElement('tr');
 			    tbody[0].appendChild(tr);
 
