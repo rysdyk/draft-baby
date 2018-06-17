@@ -1,0 +1,33 @@
+[
+  { "name": "Rob Gronkowski",          "team": "NE",  "tier": 1 },
+
+  { "name": "Travis Kelce",            "team": "KC",  "tier": 2 },
+  { "name": "Zach Ertz",               "team": "PHI", "tier": 2 },
+
+  { "name": "Jimmy Graham",            "team": "GB",  "tier": 3 },
+  { "name": "Evan Engram",             "team": "NYG", "tier": 3 },
+  { "name": "Greg Olsen",              "team": "CAR", "tier": 3 },
+  { "name": "Delanie Walker",          "team": "TEN", "tier": 3 },
+  { "name": "Kyle Rudolph",            "team": "MIN", "tier": 3 },
+
+  { "name": "Trey Burton",             "team": "CHI", "tier": 4 },
+  { "name": "Jordan Reed",             "team": "WAS", "tier": 4 },
+  { "name": "Jack Doyle",              "team": "IND", "tier": 4 },
+  { "name": "Tyler Eifert",            "team": "CIN", "tier": 4 },
+  { "name": "George Kittle",           "team": "SF",  "tier": 4 },
+  { "name": "O.J. Howard",             "team": "TB",  "tier": 4 },
+  { "name": "David Njoku",             "team": "CLE", "tier": 4 },
+  { "name": "Luke Willson",            "team": "DET", "tier": 4 },
+
+  { "name": "Cameron Brate",           "team": "TB",  "tier": 5 },
+  { "name": "Antonio Gates",           "team": "FA",  "tier": 5 },
+  { "name": "Eric Ebron",              "team": "IND", "tier": 5 },
+  { "name": "Charles Clay",            "team": "BUF", "tier": 5 },
+  { "name": "Jared Cook",              "team": "OAK", "tier": 5 },
+  { "name": "Mike Gesicki",            "team": "MIA", "tier": 5 },
+  { "name": "Austin Seferian-Jenkins", "team": "JAC", "tier": 5 },
+  { "name": "Vance McDonald",          "team": "PIT", "tier": 5 },
+  { "name": "Ricky Seals-Jones",       "team": "ARI", "tier": 5 },
+  { "name": "Benjamin Watson",         "team": "ARI", "tier": 5 },
+  { "name": "Austin Hooper",           "team": "ATL", "tier": 5 }
+]
