@@ -18,7 +18,7 @@
   "homepage": "https://rysdyk.com/draft-baby",
   "devDependencies": {
     "browser-sync": "^2.24.4",
-    "gulp": "^4.0.0",
+    "gulp": "^3.9.1",
     "gulp-connect": "^5.5.0",
     "gulp-sass": "^4.0.1",
     "gulp-typescript": "^5.0.0-alpha.1",
@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.8",
-    "animate.css": "^3.6.1"
+    "animate.css": "^3.6.1",
+    "gulp-livereload": "^3.8.1"
   }
 }

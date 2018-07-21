@@ -4,19 +4,13 @@ var tsProject = ts.createProject("tsconfig.json");
 
 var connect = require('gulp-connect');
 var sass = require('gulp-sass');
-var browserSync = require('browser-sync').create();
+var livereload = livereload = require('gulp-livereload');
 
 gulp.task('copy-index-html', function() {
     gulp.src('./index.html')
     // Perform minification tasks, etc here
     .pipe(gulp.dest('./dist/'));
 });
-
-// gulp.task('copy-full-list-html', function() {
-//     gulp.src('./full-list.html')
-//     // Perform minification tasks, etc here
-//     .pipe(gulp.dest('./dist/'));
-// });
 
 gulp.task('copy-simulator-html', function() {
     gulp.src('./simulator.html')
@@ -49,26 +43,24 @@ gulp.task('styles', function() {
     gulp.src('./scss/**/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./css/'))
-        .pipe(browserSync.reload({stream: true}));
+        //.pipe(browserSync.reload({stream: true}));
 });
 
-gulp.task('browserSync', function(){
-  browserSync.init({
-    server: {
-      baseDir: './'
-    }
-  });
-});
-
-gulp.task('compile-js', function() {
+gulp.task('typescript', function() {
   return tsProject.src()
-      .pipe(tsProject())
-      .js.pipe(gulp.dest("dist/js"));
+    .pipe(tsProject())
+    .js.pipe(gulp.dest("dist/js"));
 })
 
-gulp.task("default", function () {
-  ['copy-lib-files', 'copy-index-html', 'copy-simulator-html',
-  'compile-js', 'connectDist', 'browserSync'], function(){
+
+gulp.task("watch", function () {
+  ['typescript', 'styles'], function(){
+    gulp.watch('./**/*.ts', ['typescript']);
     gulp.watch('./scss/**/*.scss', ['styles']);
+
+    livereload.listen();
   }
 });
+
+gulp.task("default", ['copy-index-html', 'copy-simulator-html', 'copy-lib-files',
+                      "styles", "typescript", "connectDist", "watch"]);
