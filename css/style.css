@@ -416,8 +416,7 @@ span.disclaimer {
 
 .container {
   margin: 0 auto;
-  width: 90%;
-  min-width: 800px; }
+  width: 90%; }
   .container:after, .container:before {
     clear: both;
     content: '';
@@ -623,7 +622,8 @@ footer {
   .position-wrapper .table-wrapper {
     background-color: #ededed;
     height: 400px;
-    overflow: scroll; }
+    width: 100%;
+    overflow: auto; }
     .position-wrapper .table-wrapper table {
       width: 100%; }
     .position-wrapper .table-wrapper tr.tier-1 {

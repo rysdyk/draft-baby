@@ -63,4 +63,4 @@ gulp.task("watch", function () {
 });
 
 gulp.task("default", ['copy-index-html', 'copy-simulator-html', 'copy-lib-files',
-                      "styles", "typescript", "connectDist", "watch"]);
+                      "styles", "typescript", "connect", "watch"]);
