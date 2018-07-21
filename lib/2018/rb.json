@@ -72,6 +72,6 @@
   { "name": "Chris Ivory",         "team": "BUF", "tier": 7, "depth": 2 },
   { "name": "Mike Gillislee",      "team": "NE",  "tier": 7, "depth": 3 },
   { "name": "Jeremy Hill",         "team": "NE",  "tier": 7, "depth": 4 },
-  { "name": "CJ Prosise",          "team": "SEA", "tier": 7, "depth": 3 }
-  { "name": "Adrian Peterson",     "team": "FA",  "tier": 7, "depth": 0 },
+  { "name": "CJ Prosise",          "team": "SEA", "tier": 7, "depth": 3 },
+  { "name": "Adrian Peterson",     "team": "FA",  "tier": 7, "depth": 0 }
 ]
