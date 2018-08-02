@@ -62,5 +62,8 @@ gulp.task("watch", function () {
   }
 });
 
+gulp.task("build", ['copy-index-html', 'copy-simulator-html', 'copy-lib-files',
+                      "styles", "typescript"]);
+
 gulp.task("default", ['copy-index-html', 'copy-simulator-html', 'copy-lib-files',
                       "styles", "typescript", "connect", "watch"]);

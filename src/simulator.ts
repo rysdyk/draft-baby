@@ -242,6 +242,4 @@
 // things to add next:
 // add pick #, round, overall numbers to player
 // add round markers to total drafted list
-// choose different league formats
 // improve picking algorithm to pick according to team needs
-
